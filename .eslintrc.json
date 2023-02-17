@@ -1,5 +1,12 @@
 {
-  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
   "globals": {
     "React": "readonly"
   },
