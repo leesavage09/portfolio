@@ -1,7 +1,13 @@
 import Head from 'next/head';
+import { useState } from 'react';
+import { Scroll } from 'src/stories/animation/Scroll';
+import { Button } from 'src/stories/Button';
 import { Section } from 'src/stories/Section';
+import { Heading1 } from 'src/stories/text/Heading1';
+import { ThemeToggle } from 'src/stories/ThemeToggle';
 
 export default function Home() {
+  const [dark, setdark] = useState(true);
   return (
     <>
       <Head>
@@ -10,10 +16,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={dark ? 'dark' : ''}>
         <Section>
-          <h1>Hello World</h1>
-          <p>body</p>
+          <span className="absolute top-11 right-11">
+            <ThemeToggle onClick={() => setdark((boolean) => !boolean)} />
+          </span>
+          <Heading1>
+            HEY, I&apos;M <span className="text-primary">Lee Savage</span>
+          </Heading1>
+          <p>
+            A JavaScript focused web developer that builds frontend and backend
+            applications
+          </p>
+          <Button primary label={'Projects'} />
+          <Scroll />
         </Section>
       </main>
     </>
