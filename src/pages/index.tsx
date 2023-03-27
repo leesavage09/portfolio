@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Section } from 'src/stories/Section';
 
 export default function Home() {
   return (
@@ -10,8 +11,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Hello World</h1>
-        <p>body</p>
+        <Section>
+          <h1>Hello World</h1>
+          <p>body</p>
+        </Section>
       </main>
     </>
   );
