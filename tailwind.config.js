@@ -16,6 +16,16 @@ module.exports = {
         700: '#F43E3E',
         800: '#F20D0D',
       },
+      yellow: {
+        100: '#FFFBE1',
+        200: '#FEF7C2',
+        300: '#FEF090',
+        400: '#FEEA5D',
+        500: '#FDE32B',
+        DEFAULT: '#F1D302',
+        700: '#CAB102',
+        800: '#B19B01',
+      },
       blue: {
         100: '#F7FBFD',
         200: '#EBF4F9',
