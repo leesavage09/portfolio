@@ -38,8 +38,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      sans: ['Source Sans Pro', 'sans-serif'],
     },
     extend: {
       spacing: {
