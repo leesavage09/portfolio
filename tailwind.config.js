@@ -51,6 +51,24 @@ module.exports = {
       backgroundImage: {
         pattern: "url('/subtle-prism.svg')",
       },
+      keyframes: {
+        scroll: {
+          '0%': {
+            transform: 'translateY(-0.75rem)',
+            opacity: 1,
+          },
+          '40%': {
+            transform: 'translateY(0.75rem)',
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 0,
+          },
+        },
+      },
+      animation: {
+        scroll: 'scroll 1.5s ease-in infinite',
+      },
     },
   },
   plugins: [],
