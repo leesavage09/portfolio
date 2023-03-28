@@ -5,7 +5,6 @@ interface SectionProps {
   children: JSX.Element | Array<JSX.Element>;
   pattern?: boolean;
   className?: string;
-  invertTheme?: boolean;
 }
 
 export const Section: React.FC<SectionProps> = ({
