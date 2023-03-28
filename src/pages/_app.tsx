@@ -1,7 +1,7 @@
+import { ThemeContext, Themes } from '@components/ThemeContext';
 import '@styles/globals.css';
 import type { AppProps } from 'next/app';
 import { useState } from 'react';
-import { ThemeContext, Themes } from 'src/components/ThemeContext';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState<Themes>('dark');

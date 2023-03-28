@@ -1,6 +1,6 @@
+import { ThemeToggle } from '@stories/Molecules/ThemeToggle';
 import Image from 'next/image';
 import profilePic from '../../../public/images/leeSavage.png';
-import { ThemeToggle } from '../Molecules/ThemeToggle';
 
 export const Menu = () => {
   return (

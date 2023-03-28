@@ -1,11 +1,11 @@
+import { ThemeContext } from '@components/ThemeContext';
+import { Button } from '@stories/Atoms/Button';
+import { Heading1 } from '@stories/Atoms/Heading1';
+import { ScrollIndicator } from '@stories/Atoms/ScrollIndicator';
+import { Section } from '@stories/Atoms/Section';
+import { Menu } from '@stories/Organisms/Menu';
 import Head from 'next/head';
 import { useContext } from 'react';
-import { ThemeContext } from 'src/components/ThemeContext';
-import { Button } from 'src/stories/Atoms/Button';
-import { Heading1 } from 'src/stories/Atoms/Heading1';
-import { ScrollIndicator } from 'src/stories/Atoms/ScrollIndicator';
-import { Section } from 'src/stories/Atoms/Section';
-import { Menu } from 'src/stories/Organisms/Menu';
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
