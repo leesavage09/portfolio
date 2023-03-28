@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import Moon from '../assets/icons/moon.svg';
-import Sun from '../assets/icons/sun.svg';
+import Moon from '../../public/vector/moon.svg';
+import Sun from '../../public/vector/sun.svg';
 import { ThemeContext } from './components/ThemeContext';
 
 export const ThemeToggle = () => {

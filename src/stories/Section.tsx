@@ -18,6 +18,7 @@ export const Section: React.FC<SectionProps> = ({ children }) => {
     
     p-9
     h-screen
+    w-full
     
     bg-pattern bg-cover
     "

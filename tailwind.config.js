@@ -59,7 +59,7 @@ module.exports = {
         '4xl': '2rem',
       },
       backgroundImage: {
-        pattern: "url('/subtle-prism.svg')",
+        pattern: "url('/vector/subtle-prism.svg')",
       },
       keyframes: {
         scroll: {

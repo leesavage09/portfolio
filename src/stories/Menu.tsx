@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import profilePic from '../../public/leeSavage.png';
+import profilePic from '../../public/images/leeSavage.png';
 import { ThemeToggle } from './ThemeToggle';
 
 export const Menu = () => {
