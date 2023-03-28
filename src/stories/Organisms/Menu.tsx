@@ -1,6 +1,18 @@
 import { ThemeToggle } from '@stories/Molecules/ThemeToggle';
 import Image from 'next/image';
+import Link from 'next/link';
 import profilePic from '/public/images/leeSavage.png';
+
+const MenuLinkItem = ({ lable, href }: { lable: string; href: string }) => (
+  <li>
+    <Link
+      className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
+      href={href}
+    >
+      {lable}
+    </Link>
+  </li>
+);
 
 export const Menu = () => {
   return (
@@ -8,7 +20,7 @@ export const Menu = () => {
       className="absolute top-0 left-0 
     flex justify-between w-full p-4 
     dark:bg-dark-blue bg-blue-100 drop-shadow-lg 
-    text-md uppercase font-extrabold
+    text-md uppercase font-extrabold     
     "
     >
       <div className="flex items-center space-x-4 ">
@@ -24,26 +36,10 @@ export const Menu = () => {
         </a>
       </div>
       <ol className="flex space-x-9 items-center text-blue-100 ">
-        <li>
-          <a href="#" className="hover:text-yellow duration-500">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:text-yellow duration-500">
-            About
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:text-yellow duration-500">
-            Projects
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:text-yellow duration-500">
-            Contact
-          </a>
-        </li>
+        <MenuLinkItem href="#" lable="Home" />
+        <MenuLinkItem href="#" lable="About" />
+        <MenuLinkItem href="#" lable="Projects" />
+        <MenuLinkItem href="#" lable="Contact" />
         <li>
           {' '}
           <ThemeToggle />
