@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Menu } from './Menu';
 
 export default {
-  title: 'Toggle',
+  title: 'Organisms/Menu',
   component: Menu,
 } as ComponentMeta<typeof Menu>;
 

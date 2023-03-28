@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { useContext } from 'react';
+import { ThemeContext } from 'src/components/ThemeContext';
 import { Scroll } from 'src/stories/animation/Scroll';
 import { Button } from 'src/stories/Button';
-import { ThemeContext } from 'src/stories/components/ThemeContext';
 import { Menu } from 'src/stories/Menu';
 import { Section } from 'src/stories/Section';
 import { Heading1 } from 'src/stories/text/Heading1';

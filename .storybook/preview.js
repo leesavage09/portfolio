@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ThemeContext } from '../src/stories/components/ThemeContext';
+import { ThemeContext } from '../src/components/ThemeContext';
 import '../src/styles/globals.css';
 
 export const parameters = {
