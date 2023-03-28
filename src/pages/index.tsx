@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <main className={theme}>
         <Menu />
-        <Section>
+        <Section className="h-screen" pattern>
           <Heading1>
             HEY, I&apos;M <span className="text-primary">Lee Savage</span>
           </Heading1>
@@ -30,6 +30,14 @@ export default function Home() {
           </p>
           <Button primary label={'Projects'} />
           <ScrollIndicator />
+        </Section>
+        <Section>
+          <Heading1>About Me</Heading1>
+          <p>
+            Here you will find more information about me, what I do, and my
+            current skills mostly in terms of programming and technology
+          </p>
+          <Button primary label={'Projects'} />
         </Section>
       </main>
     </>

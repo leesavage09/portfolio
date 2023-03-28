@@ -17,7 +17,7 @@ const MenuLinkItem = ({ lable, href }: { lable: string; href: string }) => (
 export const Menu = () => {
   return (
     <nav
-      className="absolute top-0 left-0 
+      className="fixed z-10 top-0 left-0 
     flex justify-between w-full p-4 
     dark:bg-dark-blue bg-blue-100 drop-shadow-lg 
     text-md uppercase font-extrabold     

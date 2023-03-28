@@ -6,8 +6,8 @@ export default {
   component: Section,
 } as ComponentMeta<typeof Section>;
 
-export const noArgs: ComponentStory<typeof Section> = () => (
-  <Section>
+export const noArgs: ComponentStory<typeof Section> = (args) => (
+  <Section {...args}>
     <p>content will go here</p>
   </Section>
 );
