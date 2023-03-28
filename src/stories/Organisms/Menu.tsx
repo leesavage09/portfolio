@@ -28,18 +28,19 @@ export const Menu = () => {
     text-md uppercase font-extrabold     
     "
     >
-      <div className="flex items-center space-x-4 ">
+      <a
+        href="#"
+        className="text-primary hover:text-yellow duration-500 flex items-center"
+      >
         <Image
           src={profilePic}
           width={60}
           height={60}
-          className="w-11 h-11 rounded-full dark:bg-dark-blue-500 bg-blue-200"
+          className="w-11 h-11 rounded-full dark:bg-dark-blue-500 bg-blue-200 mr-3"
           alt="A portrait photo of Lee Savage"
         />
-        <a href="#" className="text-primary hover:text-yellow duration-500">
-          Lee Savage
-        </a>
-      </div>
+        Lee Savage
+      </a>
       <ol className="flex space-x-9 items-center text-blue-100 ">
         <MenuLinkItem scrollTo="" lable="Home" />
         <MenuLinkItem scrollTo="about" lable="About" />
