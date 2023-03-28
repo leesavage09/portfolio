@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import { useContext } from 'react';
 import { ThemeContext } from 'src/components/ThemeContext';
-import { Scroll } from 'src/stories/animation/Scroll';
-import { Button } from 'src/stories/Button';
-import { Menu } from 'src/stories/Menu';
-import { Section } from 'src/stories/Section';
-import { Heading1 } from 'src/stories/text/Heading1';
+import { Button } from 'src/stories/Atoms/Button';
+import { Heading1 } from 'src/stories/Atoms/Heading1';
+import { ScrollIndicator } from 'src/stories/Atoms/ScrollIndicator';
+import { Section } from 'src/stories/Atoms/Section';
+import { Menu } from 'src/stories/Organisms/Menu';
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
@@ -29,7 +29,7 @@ export default function Home() {
             applications
           </p>
           <Button primary label={'Projects'} />
-          <Scroll />
+          <ScrollIndicator />
         </Section>
       </main>
     </>

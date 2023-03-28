@@ -1,4 +1,4 @@
-export const Scroll = () => {
+export const ScrollIndicator = () => {
   return (
     <span
       className="

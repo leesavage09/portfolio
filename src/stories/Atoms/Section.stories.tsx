@@ -2,12 +2,12 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Section } from './Section';
 
 export default {
-  title: 'Section',
+  title: 'Atoms/Section',
   component: Section,
 } as ComponentMeta<typeof Section>;
 
 export const noArgs: ComponentStory<typeof Section> = () => (
   <Section>
-    <p>test</p>
+    <p>content will go here</p>
   </Section>
 );
