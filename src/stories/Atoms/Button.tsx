@@ -5,7 +5,8 @@ interface ButtonProps {
   primary: boolean;
   label: string;
   className?: string;
-  href: string;
+  href?: string;
+  onClick?: () => void;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -13,18 +14,27 @@ export const Button: React.FC<ButtonProps> = ({
   label,
   className = '',
   href,
+  onClick,
 }) => {
   const defaultStyle = `${
-    primary ? 'bg-primary' : 'bg-blue'
-  } text-dark-blue-800 uppercase py-3 px-9 rounded-md drop-shadow-lg border-none duration-300 hover:-translate-y-1`;
+    primary ? 'bg-primary text-dark-blue-800' : 'bg-blue text-dark-blue'
+  }  uppercase py-3 px-9 rounded-md drop-shadow-lg border-none duration-300 hover:-translate-y-1`;
 
-  return (
-    <Link
-      type="button"
-      className={twMerge(defaultStyle, className)}
-      href={href}
-    >
-      {label}
-    </Link>
-  );
+  const style = twMerge(defaultStyle, className);
+
+  if (href)
+    return (
+      <Link type="button" className={style} href={href} onClick={onClick}>
+        {label}
+      </Link>
+    );
+
+  if (onClick)
+    return (
+      <button type="button" className={style} onClick={onClick}>
+        {label}
+      </button>
+    );
+
+  throw Error('Button component requires href or onClick');
 };
