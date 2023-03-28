@@ -15,6 +15,7 @@ export const ThemeToggle = () => {
     <button
       type="button"
       className="bg-blue w-20 h-11 py-1 rounded-full flex items-center justify-center hover:bg-yellow duration-500"
+      aria-label="Toggles theme between light and dark"
       onClick={handleToggle}
     >
       <span
