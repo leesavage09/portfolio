@@ -19,7 +19,7 @@ export const Section: React.FC<SectionProps> = ({
 
   const patternStyle = pattern
     ? ' dark:bg-dark-blue  bg-blue-300 bg-pattern bg-cover'
-    : ' dark:bg-dark-blue-500  bg-blue-200  ';
+    : ' dark:bg-dark-blue-700  bg-blue-200  ';
 
   return (
     <section className={mergedStyle + patternStyle}>
