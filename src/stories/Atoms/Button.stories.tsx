@@ -7,9 +7,9 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 export const primary: ComponentStory<typeof Button> = () => (
-  <Button primary={true} label={'Button'} />
+  <Button primary={true} scrollTo=" " label={'Button'} />
 );
 
 export const secondary: ComponentStory<typeof Button> = () => (
-  <Button primary={false} label={'Button'} />
+  <Button primary={false} scrollTo=" " label={'Button'} />
 );

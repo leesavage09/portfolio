@@ -50,5 +50,5 @@ export const Button: React.FC<ButtonProps> = ({
       </button>
     );
 
-  throw Error('Button component requires href or onClick');
+  throw Error('Button component requires href, onClick or scrollTo');
 };
