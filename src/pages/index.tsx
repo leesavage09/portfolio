@@ -1,13 +1,15 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useContext } from 'react';
 import { Scroll } from 'src/stories/animation/Scroll';
 import { Button } from 'src/stories/Button';
+import { ThemeContext } from 'src/stories/components/ThemeContext';
+import { Menu } from 'src/stories/Menu';
 import { Section } from 'src/stories/Section';
 import { Heading1 } from 'src/stories/text/Heading1';
-import { ThemeToggle } from 'src/stories/ThemeToggle';
 
 export default function Home() {
-  const [dark, setdark] = useState(true);
+  const { theme } = useContext(ThemeContext);
+
   return (
     <>
       <Head>
@@ -16,11 +18,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={dark ? 'dark' : ''}>
+      <main className={theme}>
+        <Menu />
         <Section>
-          <span className="absolute top-11 right-11">
-            <ThemeToggle onClick={() => setdark((boolean) => !boolean)} />
-          </span>
           <Heading1>
             HEY, I&apos;M <span className="text-primary">Lee Savage</span>
           </Heading1>

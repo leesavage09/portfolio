@@ -1,23 +1,20 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import Moon from '../assets/icons/moon.svg';
 import Sun from '../assets/icons/sun.svg';
+import { ThemeContext } from './components/ThemeContext';
 
-interface ThemeToggleProps {
-  onClick: () => void;
-}
-
-export const ThemeToggle: React.FC<ThemeToggleProps> = ({ onClick }) => {
-  const [dark, setDark] = useState(true);
+export const ThemeToggle = () => {
+  const { theme, setTheme } = useContext(ThemeContext);
+  const dark = theme === 'dark';
 
   const handleToggle = () => {
-    setDark((boolean) => !boolean);
-    onClick();
+    setTheme(dark ? 'light' : 'dark');
   };
 
   return (
     <button
       type="button"
-      className="bg-blue w-20 py-1 rounded-full flex items-center justify-center"
+      className="bg-blue w-20 h-11 py-1 rounded-full flex items-center justify-center hover:bg-yellow duration-500"
       onClick={handleToggle}
     >
       <span

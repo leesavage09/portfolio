@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { ThemeContext } from '../src/stories/components/ThemeContext';
 import '../src/styles/globals.css';
 
 export const parameters = {
@@ -19,9 +20,19 @@ export const argTypes = {
 export const args = { theme: 'light' };
 
 export const decorators = [
-  (Story, options) => (
-    <div className={options.args.theme}>
-      <Story />
-    </div>
-  ),
+  (Story, options) => {
+    const [theme, setTheme] = useState(options.args.theme);
+
+    useEffect(() => {
+      setTheme(options.args.theme);
+    }, [options.args.theme]);
+
+    return (
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <div className={theme}>
+          <Story />
+        </div>
+      </ThemeContext.Provider>
+    );
+  },
 ];
