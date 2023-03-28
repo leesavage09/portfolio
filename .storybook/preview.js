@@ -30,7 +30,7 @@ export const decorators = [
     return (
       <ThemeContext.Provider value={{ theme, setTheme }}>
         <div
-          className={`${theme} flex justify-center items-center h-screen ${
+          className={`${theme} flex justify-center items-center min-h-screen ${
             theme === 'dark' ? 'bg-dark-blue' : 'bg-blue-100'
           }`}
         >

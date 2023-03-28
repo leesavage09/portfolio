@@ -3,5 +3,5 @@ interface Heading1Props {
 }
 
 export const Subtitle2: React.FC<Heading1Props> = ({ children }) => {
-  return <p className="text-center text-xl">{children}</p>;
+  return <p className="text-center text-xl mb-6">{children}</p>;
 };
