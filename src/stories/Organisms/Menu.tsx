@@ -1,16 +1,21 @@
 import { ThemeToggle } from '@stories/Molecules/ThemeToggle';
 import Image from 'next/image';
-import Link from 'next/link';
 import profilePic from '/public/images/leeSavage.png';
 
-const MenuLinkItem = ({ lable, href }: { lable: string; href: string }) => (
+const MenuLinkItem = ({
+  lable,
+  scrollTo,
+}: {
+  lable: string;
+  scrollTo: string;
+}) => (
   <li>
-    <Link
+    <a
       className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
-      href={href}
+      href={`#${scrollTo}`}
     >
       {lable}
-    </Link>
+    </a>
   </li>
 );
 
@@ -36,10 +41,10 @@ export const Menu = () => {
         </a>
       </div>
       <ol className="flex space-x-9 items-center text-blue-100 ">
-        <MenuLinkItem href="#" lable="Home" />
-        <MenuLinkItem href="#" lable="About" />
-        <MenuLinkItem href="#" lable="Projects" />
-        <MenuLinkItem href="#" lable="Contact" />
+        <MenuLinkItem scrollTo="" lable="Home" />
+        <MenuLinkItem scrollTo="about" lable="About" />
+        <MenuLinkItem scrollTo="projects" lable="Projects" />
+        <MenuLinkItem scrollTo="contact" lable="Contact" />
         <li>
           {' '}
           <ThemeToggle />

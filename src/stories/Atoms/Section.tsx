@@ -2,12 +2,14 @@ import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface SectionProps {
+  id?: string;
   children: JSX.Element | Array<JSX.Element>;
   pattern?: boolean;
   className?: string;
 }
 
 export const Section: React.FC<SectionProps> = ({
+  id,
   children,
   pattern,
   className,
@@ -22,7 +24,7 @@ export const Section: React.FC<SectionProps> = ({
     : ' dark:bg-dark-blue-700  bg-blue-200  ';
 
   return (
-    <section className={mergedStyle + patternStyle}>
+    <section id={id} className={mergedStyle + patternStyle}>
       <div className="max-w-screen-lg flex flex-col justify-center items-center">
         {children}
       </div>

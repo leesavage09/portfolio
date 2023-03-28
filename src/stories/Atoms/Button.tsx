@@ -6,6 +6,7 @@ interface ButtonProps {
   label: string;
   className?: string;
   href?: string;
+  scrollTo?: string;
   onClick?: () => void;
 }
 
@@ -13,6 +14,7 @@ export const Button: React.FC<ButtonProps> = ({
   primary,
   label,
   className = '',
+  scrollTo,
   href,
   onClick,
 }) => {
@@ -21,6 +23,18 @@ export const Button: React.FC<ButtonProps> = ({
   }  uppercase py-3 px-9 rounded-md drop-shadow-lg border-none duration-300 hover:-translate-y-1`;
 
   const style = twMerge(defaultStyle, className);
+
+  if (scrollTo)
+    return (
+      <a
+        type="button"
+        className={style}
+        href={`#${scrollTo}`}
+        onClick={onClick}
+      >
+        {label}
+      </a>
+    );
 
   if (href)
     return (
