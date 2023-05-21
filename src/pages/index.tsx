@@ -1,9 +1,7 @@
 import { ThemeContext } from '@components/ThemeContext';
 import { Button } from '@stories/Atoms/Button';
 import { Chip } from '@stories/Atoms/Chip';
-import { Heading1 } from '@stories/Atoms/Heading1';
-import { Heading2 } from '@stories/Atoms/Heading2';
-import { Heading3 } from '@stories/Atoms/Heading3';
+import { Heading } from '@stories/Atoms/Heading';
 import { Input } from '@stories/Atoms/Input';
 import { ScrollIndicator } from '@stories/Atoms/ScrollIndicator';
 import { Section } from '@stories/Atoms/Section';
@@ -30,9 +28,9 @@ export default function Home() {
       <main className={theme}>
         <Menu />
         <Section className="h-screen" pattern>
-          <Heading1>
+          <Heading type="h1">
             HEY, I&apos;M <span className="text-primary">Lee Savage</span>
-          </Heading1>
+          </Heading>
           <Subtitle1>
             A JavaScript focused web developer that builds frontend and backend
             applications
@@ -41,14 +39,14 @@ export default function Home() {
           <ScrollIndicator />
         </Section>
         <Section id="about">
-          <Heading2>About Me</Heading2>
+          <Heading type="h2">About Me</Heading>
           <Subtitle2>
             Here you will find more information about me, what I do, and my
             current skills mostly in terms of programming and technology
           </Subtitle2>
           <div className="w-full grid grid-cols-2 gap-20">
             <div className="flex flex-col justify-start">
-              <Heading3>Me</Heading3>
+              <Heading type="h3">Me</Heading>
               <p>
                 I&apos;m open to Job opportunities where I can contribute, learn
                 and grow. If you have a good opportunity that matches my skills
@@ -56,7 +54,7 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col justify-start">
-              <Heading3>My Skills</Heading3>
+              <Heading type="h3">My Skills</Heading>
               <div className="flex flex-wrap gap-4 ">
                 <Chip lable={'JavaScript'} />
                 <Chip lable={'Typescript'} />
@@ -73,7 +71,7 @@ export default function Home() {
           </div>
         </Section>
         <Section id="projects">
-          <Heading2>Projects</Heading2>
+          <Heading type="h2">Projects</Heading>
           <Subtitle2>
             Here you will find some of the personal and clients projects that I
             created with each project containing its own case study
@@ -86,7 +84,7 @@ export default function Home() {
           </CaseStudy>
         </Section>
         <Section pattern id="contact">
-          <Heading2>Contact</Heading2>
+          <Heading type="h2">Contact</Heading>
           <Subtitle2>
             Feel free to Contact me by submitting the form below and I will get
             back to you as soon as possible
