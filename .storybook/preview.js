@@ -31,7 +31,7 @@ export const decorators = [
       <ThemeContext.Provider value={{ theme, setTheme }}>
         <div
           className={`${theme} flex justify-center items-center h-screen ${
-            theme === 'dark' ? 'bg-dark-blue' : 'bg-blue-100'
+            theme === 'dark' ? 'bg-dark-blue-700' : 'bg-blue-100'
           }`}
         >
           <Story />
