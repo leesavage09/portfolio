@@ -19,8 +19,8 @@ export const CaseStudy: React.FC<CaseStudyProps> = ({
   return (
     <div className="w-full grid grid-cols-2 gap-20">
       <Image src={image} alt={`${title} image`} className="drop-shadow-md" />
-      <div>
-        <Heading type="h3">Not Instagram</Heading>
+      <div className="pt-4">
+        <Heading type="h3">{title}</Heading>
         <p className="text-md text-dark-blue dark:text-blue-100">{children}</p>
         <Button primary label={'Case Study'} className="mt-6" href={href} />
       </div>

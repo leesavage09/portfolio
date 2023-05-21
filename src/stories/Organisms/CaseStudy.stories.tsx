@@ -7,8 +7,13 @@ export default {
   component: CaseStudy,
 } as ComponentMeta<typeof CaseStudy>;
 
-export const example: ComponentStory<typeof CaseStudy> = (args) => (
-  <CaseStudy {...args} image={notinstagram} title={'Not Instagram'} href={'#'}>
-    This is an example
-  </CaseStudy>
+export const caseStudy: ComponentStory<typeof CaseStudy> = (args) => (
+  <CaseStudy {...args}>{args.children}</CaseStudy>
 );
+
+caseStudy.args = {
+  image: notinstagram,
+  title: 'Not Instagram!',
+  href: '#',
+  children: <>This is an example case study</>,
+};

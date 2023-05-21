@@ -7,11 +7,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 export const button: ComponentStory<typeof Button> = (args) => (
-  // div is a hack to force storybook to preload some styles
-  <>
-    <div className="bg-dark-blue-700" style={{ display: 'none' }} />
-    <Button {...args} />
-  </>
+  <Button {...args} />
 );
 
 button.args = {

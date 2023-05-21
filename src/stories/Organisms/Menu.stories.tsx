@@ -6,4 +6,4 @@ export default {
   component: Menu,
 } as ComponentMeta<typeof Menu>;
 
-export const noArgs: ComponentStory<typeof Menu> = () => <Menu />;
+export const menu: ComponentStory<typeof Menu> = () => <Menu />;
