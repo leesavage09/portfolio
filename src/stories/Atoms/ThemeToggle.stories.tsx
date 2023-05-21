@@ -2,8 +2,10 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeToggle } from './ThemeToggle';
 
 export default {
-  title: 'Molecules/ThemeToggle',
+  title: 'Atoms/ThemeToggle',
   component: ThemeToggle,
 } as ComponentMeta<typeof ThemeToggle>;
 
-export const noArgs: ComponentStory<typeof ThemeToggle> = () => <ThemeToggle />;
+export const themeToggle: ComponentStory<typeof ThemeToggle> = () => (
+  <ThemeToggle />
+);

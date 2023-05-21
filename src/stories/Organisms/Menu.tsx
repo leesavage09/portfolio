@@ -1,4 +1,4 @@
-import { ThemeToggle } from '@stories/Molecules/ThemeToggle';
+import { ThemeToggle } from '@stories/Atoms/ThemeToggle';
 import Image from 'next/image';
 import profilePic from '/public/images/leeSavage.png';
 
