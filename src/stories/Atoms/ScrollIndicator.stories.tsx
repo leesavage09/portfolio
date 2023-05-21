@@ -6,6 +6,6 @@ export default {
   component: ScrollIndicator,
 } as ComponentMeta<typeof ScrollIndicator>;
 
-export const noArgs: ComponentStory<typeof ScrollIndicator> = () => (
+export const scrollIndicator: ComponentStory<typeof ScrollIndicator> = () => (
   <ScrollIndicator />
 );

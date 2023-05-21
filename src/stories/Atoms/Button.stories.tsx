@@ -6,10 +6,15 @@ export default {
   component: Button,
 } as ComponentMeta<typeof Button>;
 
-export const primary: ComponentStory<typeof Button> = () => (
-  <Button primary={true} scrollTo=" " label={'Button'} />
+export const button: ComponentStory<typeof Button> = (args) => (
+  // div is a hack to force storybook to preload some styles
+  <>
+    <div className="bg-dark-blue-700" style={{ display: 'none' }} />
+    <Button {...args} />
+  </>
 );
 
-export const secondary: ComponentStory<typeof Button> = () => (
-  <Button primary={false} scrollTo=" " label={'Button'} />
-);
+button.args = {
+  label: 'Button',
+  primary: true,
+};

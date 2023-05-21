@@ -6,8 +6,11 @@ export default {
   component: Section,
 } as ComponentMeta<typeof Section>;
 
-export const noArgs: ComponentStory<typeof Section> = (args) => (
-  <Section {...args}>
-    <p>content will go here</p>
-  </Section>
+export const section: ComponentStory<typeof Section> = (args) => (
+  <Section {...args}>{args.children}</Section>
 );
+
+section.args = {
+  children: <p>This is some content</p>,
+  pattern: true,
+};
