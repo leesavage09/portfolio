@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Subtitle1 } from './Subtitle1';
 
 export default {
-  title: 'Atoms/Heading 1',
+  title: 'Atoms/Subtitle 1',
   component: Subtitle1,
 } as ComponentMeta<typeof Subtitle1>;
 
