@@ -6,9 +6,8 @@ export default {
   component: Chip,
 } as ComponentMeta<typeof Chip>;
 
-export const withLable: ComponentStory<typeof Chip> = (args) => (
-  <Chip {...args} />
-);
-withLable.args = {
-  lable: 'Default Lable',
+export const chip: ComponentStory<typeof Chip> = (args) => <Chip {...args} />;
+
+chip.args = {
+  lable: 'Chip',
 };
