@@ -5,8 +5,7 @@ import { Heading } from '@stories/Atoms/Heading';
 import { Input } from '@stories/Atoms/Input';
 import { ScrollIndicator } from '@stories/Atoms/ScrollIndicator';
 import { Section } from '@stories/Atoms/Section';
-import { Subtitle1 } from '@stories/Atoms/Subtitle1';
-import { Subtitle2 } from '@stories/Atoms/Subtitle2';
+import { Subtitle } from '@stories/Atoms/Subtitle';
 import { Form } from '@stories/Molecules/Form';
 import { CaseStudy } from '@stories/Organisms/CaseStudy';
 import { Menu } from '@stories/Organisms/Menu';
@@ -31,19 +30,19 @@ export default function Home() {
           <Heading type="h1">
             HEY, I&apos;M <span className="text-primary">Lee Savage</span>
           </Heading>
-          <Subtitle1>
+          <Subtitle type="L">
             A JavaScript focused web developer that builds frontend and backend
             applications
-          </Subtitle1>
+          </Subtitle>
           <Button primary label={'Projects'} scrollTo={'projects'} />
           <ScrollIndicator />
         </Section>
         <Section id="about">
           <Heading type="h2">About Me</Heading>
-          <Subtitle2>
+          <Subtitle type="M">
             Here you will find more information about me, what I do, and my
             current skills mostly in terms of programming and technology
-          </Subtitle2>
+          </Subtitle>
           <div className="w-full grid grid-cols-2 gap-20">
             <div className="flex flex-col justify-start">
               <Heading type="h3">Me</Heading>
@@ -72,10 +71,10 @@ export default function Home() {
         </Section>
         <Section id="projects">
           <Heading type="h2">Projects</Heading>
-          <Subtitle2>
+          <Subtitle type="M">
             Here you will find some of the personal and clients projects that I
             created with each project containing its own case study
-          </Subtitle2>
+          </Subtitle>
           <CaseStudy image={notinstagram} title={'Not Instagram'} href={'#'}>
             Notinstagram is a pixel perfect MVP version of Instagram. I created
             not instagram in my spare time to learn React and Ruby on Rails. It
@@ -85,10 +84,10 @@ export default function Home() {
         </Section>
         <Section pattern id="contact">
           <Heading type="h2">Contact</Heading>
-          <Subtitle2>
+          <Subtitle type="M">
             Feel free to Contact me by submitting the form below and I will get
             back to you as soon as possible
-          </Subtitle2>
+          </Subtitle>
           <Form submitLabel="Send Me An Email">
             <Input id="name" label="Name" placeholder="Enter your Name" />
             <Input id="email" label="Email" placeholder="Enter your Email" />
