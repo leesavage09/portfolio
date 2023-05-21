@@ -39,9 +39,9 @@ export const Menu = () => {
           className="w-11 h-11 rounded-full dark:bg-dark-blue-500 bg-blue-200 mr-3"
           alt="A portrait photo of Lee Savage"
         />
-        Lee Savage
+        <span className="invisible md:visible">Lee Savage</span>
       </a>
-      <ol className="flex space-x-9 items-center text-blue-100 ">
+      <ol className="flex flex-wrap space-x-9 items-center justify-end text-blue-100 ">
         <MenuLinkItem scrollTo="" lable="Home" />
         <MenuLinkItem scrollTo="about" lable="About" />
         <MenuLinkItem scrollTo="projects" lable="Projects" />
