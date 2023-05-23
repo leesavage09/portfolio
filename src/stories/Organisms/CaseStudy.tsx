@@ -1,5 +1,6 @@
 import { Button } from '@stories/Atoms/Button';
 import { Heading } from '@stories/Atoms/Heading';
+import { Layout } from '@stories/Atoms/Layout';
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 
@@ -17,18 +18,25 @@ export const CaseStudy: React.FC<CaseStudyProps> = ({
   href,
 }) => {
   return (
-    <div className="w-full grid grid-cols-2 gap-20 mb-36">
-      <Image
-        src={image}
-        alt={`${title} image`}
-        className="drop-shadow-md"
-        width={500}
-      />
-      <div className="pt-4">
-        <Heading type="h3">{title}</Heading>
-        {children}
-        <Button primary label={'Case Study'} className="mt-6" href={href} />
-      </div>
-    </div>
+    <Layout
+      className="grid grid-cols-2 gap-20"
+      columns={[
+        <>
+          <Image
+            src={image}
+            alt={`${title} image`}
+            className="drop-shadow-md"
+            width={500}
+          />
+        </>,
+        <>
+          <div className="pt-4">
+            <Heading type="h3">{title}</Heading>
+            {children}
+            <Button primary label={'Case Study'} className="mt-6" href={href} />
+          </div>
+        </>,
+      ]}
+    />
   );
 };

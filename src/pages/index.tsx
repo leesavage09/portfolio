@@ -3,6 +3,8 @@ import { Button } from '@stories/Atoms/Button';
 import { Chip } from '@stories/Atoms/Chip';
 import { Heading } from '@stories/Atoms/Heading';
 import { Input } from '@stories/Atoms/Input';
+import { Layout } from '@stories/Atoms/Layout';
+import { Paragraph } from '@stories/Atoms/Paragraph';
 import { ScrollIndicator } from '@stories/Atoms/ScrollIndicator';
 import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
@@ -12,6 +14,7 @@ import { Menu } from '@stories/Organisms/Menu';
 import Head from 'next/head';
 import { useContext } from 'react';
 import notinstagram from '/public/images/notinstagram.png';
+import tt2howtopay from '/public/images/tt2howtopay.png';
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
@@ -41,33 +44,36 @@ export default function Home() {
           <Heading type="h2">About Me</Heading>
           <Subtitle type="M">
             Here you will find more information about me, what I do, and my
-            current skills mostly in terms of programming and technology
+            skills and the technoliges I have used recently
           </Subtitle>
-          <div className="w-full grid grid-cols-2 gap-20">
-            <div className="flex flex-col justify-start">
-              <Heading type="h3">Me</Heading>
-              <p>
-                I&apos;m open to Job opportunities where I can contribute, learn
-                and grow. If you have a good opportunity that matches my skills
-                and experience then don&apos;t hesitate to contact me.
-              </p>
-            </div>
-            <div className="flex flex-col justify-start">
-              <Heading type="h3">My Skills</Heading>
-              <div className="flex flex-wrap gap-4 ">
-                <Chip lable={'JavaScript'} />
-                <Chip lable={'Typescript'} />
-                <Chip lable={'React'} />
-                <Chip lable={'Next.js'} />
-                <Chip lable={'Express'} />
-                <Chip lable={'Tailwind'} />
-                <Chip lable={'HTML'} />
-                <Chip lable={'CSS'} />
-                <Chip lable={'Responsive Design'} />
-                <Chip lable={'Git'} />
-              </div>
-            </div>
-          </div>
+          <Layout
+            className="grid grid-cols-2 gap-20"
+            columns={[
+              <>
+                <Heading type="h3">Me</Heading>
+                <Paragraph>
+                  I&apos;m open to Job opportunities where I can contribute,
+                  learn and grow. If you have a good opportunity that matches my
+                  skills and experience then don&apos;t hesitate to contact me.
+                </Paragraph>
+              </>,
+              <>
+                <Heading type="h3">My Skills</Heading>
+                <div className="flex flex-wrap gap-4 ">
+                  <Chip lable={'JavaScript'} />
+                  <Chip lable={'Typescript'} />
+                  <Chip lable={'React'} />
+                  <Chip lable={'Next.js'} />
+                  <Chip lable={'Express'} />
+                  <Chip lable={'Tailwind'} />
+                  <Chip lable={'HTML'} />
+                  <Chip lable={'CSS'} />
+                  <Chip lable={'Responsive Design'} />
+                  <Chip lable={'Git'} />
+                </div>
+              </>,
+            ]}
+          />
         </Section>
         <Section id="projects">
           <Heading type="h2">Projects</Heading>
@@ -75,12 +81,72 @@ export default function Home() {
             Here you will find some of the personal and clients projects that I
             created with each project containing its own case study
           </Subtitle>
-          <CaseStudy image={notinstagram} title={'Not Instagram'} href={'#'}>
-            Notinstagram is a pixel perfect MVP version of Instagram. I created
-            not instagram in my spare time to learn React and Ruby on Rails. It
-            serves as a demonstration of my capabilities in createing a complex
-            full stack aplication from scratch.
-          </CaseStudy>
+          <Layout
+            className="space-y-24"
+            columns={[
+              <>
+                <CaseStudy
+                  image={tt2howtopay}
+                  title={'Tyne Tunnel 2 Project'}
+                  href={'#'}
+                >
+                  <Paragraph>
+                    Tyne Tunnel is the most popular route for those driving to
+                    the North of England. The tunnel goes underneath the river
+                    Tyne and connects North and South Shields.
+                  </Paragraph>
+                  <Paragraph>
+                    I worked as the lead front-end developer on multiple front
+                    ends. Among them were a customer-faced web application, head
+                    office reporting and customer service.
+                  </Paragraph>
+                  <div className="flex flex-wrap gap-4 ">
+                    <Chip lable={'Agile Scrum'} />
+                    <Chip lable={'Gitflow'} />
+
+                    <Chip lable={'ClickUp'} />
+                    <Chip lable={'Jira'} />
+
+                    <Chip lable={'Babel'} />
+                    <Chip lable={'Vite'} />
+                    <Chip lable={'TypeScript'} />
+                    <Chip lable={'React'} />
+
+                    <Chip lable={'Eslint'} />
+                    <Chip lable={'SASS'} />
+                    <Chip lable={'Tailwind'} />
+
+                    <Chip lable={'URQL'} />
+                    <Chip lable={'GraphQL'} />
+
+                    <Chip lable={'Formik'} />
+                    <Chip lable={'Yup'} />
+                    <Chip lable={'Storybook'} />
+                    <Chip lable={'Ant design'} />
+
+                    <Chip lable={'Jest'} />
+                    <Chip lable={'Cypress'} />
+                    <Chip lable={'React Testing Library'} />
+                  </div>
+                </CaseStudy>
+              </>,
+              <>
+                <CaseStudy
+                  image={notinstagram}
+                  title={'Not Instagram'}
+                  href={'#'}
+                >
+                  <Paragraph>
+                    Notinstagram is a pixel perfect MVP version of Instagram. I
+                    created not instagram in my spare time to learn React and
+                    Ruby on Rails. It serves as a demonstration of my
+                    capabilities in createing a complex full stack aplication
+                    from scratch.
+                  </Paragraph>
+                </CaseStudy>
+              </>,
+            ]}
+          />
         </Section>
         <Section pattern id="contact">
           <Heading type="h2">Contact</Heading>
