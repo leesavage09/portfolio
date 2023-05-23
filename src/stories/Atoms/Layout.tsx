@@ -7,7 +7,7 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ columns, className = '' }) => {
   const jsxColumns = columns.map((column, idx) => (
-    <div key={idx} className="flex flex-col justify-start">
+    <div key={idx} className="flex flex-col justify-center">
       {column}
     </div>
   ));
