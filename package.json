@@ -9,13 +9,11 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "husky install && next build && build-storybook -o public/storybook",
     "start": "next start",
-    "prepare": "husky install",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -o public/storybook"
+    "storybook": "start-storybook -s ./public -p 6006"
   },
   "dependencies": {
     "@next/font": "13.1.6",
