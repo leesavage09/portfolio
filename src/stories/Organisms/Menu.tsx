@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { ThemeToggle } from '@stories/Atoms/ThemeToggle';
 import Image from 'next/image';
 import profilePic from '/public/images/leeSavage.png';
@@ -12,7 +13,7 @@ const MenuLinkItem = ({
   <li>
     <a
       className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
-      href={`#${scrollTo}`}
+      href={`/#${scrollTo}`}
     >
       {lable}
     </a>
@@ -29,7 +30,7 @@ export const Menu = () => {
     "
     >
       <a
-        href="#"
+        href="/#"
         className="text-primary hover:text-yellow duration-500 flex items-center"
       >
         <Image
