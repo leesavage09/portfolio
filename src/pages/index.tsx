@@ -1,15 +1,14 @@
 import { Button } from '@stories/Atoms/Button';
 import { Chip } from '@stories/Atoms/Chip';
 import { Heading } from '@stories/Atoms/Heading';
-import { Input } from '@stories/Atoms/Input';
 import { Layout } from '@stories/Atoms/Layout';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { ScrollIndicator } from '@stories/Atoms/ScrollIndicator';
 import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
-import { Form } from '@stories/Molecules/Form';
 import { CaseStudy } from '@stories/Organisms/CaseStudy';
 import Head from 'next/head';
+import { Contact } from './components/Contact';
 import notinstagram from '/public/images/notinstagram.png';
 import tt2overview from '/public/images/tt2overview.png';
 
@@ -57,7 +56,7 @@ export default function Home() {
               className: '',
               element: (
                 <>
-                  <Heading type="h3">Favorate Technolgies</Heading>
+                  <Heading type="h3">Favorite Technologies</Heading>
                   <div className="flex flex-wrap gap-4 ">
                     <Chip lable={'SAAS'} />
                     <Chip lable={'JavaScript'} />
@@ -132,21 +131,7 @@ export default function Home() {
         />
       </Section>
       <Section pattern id="contact">
-        <Heading type="h2">Contact</Heading>
-        <Subtitle type="M">
-          Feel free to Contact me by submitting the form below and I will get
-          back to you as soon as possible
-        </Subtitle>
-        <Form submitLabel="Send Me An Email">
-          <Input id="name" label="Name" placeholder="Enter your Name" />
-          <Input id="email" label="Email" placeholder="Enter your Email" />
-          <Input
-            id="message"
-            textArea
-            label="Message"
-            placeholder="Enter your Message"
-          />
-        </Form>
+        <Contact />
       </Section>
     </>
   );

@@ -7,8 +7,10 @@ import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
 import Head from 'next/head';
 import Image from 'next/image';
-import tt2Mobile from '/public/images/tt2Mobile.jpg';
+import { Contact } from './components/Contact';
+import tt2 from '/public/images/tt2.png';
 import tt2devices from '/public/images/tt2devices.png';
+import tt2devices2 from '/public/images/tt2devices2.png';
 
 export default function TT2() {
   return (
@@ -16,13 +18,14 @@ export default function TT2() {
       <Head>
         <title>TT2 Case Study</title>
       </Head>
-      <Section id="about" pattern>
+      <Section id="about" pattern className="pt-40">
         <Heading type="h1">Tyne Tunnel 2 Project</Heading>
         <OrderedList
           items={[
             {
               name: 'Client',
               discription: 'Land digital agency',
+              href: 'https://www.landdigital.agency/',
             },
             {
               name: 'Role',
@@ -30,7 +33,7 @@ export default function TT2() {
             },
             {
               name: 'Scope',
-              discription: 'Large monorepo project with multiple front-end',
+              discription: 'Large monorepo with multiple user interfaces',
             },
             {
               name: 'Timeframe',
@@ -68,47 +71,51 @@ export default function TT2() {
               ),
             },
             {
-              className: '',
+              className: 'justify-center',
               element: (
-                <>
-                  <Heading type="h3">Technologies used</Heading>
-                  <div className="flex flex-wrap gap-4 ">
-                    <Chip lable={'Agile Scrum'} />
-                    <Chip lable={'Gitflow'} />
-
-                    <Chip lable={'ClickUp'} />
-                    <Chip lable={'Jira'} />
-
-                    <Chip lable={'Babel'} />
-                    <Chip lable={'Vite'} />
-                    <Chip lable={'TypeScript'} />
-                    <Chip lable={'React'} />
-
-                    <Chip lable={'Eslint'} />
-                    <Chip lable={'SASS'} />
-                    <Chip lable={'Tailwind'} />
-
-                    <Chip lable={'URQL'} />
-                    <Chip lable={'GraphQL'} />
-
-                    <Chip lable={'Formik'} />
-                    <Chip lable={'Yup'} />
-                    <Chip lable={'Storybook'} />
-                    <Chip lable={'Ant design'} />
-
-                    <Chip lable={'Jest'} />
-                    <Chip lable={'Cypress'} />
-                    <Chip lable={'React Testing Library'} />
-                  </div>
-                </>
+                <Image
+                  src={tt2}
+                  alt={`TT2 tunnel`}
+                  className="drop-shadow-md"
+                  width={500}
+                />
               ),
             },
           ]}
         />
+        <Heading type="h3">Technologies used</Heading>
+        <div className="flex flex-wrap gap-4 ">
+          <Chip lable={'Agile Scrum'} />
+          <Chip lable={'Gitflow'} />
+
+          <Chip lable={'ClickUp'} />
+          <Chip lable={'Jira'} />
+
+          <Chip lable={'Babel'} />
+          <Chip lable={'Vite'} />
+          <Chip lable={'TypeScript'} />
+          <Chip lable={'React'} />
+
+          <Chip lable={'Eslint'} />
+          <Chip lable={'SASS'} />
+          <Chip lable={'Tailwind'} />
+
+          <Chip lable={'URQL'} />
+          <Chip lable={'GraphQL'} />
+
+          <Chip lable={'Formik'} />
+          <Chip lable={'Yup'} />
+          <Chip lable={'Storybook'} />
+          <Chip lable={'Ant design'} />
+
+          <Chip lable={'Jest'} />
+          <Chip lable={'Cypress'} />
+          <Chip lable={'React Testing Library'} />
+        </div>
       </Section>
 
       <Section id="details">
-        <Heading type="h2">Multiple front-ends</Heading>
+        <Heading type="h2">Multiple front ends</Heading>
         <Subtitle type="M">
           I worked as the lead front-end developer on multiple front ends.
         </Subtitle>
@@ -158,13 +165,19 @@ export default function TT2() {
       </Section>
 
       <Section id="details">
-        <Heading type="h2">Work Compleated</Heading>
+        <Heading type="h2">Work Completed</Heading>
         <Subtitle type="M">
           Due to the large scope of the project, continuous updates and ongoing
           improvements were necessary. Improvements like reduction of technical
           debt, implementation of features, redesigns, and improvements of user
           experience.
         </Subtitle>
+        <Image
+          src={tt2devices2}
+          alt={`TT2 mobile app images`}
+          className="drop-shadow-md mb-8"
+          width={1024}
+        />
         <Layout
           columns={2}
           elements={[
@@ -212,13 +225,8 @@ export default function TT2() {
           ]}
         />
       </Section>
-      <Section id="images">
-        <Image
-          src={tt2Mobile}
-          alt={`TT2 mobile app images`}
-          className="drop-shadow-md"
-          width={1024}
-        />
+      <Section pattern id="contact">
+        <Contact />
       </Section>
     </>
   );
