@@ -19,23 +19,36 @@ export const CaseStudy: React.FC<CaseStudyProps> = ({
 }) => {
   return (
     <Layout
-      className="grid grid-cols-2 gap-20"
-      columns={[
-        <>
-          <Image
-            src={image}
-            alt={`${title} image`}
-            className="drop-shadow-md"
-            width={500}
-          />
-        </>,
-        <>
-          <div className="pt-4">
-            <Heading type="h3">{title}</Heading>
-            {children}
-            <Button primary label={'Case Study'} className="mt-6" href={href} />
-          </div>
-        </>,
+      columns={2}
+      elements={[
+        {
+          element: (
+            <>
+              <Image
+                src={image}
+                alt={`${title} image`}
+                className="drop-shadow-md"
+                width={500}
+              />
+            </>
+          ),
+        },
+        {
+          element: (
+            <>
+              <div className="pt-4">
+                <Heading type="h3">{title}</Heading>
+                {children}
+                <Button
+                  primary
+                  label={'Case Study'}
+                  className="mt-6"
+                  href={href}
+                />
+              </div>
+            </>
+          ),
+        },
       ]}
     />
   );

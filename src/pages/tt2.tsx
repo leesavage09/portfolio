@@ -41,57 +41,68 @@ export default function TT2() {
       </Section>
       <Section id="about">
         <Layout
-          className="grid grid-cols-2 gap-20"
-          columns={[
-            <>
-              <Heading type="h3">About Tyne Tunnel</Heading>
-              <Paragraph>
-                Tyne Tunnel is the most popular route for those driving to the
-                North of England. The tunnel goes underneath the river Tyne and
-                connects North and South Shields.
-              </Paragraph>
-              <Paragraph>
-                First opened in 1967 as a single lane tunnel in each direction,
-                the tunnel was expanded to a dual carriageway in 2011. Nowadays,
-                the tunnel facilitates over 60,000 journeys each day.
-              </Paragraph>
-              <Paragraph>
-                A cashless free flow system was implemented in November 2021.
-                The removal of barriers and physical payment booths required
-                implementation of a web app payment system.
-              </Paragraph>
-            </>,
-            <>
-              <Heading type="h3">Technologies used</Heading>
-              <div className="flex flex-wrap gap-4 ">
-                <Chip lable={'Agile Scrum'} />
-                <Chip lable={'Gitflow'} />
+          columns={2}
+          elements={[
+            {
+              className: '',
+              element: (
+                <>
+                  <Heading type="h3">About Tyne Tunnel</Heading>
+                  <Paragraph>
+                    Tyne Tunnel is the most popular route for those driving to
+                    the North of England. The tunnel goes underneath the river
+                    Tyne and connects North and South Shields.
+                  </Paragraph>
+                  <Paragraph>
+                    First opened in 1967 as a single lane tunnel in each
+                    direction, the tunnel was expanded to a dual carriageway in
+                    2011. Nowadays, the tunnel facilitates over 60,000 journeys
+                    each day.
+                  </Paragraph>
+                  <Paragraph>
+                    A cashless free flow system was implemented in November
+                    2021. The removal of barriers and physical payment booths
+                    required implementation of a web app payment system.
+                  </Paragraph>
+                </>
+              ),
+            },
+            {
+              className: '',
+              element: (
+                <>
+                  <Heading type="h3">Technologies used</Heading>
+                  <div className="flex flex-wrap gap-4 ">
+                    <Chip lable={'Agile Scrum'} />
+                    <Chip lable={'Gitflow'} />
 
-                <Chip lable={'ClickUp'} />
-                <Chip lable={'Jira'} />
+                    <Chip lable={'ClickUp'} />
+                    <Chip lable={'Jira'} />
 
-                <Chip lable={'Babel'} />
-                <Chip lable={'Vite'} />
-                <Chip lable={'TypeScript'} />
-                <Chip lable={'React'} />
+                    <Chip lable={'Babel'} />
+                    <Chip lable={'Vite'} />
+                    <Chip lable={'TypeScript'} />
+                    <Chip lable={'React'} />
 
-                <Chip lable={'Eslint'} />
-                <Chip lable={'SASS'} />
-                <Chip lable={'Tailwind'} />
+                    <Chip lable={'Eslint'} />
+                    <Chip lable={'SASS'} />
+                    <Chip lable={'Tailwind'} />
 
-                <Chip lable={'URQL'} />
-                <Chip lable={'GraphQL'} />
+                    <Chip lable={'URQL'} />
+                    <Chip lable={'GraphQL'} />
 
-                <Chip lable={'Formik'} />
-                <Chip lable={'Yup'} />
-                <Chip lable={'Storybook'} />
-                <Chip lable={'Ant design'} />
+                    <Chip lable={'Formik'} />
+                    <Chip lable={'Yup'} />
+                    <Chip lable={'Storybook'} />
+                    <Chip lable={'Ant design'} />
 
-                <Chip lable={'Jest'} />
-                <Chip lable={'Cypress'} />
-                <Chip lable={'React Testing Library'} />
-              </div>
-            </>,
+                    <Chip lable={'Jest'} />
+                    <Chip lable={'Cypress'} />
+                    <Chip lable={'React Testing Library'} />
+                  </div>
+                </>
+              ),
+            },
           ]}
         />
       </Section>
@@ -102,36 +113,46 @@ export default function TT2() {
           I worked as the lead front-end developer on multiple front ends.
         </Subtitle>
         <Layout
-          className="grid grid-cols-2 gap-20"
-          columns={[
-            <>
-              <Image
-                src={tt2devices}
-                alt={`TT2 app images`}
-                className="drop-shadow-md"
-                width={500}
-              />
-            </>,
-            <>
-              <Heading type="h3">Customer Web app</Heading>
-              <Paragraph>
-                The customer facing front end is a responsive web app. Customers
-                are able to sign in, view their journeys, pay for tolls manage
-                vehicles and top-up their account.
-              </Paragraph>
-              <Heading type="h3">Head office reporting</Heading>
-              <Paragraph>
-                The front end of head office reporting provides a view on
-                several statistics for tunnel usage, payments, UTN charges and
-                more. It also offers the possibility to export data.
-              </Paragraph>
-              <Heading type="h3">Customer service</Heading>
-              <Paragraph>
-                The back-office for the customer service facilitates speedy,
-                informative, one-touch responses to customers, to enabling team
-                members to exceed internal KPIs.
-              </Paragraph>
-            </>,
+          columns={2}
+          elements={[
+            {
+              className: 'justify-center',
+              element: (
+                <>
+                  <Image
+                    src={tt2devices}
+                    alt={`TT2 app images`}
+                    className="drop-shadow-md"
+                    width={500}
+                  />
+                </>
+              ),
+            },
+            {
+              className: '',
+              element: (
+                <>
+                  <Heading type="h3">Customer Web app</Heading>
+                  <Paragraph>
+                    The customer facing front end is a responsive web app.
+                    Customers are able to sign in, view their journeys, pay for
+                    tolls manage vehicles and top-up their account.
+                  </Paragraph>
+                  <Heading type="h3">Head office reporting</Heading>
+                  <Paragraph>
+                    The front end of head office reporting provides a view on
+                    several statistics for tunnel usage, payments, UTN charges
+                    and more. It also offers the possibility to export data.
+                  </Paragraph>
+                  <Heading type="h3">Customer service</Heading>
+                  <Paragraph>
+                    The back-office for the customer service facilitates speedy,
+                    informative, one-touch responses to customers, to enabling
+                    team members to exceed internal KPIs.
+                  </Paragraph>
+                </>
+              ),
+            },
           ]}
         />
       </Section>
@@ -145,39 +166,49 @@ export default function TT2() {
           experience.
         </Subtitle>
         <Layout
-          className="grid grid-cols-2 gap-20"
-          columns={[
-            <>
-              <Heading type="h3">Stripe implementation</Heading>
-              <Paragraph>
-                When I joined Land Digital agency on the Tyne Tunnel 2 Project,
-                WorldPay was the payment provider. I replaced WorldPay with a
-                customized Stripe check-out.
-              </Paragraph>
-              <Heading type="h3">Authentication</Heading>
-              <Paragraph>
-                I refactored front end authentication logic, simplifying a
-                customized authentication/authorization component. The component
-                handled masquerade tokens allowing telephone support agents
-                access to user accounts.
-              </Paragraph>
-            </>,
-            <>
-              <Heading type="h3">Migration to React router 6</Heading>
-              <Paragraph>
-                To clarify design decisions and help future developers maintain
-                the code base, I refactored and simplified application routing
-                with a migration from React router 5 to React router 6. This
-                included modifications of the use and structure of React 18
-                suspense API and fallback components.
-              </Paragraph>
-              <Heading type="h3">Testing</Heading>
-              <Paragraph>
-                Because of the large number of users, many implemented key
-                features were backed-up with multi-layered (Snapshot, Unit,
-                Integration and E2E) testing for bug-free development.
-              </Paragraph>
-            </>,
+          columns={2}
+          elements={[
+            {
+              className: '',
+              element: (
+                <>
+                  <Heading type="h3">Stripe implementation</Heading>
+                  <Paragraph>
+                    When I joined Land Digital agency on the Tyne Tunnel 2
+                    Project, WorldPay was the payment provider. I replaced
+                    WorldPay with a customized Stripe check-out.
+                  </Paragraph>
+                  <Heading type="h3">Authentication</Heading>
+                  <Paragraph>
+                    I refactored front end authentication logic, simplifying a
+                    customized authentication/authorization component. The
+                    component handled masquerade tokens allowing telephone
+                    support agents access to user accounts.
+                  </Paragraph>
+                </>
+              ),
+            },
+            {
+              className: '',
+              element: (
+                <>
+                  <Heading type="h3">Migration to React router 6</Heading>
+                  <Paragraph>
+                    To clarify design decisions and help future developers
+                    maintain the code base, I refactored and simplified
+                    application routing with a migration from React router 5 to
+                    React router 6. This included modifications of the use and
+                    structure of React 18 suspense API and fallback components.
+                  </Paragraph>
+                  <Heading type="h3">Testing</Heading>
+                  <Paragraph>
+                    Because of the large number of users, many implemented key
+                    features were backed-up with multi-layered (Snapshot, Unit,
+                    Integration and E2E) testing for bug-free development.
+                  </Paragraph>
+                </>
+              ),
+            },
           ]}
         />
       </Section>
