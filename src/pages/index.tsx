@@ -11,7 +11,7 @@ import { Form } from '@stories/Molecules/Form';
 import { CaseStudy } from '@stories/Organisms/CaseStudy';
 import Head from 'next/head';
 import notinstagram from '/public/images/notinstagram.png';
-import tt2devices from '/public/images/tt2devices.png';
+import tt2overview from '/public/images/tt2overview.png';
 
 export default function Home() {
   return (
@@ -90,7 +90,7 @@ export default function Home() {
               element: (
                 <>
                   <CaseStudy
-                    image={tt2devices}
+                    image={tt2overview}
                     title={'Tyne Tunnel 2 Project'}
                     href={'/tt2'}
                   >
