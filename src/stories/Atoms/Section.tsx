@@ -15,7 +15,7 @@ export const Section: React.FC<SectionProps> = ({
   className,
 }) => {
   const defaultStyle =
-    'flex flex-col justify-center items-center py-24 px-9 w-full dark:text-blue-100 text-dark-blue-800 text-lg';
+    'flex flex-col justify-center items-center py-16 px-9 w-full dark:text-blue-100 text-dark-blue-800 text-lg';
 
   const mergedStyle = twMerge(defaultStyle, className);
 
