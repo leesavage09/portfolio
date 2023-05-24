@@ -8,7 +8,7 @@ import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
 import { CaseStudy } from '@stories/Organisms/CaseStudy';
 import Head from 'next/head';
-import { Contact } from './components/Contact';
+import Contact from './components/Contact';
 import notinstagram from '/public/images/notinstagram.png';
 import tt2overview from '/public/images/tt2overview.png';
 

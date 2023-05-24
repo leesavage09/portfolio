@@ -3,7 +3,7 @@ import { Input } from '@stories/Atoms/Input';
 import { Subtitle } from '@stories/Atoms/Subtitle';
 import { Form } from '@stories/Molecules/Form';
 
-export const Contact = () => {
+export default function Contact() {
   return (
     <>
       <Heading type="h2">Contact</Heading>
@@ -23,4 +23,4 @@ export const Contact = () => {
       </Form>
     </>
   );
-};
+}

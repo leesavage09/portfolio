@@ -7,7 +7,7 @@ import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
 import Head from 'next/head';
 import Image from 'next/image';
-import { Contact } from './components/Contact';
+import Contact from './components/Contact';
 import tt2 from '/public/images/tt2.png';
 import tt2devices from '/public/images/tt2devices.png';
 import tt2devices2 from '/public/images/tt2devices2.png';
