@@ -29,40 +29,44 @@ export const Menu = () => (
         <span className="invisible md:visible">Lee Savage</span>
       </>
     </Link>
-    <ol className="flex flex-wrap space-x-9 items-center justify-end text-blue-100 ">
-      <Link
-        href="/"
-        scrollTarget="home"
-        className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
-      >
-        Home
-      </Link>
-      <Link
-        href="/"
-        scrollTarget="about"
-        className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
-      >
-        About
-      </Link>
-      <Link
-        href="/"
-        scrollTarget="projects"
-        className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
-      >
-        Projects
-      </Link>
-      <Link
-        href="/"
-        scrollTarget="contact"
-        className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
-      >
-        Contact
-      </Link>
-
-      <li>
-        {' '}
+    <div className="flex items-center ">
+      <ol className="flex flex-wrap space-x-9 justify-end text-blue-100 ">
+        <span className="flex flex-wrap space-x-9 justify-end">
+          <Link
+            href="/"
+            scrollTarget="home"
+            className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
+          >
+            Home
+          </Link>
+          <Link
+            href="/"
+            scrollTarget="about"
+            className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
+          >
+            About
+          </Link>
+        </span>
+        <span className="flex flex-wrap space-x-9 justify-end">
+          <Link
+            href="/"
+            scrollTarget="projects"
+            className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
+          >
+            Projects
+          </Link>
+          <Link
+            href="/"
+            scrollTarget="contact"
+            className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
+          >
+            Contact
+          </Link>
+        </span>
+      </ol>
+      <li className="list-none ml-4">
         <ThemeToggle />
       </li>
-    </ol>
+    </div>
   </nav>
 );
