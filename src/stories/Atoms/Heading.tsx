@@ -12,7 +12,7 @@ export const Heading: React.FC<Heading1Props> = ({ children, type }) => {
         text-dark-blue 
         dark:text-blue-100 
         
-        text-6xl uppercase font-extrabold
+        text-4xl lg:text-6xl uppercase font-extrabold
     
         pb-4
         "
@@ -27,7 +27,7 @@ export const Heading: React.FC<Heading1Props> = ({ children, type }) => {
           text-dark-blue 
           dark:text-blue-100 
           
-          text-4xl uppercase font-extrabold
+          text-2xl lg:text-4xl uppercase font-extrabold
       
           mb-11
       
@@ -54,7 +54,7 @@ export const Heading: React.FC<Heading1Props> = ({ children, type }) => {
             text-dark-blue 
             dark:text-blue-100 
             
-            text-3xl capitalize font-extrabold
+            text-xl lg:text-3xl capitalize font-extrabold
         
             mb-6
             "

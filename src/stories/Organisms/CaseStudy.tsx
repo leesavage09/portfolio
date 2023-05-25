@@ -21,7 +21,7 @@ export const CaseStudy: React.FC<CaseStudyProps> = ({
 }) => {
   return (
     <Layout columns={2}>
-      <LayoutItem className="justify-center items-center">
+      <LayoutItem className="justify-center">
         <Image
           src={image}
           alt={`${title} image`}

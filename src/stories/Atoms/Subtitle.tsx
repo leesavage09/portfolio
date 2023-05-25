@@ -6,8 +6,12 @@ interface Heading1Props {
 export const Subtitle: React.FC<Heading1Props> = ({ children, type }) => {
   switch (type) {
     case 'L':
-      return <p className="text-2xl text-center mb-8">{children}</p>;
+      return (
+        <p className="md:text-xl lg:text-2xl text-center mb-8">{children}</p>
+      );
     case 'M':
-      return <p className="text-center text-xl mb-16">{children}</p>;
+      return (
+        <p className="md:text-l lg:text-xl text-center mb-16">{children}</p>
+      );
   }
 };

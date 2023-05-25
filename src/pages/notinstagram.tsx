@@ -156,44 +156,38 @@ export default function TT2() {
             </Paragraph>
           </LayoutItem>
           <LayoutItem>
-            <div>
-              <Heading type="h3">Live demo</Heading>
-              <Paragraph>
-                You can view a live demo of notinstagram. Please note that the
-                web app is designed for mobile devices only. To access the demo,
-                you can best use a mobile device. On desktop, you can use the
-                mobile simulator in the browser DevTools.
-              </Paragraph>
-              <Paragraph>
-                Warning: If you use Chrome or a browser with fishing protection,
-                the site is flagged as a scam. I take this as a complement, as
-                it looks identical to the old version of Instagram. For example,
-                with Chrome you will need to click through&apos;Detail&apos;
-                &apos;visit this unsafe site&apos;.
-              </Paragraph>
-              <Button
-                primary
-                label={'Live Link'}
-                href={'https://not--instagram.herokuapp.com/'}
-              />
-            </div>
+            <Heading type="h3">Live demo</Heading>
+            <Paragraph>
+              You can view a live demo of notinstagram. Please note that the web
+              app is designed for mobile devices only. To access the demo, you
+              can best use a mobile device. On desktop, you can use the mobile
+              simulator in the browser DevTools.
+            </Paragraph>
+            <Paragraph>
+              Warning: If you use Chrome or a browser with fishing protection,
+              the site is flagged as a scam. I take this as a complement, as it
+              looks identical to the old version of Instagram. For example, with
+              Chrome you will need to click through&apos;Detail&apos;
+              &apos;visit this unsafe site&apos;.
+            </Paragraph>
+            <Button
+              primary
+              label={'Live Link'}
+              href={'https://not--instagram.herokuapp.com/'}
+            />
           </LayoutItem>
           <LayoutItem>
-            <div>
-              <Heading type="h3">Full documentation</Heading>
-              <Paragraph>
-                Full documentation on notinstagram is available on my GitHub
-                account. The documentation includes more information on the
-                above, multiple code examples and more screenshots.
-              </Paragraph>
-              <Button
-                primary
-                label={'GitHub'}
-                href={
-                  'https://github.com/leesavage09/notinstagram#notinstagram'
-                }
-              />
-            </div>
+            <Heading type="h3">Full documentation</Heading>
+            <Paragraph>
+              Full documentation on notinstagram is available on my GitHub
+              account. The documentation includes more information on the above,
+              multiple code examples and more screenshots.
+            </Paragraph>
+            <Button
+              primary
+              label={'GitHub'}
+              href={'https://github.com/leesavage09/notinstagram#notinstagram'}
+            />
           </LayoutItem>
         </Layout>
         <Image

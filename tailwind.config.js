@@ -91,6 +91,11 @@ module.exports = {
         scroll: 'scroll 1.5s ease-in infinite',
       },
     },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+    },
   },
   plugins: [],
 };

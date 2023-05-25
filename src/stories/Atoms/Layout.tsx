@@ -7,7 +7,9 @@ interface LayoutItemProps {
 }
 
 export const LayoutItem = ({ children, className }: LayoutItemProps) => (
-  <div className={twMerge('flex flex-col justify-start', className)}>
+  <div
+    className={twMerge('flex flex-col justify-start  items-center', className)}
+  >
     {children}
   </div>
 );
@@ -23,9 +25,7 @@ export const Layout = ({ children, columns }: LayoutProps) => {
       case 1:
         return 'w-full grid grid-cols-1 gap-x-20 gap-y-24';
       case 2:
-        return 'w-full grid grid-cols-2 gap-x-20 gap-y-24';
-      case 3:
-        return 'w-full grid grid-cols-3 gap-x-20 gap-y-24';
+        return 'w-full grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-24';
     }
   })();
 

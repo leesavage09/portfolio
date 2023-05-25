@@ -8,7 +8,9 @@ export const Menu = () => (
     className="fixed z-10 top-0 left-0 
     flex justify-between w-full p-4 
     dark:bg-dark-blue-700 bg-blue-100 drop-shadow-lg 
-    text-md uppercase font-extrabold     
+    text-sm uppercase font-extrabold  
+    sm:text-base
+    md:text-lg
     "
   >
     <Link
