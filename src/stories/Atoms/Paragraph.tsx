@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 interface ParagraphProps {
-  children: string;
+  children: ReactElement | string;
 }
 
 export const Paragraph: React.FC<ParagraphProps> = ({ children }) => {

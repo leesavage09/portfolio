@@ -19,7 +19,7 @@ export default function TT2() {
         <title>TT2 Case Study</title>
       </Head>
       <Section id="heading" pattern className="pt-40">
-        <Heading type="h1">Tyne Tunnel 2 Project</Heading>
+        <Heading type="h1">Tyne Tunnel 2 Case Study</Heading>
         <OrderedList
           items={[
             {

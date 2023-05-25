@@ -34,7 +34,11 @@ export const ProjectsSection = () => (
       </LayoutItem>
 
       <LayoutItem>
-        <CaseStudy image={notinstagram} title={'Not Instagram'} href={'#'}>
+        <CaseStudy
+          image={notinstagram}
+          title={'Not Instagram'}
+          href={'/notinstagram'}
+        >
           <Paragraph>
             Notinstagram is a pixel perfect MVP version of Instagram. I created
             not instagram in my spare time to learn React and Ruby on Rails. It
