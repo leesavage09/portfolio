@@ -1,26 +1,23 @@
+import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
+
+interface LayoutItemProps {
+  className?: string;
+  children?: ReactNode;
+}
+
+export const LayoutItem = ({ children, className }: LayoutItemProps) => (
+  <div className={twMerge('flex flex-col justify-start', className)}>
+    {children}
+  </div>
+);
 
 interface LayoutProps {
   columns: 1 | 2 | 3;
-  elements: Array<{
-    className?: string;
-    element: JSX.Element;
-  }>;
+  children: ReactNode;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ elements, columns }) => {
-  const jsx = elements.map((element, idx) => (
-    <div
-      key={idx}
-      className={twMerge(
-        'flex flex-col justify-start',
-        element?.className || ''
-      )}
-    >
-      {element.element}
-    </div>
-  ));
-
+export const Layout = ({ children, columns }: LayoutProps) => {
   const tailwindCol = (() => {
     switch (columns) {
       case 1:
@@ -32,5 +29,5 @@ export const Layout: React.FC<LayoutProps> = ({ elements, columns }) => {
     }
   })();
 
-  return <div className={tailwindCol}>{jsx}</div>;
+  return <div className={tailwindCol}>{children}</div>;
 };
