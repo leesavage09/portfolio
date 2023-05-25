@@ -1,26 +1,36 @@
 import { default as NextLink } from 'next/link';
 import { useRouter } from 'next/router';
 import { ReactElement, useEffect, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface LinkProps {
   href: string;
   scrollTarget?: string;
   children: ReactElement | string;
+  className?: string;
 }
 
-export const Link = ({ href, scrollTarget, children }: LinkProps) => {
+export const Link = ({
+  href,
+  scrollTarget,
+  children,
+  className = '',
+}: LinkProps) => {
   const router = useRouter();
   const [foundTarget, setFoundTarget] = useState(false);
 
   useEffect(() => {
     if (!scrollTarget) return;
     setFoundTarget(!!document.getElementById(scrollTarget));
-  }, [scrollTarget]);
+  }, [router, scrollTarget]);
 
   if (scrollTarget && foundTarget) {
     console.log(router.pathname, { href }, { scrollTarget });
     return (
-      <a className="text-primary" href={'#' + scrollTarget}>
+      <a
+        className={twMerge('text-primary', className)}
+        href={'#' + scrollTarget}
+      >
         {' '}
         {children}{' '}
       </a>
@@ -30,7 +40,7 @@ export const Link = ({ href, scrollTarget, children }: LinkProps) => {
   const hash = scrollTarget ? '#' + scrollTarget : '';
 
   return (
-    <NextLink className="text-primary" href={href + hash}>
+    <NextLink className={twMerge('text-primary', className)} href={href + hash}>
       {' '}
       {children}{' '}
     </NextLink>

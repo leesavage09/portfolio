@@ -3,7 +3,7 @@ import { Layout, LayoutItem } from '@stories/Atoms/Layout';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { Subtitle } from '@stories/Atoms/Subtitle';
 import { CaseStudy } from '@stories/Organisms/CaseStudy';
-import notinstagram from '/public/images/notinstagram.png';
+import notinstagramsingle1 from '/public/images/notinstagramsingle1.png';
 import tt2overview from '/public/images/tt2overview.png';
 
 export const ProjectsSection = () => (
@@ -17,6 +17,7 @@ export const ProjectsSection = () => (
       <LayoutItem>
         <CaseStudy
           image={tt2overview}
+          imageWidth={500}
           title={'Tyne Tunnel 2 Project'}
           href={'/tt2'}
         >
@@ -35,7 +36,8 @@ export const ProjectsSection = () => (
 
       <LayoutItem>
         <CaseStudy
-          image={notinstagram}
+          image={notinstagramsingle1}
+          imageWidth={250}
           title={'Not Instagram'}
           href={'/notinstagram'}
         >

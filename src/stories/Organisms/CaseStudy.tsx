@@ -6,6 +6,7 @@ import React from 'react';
 
 interface CaseStudyProps {
   image: StaticImageData;
+  imageWidth: number;
   title: string;
   children: string | JSX.Element[] | JSX.Element;
   href: string;
@@ -13,18 +14,19 @@ interface CaseStudyProps {
 
 export const CaseStudy: React.FC<CaseStudyProps> = ({
   image,
+  imageWidth,
   title,
   children,
   href,
 }) => {
   return (
     <Layout columns={2}>
-      <LayoutItem className="justify-center">
+      <LayoutItem className="justify-center items-center">
         <Image
           src={image}
           alt={`${title} image`}
           className="drop-shadow-md"
-          width={500}
+          width={imageWidth}
         />
       </LayoutItem>
 

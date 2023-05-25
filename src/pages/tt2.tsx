@@ -1,3 +1,4 @@
+import { Button } from '@stories/Atoms/Button';
 import { Chip } from '@stories/Atoms/Chip';
 import { Heading } from '@stories/Atoms/Heading';
 import { Layout, LayoutItem } from '@stories/Atoms/Layout';
@@ -18,7 +19,7 @@ export default function TT2() {
       <Head>
         <title>TT2 Case Study</title>
       </Head>
-      <Section id="heading" pattern className="pt-40">
+      <Section pattern className="pt-40">
         <Heading type="h1">Tyne Tunnel 2 Case Study</Heading>
         <OrderedList
           items={[
@@ -41,8 +42,14 @@ export default function TT2() {
             },
           ]}
         />
+        <Button
+          primary
+          className="self-end"
+          label={'Live Link'}
+          href={'https://account.tt2.co.uk/'}
+        />
       </Section>
-      <Section id="about">
+      <Section>
         <Layout columns={2}>
           <LayoutItem>
             <Heading type="h3">About Tyne Tunnel</Heading>
@@ -101,7 +108,7 @@ export default function TT2() {
           <Chip lable={'React Testing Library'} />
         </div>
       </Section>
-      <Section id="scope">
+      <Section>
         <Heading type="h2">Multiple front ends</Heading>
         <Subtitle type="M">
           I worked as the lead front-end developer on multiple front ends.
@@ -137,7 +144,7 @@ export default function TT2() {
           </LayoutItem>
         </Layout>
       </Section>
-      <Section id="details">
+      <Section>
         <Heading type="h2">Work Completed</Heading>
         <Subtitle type="M">
           Due to the large scope of the project, continuous updates and ongoing
@@ -185,7 +192,7 @@ export default function TT2() {
           </LayoutItem>
         </Layout>
       </Section>
-      <Section pattern id="contact">
+      <Section id="contact" pattern>
         <ContactSection />
       </Section>
     </>

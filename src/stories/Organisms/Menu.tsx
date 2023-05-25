@@ -1,58 +1,22 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
+import { Link } from '@stories/Atoms/Link';
 import { ThemeToggle } from '@stories/Atoms/ThemeToggle';
 import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import profilePic from '/public/images/leeSavage.png';
 
-const MenuLinkItem = ({
-  lable,
-  href,
-  scroll,
-}: {
-  lable: string;
-  href: string;
-  scroll?: boolean;
-}) => {
-  if (scroll)
-    return (
-      <li>
-        <a
-          className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
-          href={href}
-        >
-          {lable}
-        </a>
-      </li>
-    );
-
-  return (
-    <li>
-      <Link
-        className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
-        href={href}
-      >
-        {lable}
-      </Link>
-    </li>
-  );
-};
-
-export const Menu = () => {
-  const router = useRouter();
-
-  return (
-    <nav
-      className="fixed z-10 top-0 left-0 
+export const Menu = () => (
+  <nav
+    className="fixed z-10 top-0 left-0 
     flex justify-between w-full p-4 
     dark:bg-dark-blue-700 bg-blue-100 drop-shadow-lg 
     text-md uppercase font-extrabold     
     "
+  >
+    <Link
+      href="/"
+      scrollTarget="home"
+      className="text-primary hover:text-yellow duration-500 flex items-center"
     >
-      <a
-        href="/#"
-        className="text-primary hover:text-yellow duration-500 flex items-center"
-      >
+      <>
         <Image
           src={profilePic}
           width={60}
@@ -61,33 +25,42 @@ export const Menu = () => {
           alt="A portrait photo of Lee Savage"
         />
         <span className="invisible md:visible">Lee Savage</span>
-      </a>
-      <ol className="flex flex-wrap space-x-9 items-center justify-end text-blue-100 ">
-        {router.pathname === '/' ? (
-          <MenuLinkItem href="/#" lable="Home" scroll />
-        ) : (
-          <MenuLinkItem href="/#" lable="Home" />
-        )}
+      </>
+    </Link>
+    <ol className="flex flex-wrap space-x-9 items-center justify-end text-blue-100 ">
+      <Link
+        href="/"
+        scrollTarget="home"
+        className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
+      >
+        Home
+      </Link>
+      <Link
+        href="/"
+        scrollTarget="about"
+        className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
+      >
+        About
+      </Link>
+      <Link
+        href="/"
+        scrollTarget="projects"
+        className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
+      >
+        Projects
+      </Link>
+      <Link
+        href="/"
+        scrollTarget="contact"
+        className="text-dark-blue dark:text-blue-100 hover:text-yellow dark:hover:text-yellow duration-500"
+      >
+        Contact
+      </Link>
 
-        {router.pathname === '/' ? (
-          <MenuLinkItem href="/#about" lable="About" scroll />
-        ) : (
-          <MenuLinkItem href="/#about" lable="About" />
-        )}
-
-        {router.pathname === '/' ? (
-          <MenuLinkItem href="/#projects" lable="Projects" scroll />
-        ) : (
-          <MenuLinkItem href="/#projects" lable="Projects" />
-        )}
-
-        <MenuLinkItem href="#contact" lable="Contact" scroll />
-
-        <li>
-          {' '}
-          <ThemeToggle />
-        </li>
-      </ol>
-    </nav>
-  );
-};
+      <li>
+        {' '}
+        <ThemeToggle />
+      </li>
+    </ol>
+  </nav>
+);

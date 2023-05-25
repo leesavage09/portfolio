@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { CaseStudy } from './CaseStudy';
-import notinstagram from '/public/images/notinstagram.png';
+import notinstagramgroup1 from '/public/images/notinstagramgroup1.png';
 
 export default {
   title: 'Organisms/CaseStudy',
@@ -12,7 +12,7 @@ export const caseStudy: ComponentStory<typeof CaseStudy> = (args) => (
 );
 
 caseStudy.args = {
-  image: notinstagram,
+  image: notinstagramgroup1,
   title: 'Not Instagram!',
   href: '#',
   children: <>This is an example case study</>,

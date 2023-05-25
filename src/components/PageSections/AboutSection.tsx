@@ -15,6 +15,12 @@ export const AboutSection = () => (
       <LayoutItem>
         <Heading type="h3">Me</Heading>
         <Paragraph>
+          I am a senior full-stack developer, experienced in numerous languages
+          such as PHP, Java, Python, Ruby, C, C#. However I have grown to love
+          JavaScript warts and all. I am dedicated to creating and maintaining
+          JavaScript SAAS and PWAs aplications.
+        </Paragraph>
+        <Paragraph>
           I&apos;m open to Job opportunities where I can contribute, learn and
           grow. If you have a good opportunity that matches my skills and
           experience then don&apos;t hesitate to contact me.

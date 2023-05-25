@@ -6,7 +6,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useState<Themes>('dark');
+  const [theme, setTheme] = useState<Themes>('light');
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

@@ -9,7 +9,9 @@ import { Section } from '@stories/Atoms/Section';
 import Head from 'next/head';
 import Image from 'next/image';
 import { ContactSection } from '../components/PageSections/ContactSection';
-import tt2 from '/public/images/tt2.png';
+import notinstagramgroup1 from '/public/images/notinstagramgroup1.png';
+import notinstagramgroup2 from '/public/images/notinstagramgroup2.png';
+import notinstagramsingle2 from '/public/images/notinstagramsingle2.png';
 
 export default function TT2() {
   return (
@@ -17,7 +19,7 @@ export default function TT2() {
       <Head>
         <title>notinstagram Case Study</title>
       </Head>
-      <Section id="heading" pattern className="pt-40">
+      <Section pattern className="pt-40">
         <Heading type="h1">notinstagram Case Study</Heading>
         <OrderedList
           items={[
@@ -35,8 +37,14 @@ export default function TT2() {
             },
           ]}
         />
+        <Button
+          primary
+          className="self-end"
+          label={'Live Link'}
+          href={'https://not--instagram.herokuapp.com/'}
+        />
       </Section>
-      <Section id="about">
+      <Section>
         <Layout columns={2}>
           <LayoutItem>
             <Heading type="h3">About notinstagram</Heading>
@@ -70,15 +78,14 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={tt2}
-              alt={`TT2 tunnel`}
-              className="drop-shadow-md "
-              width={500}
+              src={notinstagramsingle2}
+              alt={`notinstagram screen shots`}
+              width={400}
             />
           </LayoutItem>
         </Layout>
       </Section>
-      <Section id="librarys">
+      <Section>
         <Layout columns={2}>
           <LayoutItem>
             <Heading type="h3">Backend</Heading>
@@ -119,7 +126,16 @@ export default function TT2() {
               <Chip lable={'axios  '} />
             </div>
           </LayoutItem>
+        </Layout>
 
+        <Image
+          src={notinstagramgroup1}
+          alt={`notinstagram screen shots`}
+          className="my-8"
+          width={700}
+        />
+
+        <Layout columns={2}>
           <LayoutItem>
             <Heading type="h3">Design</Heading>
             <Paragraph>
@@ -157,7 +173,7 @@ export default function TT2() {
               </Paragraph>
               <Button
                 primary
-                label={'Live'}
+                label={'Live Link'}
                 href={'https://not--instagram.herokuapp.com/'}
               />
             </div>
@@ -180,8 +196,14 @@ export default function TT2() {
             </div>
           </LayoutItem>
         </Layout>
+        <Image
+          src={notinstagramgroup2}
+          alt={`notinstagram screen shots`}
+          className="my-8"
+          width={700}
+        />
       </Section>
-      <Section pattern id="contact">
+      <Section id="contact" pattern>
         <ContactSection />
       </Section>
     </>
