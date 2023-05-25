@@ -7,7 +7,7 @@ import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
 import Head from 'next/head';
 import Image from 'next/image';
-import Contact from './components/Contact';
+import { ContactSection } from '../components/PageSections/ContactSection';
 import tt2 from '/public/images/tt2.png';
 import tt2devices from '/public/images/tt2devices.png';
 import tt2devices2 from '/public/images/tt2devices2.png';
@@ -18,7 +18,7 @@ export default function TT2() {
       <Head>
         <title>TT2 Case Study</title>
       </Head>
-      <Section id="about" pattern className="pt-40">
+      <Section id="heading" pattern className="pt-40">
         <Heading type="h1">Tyne Tunnel 2 Project</Heading>
         <OrderedList
           items={[
@@ -113,8 +113,7 @@ export default function TT2() {
           <Chip lable={'React Testing Library'} />
         </div>
       </Section>
-
-      <Section id="details">
+      <Section id="scope">
         <Heading type="h2">Multiple front ends</Heading>
         <Subtitle type="M">
           I worked as the lead front-end developer on multiple front ends.
@@ -163,7 +162,6 @@ export default function TT2() {
           ]}
         />
       </Section>
-
       <Section id="details">
         <Heading type="h2">Work Completed</Heading>
         <Subtitle type="M">
@@ -226,7 +224,7 @@ export default function TT2() {
         />
       </Section>
       <Section pattern id="contact">
-        <Contact />
+        <ContactSection />
       </Section>
     </>
   );
