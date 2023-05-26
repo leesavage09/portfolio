@@ -160,38 +160,46 @@ export default function TT2() {
           className="drop-shadow-md mb-8"
           width={1024}
         />
-        <Layout columns={2}>
-          <LayoutItem>
-            <Heading type="h3">Stripe implementation</Heading>
-            <Paragraph>
-              When I joined Land Digital agency on the Tyne Tunnel 2 Project,
-              WorldPay was the payment provider. I replaced WorldPay with a
-              customized Stripe check-out.
-            </Paragraph>
-            <Heading type="h3">Authentication</Heading>
-            <Paragraph>
-              I refactored front end authentication logic, simplifying a
-              customized authentication/authorization component. The component
-              handled masquerade tokens allowing telephone support agents access
-              to user accounts.
-            </Paragraph>
-          </LayoutItem>
-          <LayoutItem>
-            <Heading type="h3">Migration to React router 6</Heading>
-            <Paragraph>
-              To clarify design decisions and help future developers maintain
-              the code base, I refactored and simplified application routing
-              with a migration from React router 5 to React router 6. This
-              included modifications of the use and structure of React 18
-              suspense API and fallback components.
-            </Paragraph>
-            <Heading type="h3">Testing</Heading>
-            <Paragraph>
-              Because of the large number of users, many implemented key
-              features were backed-up with multi-layered (Snapshot, Unit,
-              Integration and E2E) testing for bug-free development.
-            </Paragraph>
-          </LayoutItem>
+        <Layout columns={1}>
+          <Layout columns={2}>
+            <LayoutItem>
+              <Heading type="h3">Stripe implementation</Heading>
+              <Paragraph>
+                When I joined Land Digital agency on the Tyne Tunnel 2 Project,
+                WorldPay was the payment provider. I replaced WorldPay with a
+                customized Stripe check-out.
+              </Paragraph>
+            </LayoutItem>
+            <LayoutItem>
+              <Heading type="h3">Authentication</Heading>
+              <Paragraph>
+                I refactored front end authentication logic, simplifying a
+                customized authentication/authorization component. The component
+                handled masquerade tokens allowing telephone support agents
+                access to user accounts.
+              </Paragraph>
+            </LayoutItem>
+          </Layout>
+          <Layout columns={2}>
+            <LayoutItem>
+              <Heading type="h3">Migration to React router 6</Heading>
+              <Paragraph>
+                To clarify design decisions and help future developers maintain
+                the code base, I refactored and simplified application routing
+                with a migration from React router 5 to React router 6. This
+                included modifications of the use and structure of React 18
+                suspense API and fallback components.
+              </Paragraph>
+            </LayoutItem>
+            <LayoutItem>
+              <Heading type="h3">Testing</Heading>
+              <Paragraph>
+                Because of the large number of users, many implemented key
+                features were backed-up with multi-layered (Snapshot, Unit,
+                Integration and E2E) testing for bug-free development.
+              </Paragraph>
+            </LayoutItem>
+          </Layout>
         </Layout>
       </Section>
       <Section id="contact" pattern>

@@ -168,11 +168,13 @@ export default function TT2() {
               simulator in the browser DevTools.
             </Paragraph>
             <Paragraph>
-              Warning: If you use Chrome or a browser with fishing protection,
-              the site is flagged as a scam. I take this as a complement, as it
-              looks identical to the old version of Instagram. For example, with
-              Chrome you will need to click through&apos;Detail&apos;
-              &apos;visit this unsafe site&apos;.
+              <>
+                <b>Warning:</b> If you use Chrome or a browser with fishing
+                protection, the site is flagged as a scam. I take this as a
+                complement, as it looks identical to the old version of
+                Instagram. For example, with Chrome you will need to click
+                through&apos;Detail&apos; &apos;visit this unsafe site&apos;.
+              </>
             </Paragraph>
             <Button
               primary
