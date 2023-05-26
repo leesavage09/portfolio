@@ -23,9 +23,9 @@ export const Layout = ({ children, columns }: LayoutProps) => {
   const tailwindCol = (() => {
     switch (columns) {
       case 1:
-        return 'w-full grid grid-cols-1 gap-x-20 gap-y-24';
+        return 'w-full grid grid-cols-1 gap-y-16';
       case 2:
-        return 'w-full grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-24';
+        return 'w-full grid grid-cols-1 gap-y-8 sm:grid-cols-2 md:gap-y-12 lg:gap-y-24  gap-x-8 md:gap-x-14 lg:gap-x-20';
     }
   })();
 
