@@ -45,9 +45,9 @@ export default function TT2() {
         />
       </Section>
       <Section>
+        <Heading type="h2">About notinstagram</Heading>
         <Layout columns={2}>
           <LayoutItem>
-            <Heading type="h2">About notinstagram</Heading>
             <Paragraph>
               notinstagram is one of my favorite personal projects. I created a
               pixel perfect and minimally functional version of Instagram (2020
