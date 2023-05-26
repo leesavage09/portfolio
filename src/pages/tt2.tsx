@@ -52,7 +52,7 @@ export default function TT2() {
       <Section>
         <Layout columns={2}>
           <LayoutItem>
-            <Heading type="h3">About Tyne Tunnel</Heading>
+            <Heading type="h2">About Tyne Tunnel</Heading>
             <Paragraph>
               Tyne Tunnel is the most popular route for those driving to the
               North of England. The tunnel goes underneath the river Tyne and
@@ -78,7 +78,7 @@ export default function TT2() {
             />
           </LayoutItem>
         </Layout>
-        <Heading type="h3">Technologies used</Heading>
+        <Heading type="h2">Technologies used</Heading>
         <div className="flex flex-wrap gap-4 ">
           <Chip lable={'Agile Scrum'} />
           <Chip lable={'Gitflow'} />

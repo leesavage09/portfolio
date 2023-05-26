@@ -47,7 +47,7 @@ export default function TT2() {
       <Section>
         <Layout columns={2}>
           <LayoutItem>
-            <Heading type="h3">About notinstagram</Heading>
+            <Heading type="h2">About notinstagram</Heading>
             <Paragraph>
               notinstagram is one of my favorite personal projects. I created a
               pixel perfect and minimally functional version of Instagram (2020
@@ -86,6 +86,10 @@ export default function TT2() {
         </Layout>
       </Section>
       <Section>
+        <Heading type="h2">Technologies Used</Heading>
+        <Paragraph>
+          The notinstagram app is a full-stack aplication hosted on Heroku.
+        </Paragraph>
         <Layout columns={2}>
           <LayoutItem>
             <Heading type="h3">Backend</Heading>
@@ -137,7 +141,7 @@ export default function TT2() {
 
         <Layout columns={2}>
           <LayoutItem>
-            <Heading type="h3">Design</Heading>
+            <Heading type="h2">Design</Heading>
             <Paragraph>
               <>
                 SCSS is used to style notinstagram. To create reusable styled
@@ -148,7 +152,7 @@ export default function TT2() {
           </LayoutItem>
 
           <LayoutItem>
-            <Heading type="h3">Amazon S3</Heading>
+            <Heading type="h2">Amazon S3</Heading>
             <Paragraph>
               To reduce the load on the backend and to reduce costs, images are
               edited on the client side and sent directly to an Amazon S3 bucket
@@ -156,7 +160,7 @@ export default function TT2() {
             </Paragraph>
           </LayoutItem>
           <LayoutItem>
-            <Heading type="h3">Live demo</Heading>
+            <Heading type="h2">Live demo</Heading>
             <Paragraph>
               You can view a live demo of notinstagram. Please note that the web
               app is designed for mobile devices only. To access the demo, you
@@ -177,7 +181,7 @@ export default function TT2() {
             />
           </LayoutItem>
           <LayoutItem>
-            <Heading type="h3">Full documentation</Heading>
+            <Heading type="h2">Full documentation</Heading>
             <Paragraph>
               Full documentation on notinstagram is available on my GitHub
               account. The documentation includes more information on the above,
