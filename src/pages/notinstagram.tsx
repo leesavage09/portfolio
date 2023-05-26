@@ -3,19 +3,44 @@ import { Chip } from '@stories/Atoms/Chip';
 import { Heading } from '@stories/Atoms/Heading';
 import { Layout, LayoutItem } from '@stories/Atoms/Layout';
 import { Link } from '@stories/Atoms/Link';
+import { Modal } from '@stories/Atoms/Modal';
 import { OrderedList } from '@stories/Atoms/OrderedList';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { Section } from '@stories/Atoms/Section';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useState } from 'react';
 import { ContactSection } from '../components/PageSections/ContactSection';
 import notinstagramgroup1 from '/public/images/notinstagramgroup1.png';
 import notinstagramgroup2 from '/public/images/notinstagramgroup2.png';
 import notinstagramsingle2 from '/public/images/notinstagramsingle2.png';
 
-export default function TT2() {
+export default function Notinstagram() {
+  const [showLiveLink, setShowLiveLink] = useState(false);
+
   return (
     <>
+      <Modal visible={showLiveLink} close={() => setShowLiveLink(false)}>
+        <Paragraph>
+          <>
+            <b>Warning:</b> If you use Chrome or a browser with fishing
+            protection, the site is flagged as a scam. I take this as a
+            complement, as it looks identical to the old version of Instagram.
+          </>
+        </Paragraph>
+        <Paragraph>
+          <>
+            For example, with Chrome you will need to click
+            through&apos;Detail&apos; &apos;visit this unsafe site&apos;.
+          </>
+        </Paragraph>
+        <Button
+          primary
+          className="float-right"
+          label={'Continue'}
+          href={'https://not--instagram.herokuapp.com/'}
+        />
+      </Modal>
       <Head>
         <title>notinstagram Case Study</title>
       </Head>
@@ -41,7 +66,7 @@ export default function TT2() {
           primary
           className="self-end mt-8"
           label={'Live Link'}
-          href={'https://not--instagram.herokuapp.com/'}
+          onClick={() => setShowLiveLink(true)}
         />
       </Section>
       <Section>
@@ -167,19 +192,10 @@ export default function TT2() {
               can best use a mobile device. On desktop, you can use the mobile
               simulator in the browser DevTools.
             </Paragraph>
-            <Paragraph>
-              <>
-                <b>Warning:</b> If you use Chrome or a browser with fishing
-                protection, the site is flagged as a scam. I take this as a
-                complement, as it looks identical to the old version of
-                Instagram. For example, with Chrome you will need to click
-                through&apos;Detail&apos; &apos;visit this unsafe site&apos;.
-              </>
-            </Paragraph>
             <Button
               primary
               label={'Live Link'}
-              href={'https://not--instagram.herokuapp.com/'}
+              onClick={() => setShowLiveLink(true)}
             />
           </LayoutItem>
           <LayoutItem>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 
 interface ButtonProps {
-  primary: boolean;
+  primary?: boolean;
   label: string;
   className?: string;
   href?: string;
