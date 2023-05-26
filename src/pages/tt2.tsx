@@ -78,6 +78,8 @@ export default function TT2() {
             />
           </LayoutItem>
         </Layout>
+      </Section>
+      <Section>
         <Heading type="h2">Technologies used</Heading>
         <div className="flex flex-wrap gap-4 ">
           <Chip lable={'Agile Scrum'} />
