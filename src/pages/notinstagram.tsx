@@ -19,7 +19,7 @@ export default function TT2() {
       <Head>
         <title>notinstagram Case Study</title>
       </Head>
-      <Section pattern className="pt-40">
+      <Section pattern className="pt-28 md:pt-36 lg:pt-40">
         <Heading type="h1">notinstagram Case Study</Heading>
         <OrderedList
           items={[
@@ -39,7 +39,7 @@ export default function TT2() {
         />
         <Button
           primary
-          className="self-end"
+          className="self-end mt-8"
           label={'Live Link'}
           href={'https://not--instagram.herokuapp.com/'}
         />
