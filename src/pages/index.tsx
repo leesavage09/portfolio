@@ -1,3 +1,4 @@
+import { Anchor } from '@stories/Atoms/Anchor';
 import { Section } from '@stories/Atoms/Section';
 import Head from 'next/head';
 import { AboutSection } from '../components/PageSections/AboutSection';
@@ -11,16 +12,20 @@ export default function Home() {
       <Head>
         <title>Frontend Developer | Lee Savage</title>
       </Head>
-      <Section id="home" className="h-screen" pattern>
+      <Anchor id={'home'} />
+      <Section className="h-screen" pattern>
         <HomeSection />
       </Section>
-      <Section id="about">
+      <Anchor id={'about'} />
+      <Section>
         <AboutSection />
       </Section>
-      <Section id="projects">
+      <Anchor id={'projects'} />
+      <Section>
         <ProjectsSection />
       </Section>
-      <Section pattern id="contact">
+      <Anchor id={'contact'} />
+      <Section pattern>
         <ContactSection />
       </Section>
     </>

@@ -1,3 +1,4 @@
+import { Anchor } from '@stories/Atoms/Anchor';
 import { Button } from '@stories/Atoms/Button';
 import { Chip } from '@stories/Atoms/Chip';
 import { Heading } from '@stories/Atoms/Heading';
@@ -219,7 +220,8 @@ export default function Notinstagram() {
           width={700}
         />
       </Section>
-      <Section id="contact" pattern>
+      <Anchor id={'contact'} />
+      <Section pattern>
         <ContactSection />
       </Section>
     </>
