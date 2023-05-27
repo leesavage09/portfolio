@@ -9,7 +9,7 @@ interface CaseStudyProps {
   imageWidth: number;
   title: string;
   children: string | JSX.Element[] | JSX.Element;
-  href: string;
+  href?: string;
 }
 
 export const CaseStudy: React.FC<CaseStudyProps> = ({
@@ -35,11 +35,13 @@ export const CaseStudy: React.FC<CaseStudyProps> = ({
         <LayoutItem>
           <div>
             {children}
-            <div className="text-center">
-              <Button type="href" primary className="mt-6 m-auto" href={href}>
-                Live Link
-              </Button>
-            </div>
+            {href && (
+              <div className="text-center">
+                <Button type="href" primary className="mt-6 m-auto" href={href}>
+                  Case Study
+                </Button>
+              </div>
+            )}
           </div>
         </LayoutItem>
       </Layout>

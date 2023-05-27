@@ -13,7 +13,7 @@ export const caseStudy: ComponentStory<typeof CaseStudy> = (args) => (
 
 caseStudy.args = {
   image: notinstagramgroup1,
-  title: 'Not Instagram!',
+  title: 'notinstagram!',
   href: '#',
   children: <>This is an example case study</>,
 };

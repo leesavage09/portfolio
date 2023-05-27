@@ -22,6 +22,8 @@ interface ButtonPropsScroll extends ButtonPropsBasic {
 interface ButtonPropsOnClick extends ButtonPropsBasic {
   type: 'onClick';
   onClick: () => void;
+  disabled?: boolean;
+  disabledText?: string;
 }
 
 interface ButtonPropsSubmit extends ButtonPropsBasic {
@@ -64,8 +66,15 @@ export const Button: React.FC<ButtonProps> = (props) => {
       );
     case 'onClick':
       return (
-        <button type="button" className={style} onClick={props.onClick}>
-          {props.children}
+        <button
+          type="button"
+          className={style}
+          onClick={props.onClick}
+          disabled={props.disabled}
+        >
+          {props.disabled && props.disabledText
+            ? props.disabledText
+            : props.children}
         </button>
       );
 
