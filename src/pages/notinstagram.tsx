@@ -31,8 +31,9 @@ export default function Notinstagram() {
         </Paragraph>
         <Paragraph>
           <>
-            For example, with Chrome you will need to click
-            through&apos;Detail&apos; &apos;visit this unsafe site&apos;.
+            For example, with Chrome, you will need to click{' '}
+            <i>&apos;Details&apos;</i> and then{' '}
+            <i>&apos;visit this unsafe site&apos;</i>
           </>
         </Paragraph>
         <Button
