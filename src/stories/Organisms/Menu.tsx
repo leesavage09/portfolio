@@ -23,10 +23,10 @@ export const Menu = () => (
           src={profilePic}
           width={60}
           height={60}
-          className="w-11 h-11 rounded-full dark:bg-dark-blue-500 bg-blue-200 mr-3"
+          className="w-11 h-11 rounded-full dark:bg-dark-blue-500 bg-blue-200 mr-3 hidden md:block"
           alt="A portrait photo of Lee Savage"
         />
-        <span className="invisible md:visible">Lee Savage</span>
+        <span className="hidden md:block">Lee Savage</span>
       </>
     </Link>
     <div className="flex items-center ">
