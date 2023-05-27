@@ -74,7 +74,7 @@ export const ContactForm: React.FC<FormProps> = ({ children, submitLabel }) => {
           <Paragraph>Message Sent</Paragraph>
         ) : (
           <Paragraph>
-            <>Unable to send message, {result?.error}</>
+            <>{result?.error}</>
           </Paragraph>
         )}
       </Modal>

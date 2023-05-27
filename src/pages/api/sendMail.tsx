@@ -5,10 +5,17 @@ const handle = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { name, email, message } = req.body;
 
-    if (!name || typeof name !== 'string') throw Error('name required');
-    if (!email || typeof email !== 'string') throw Error('email required');
-    if (!message || typeof message !== 'string')
-      throw Error('message required');
+    if (
+      !name ||
+      typeof name !== 'string' ||
+      !email ||
+      typeof email !== 'string' ||
+      !message ||
+      typeof message !== 'string'
+    )
+      throw Error(
+        'Unable to send message. Name, email and message are required'
+      );
 
     const transporter = nodemailer.createTransport({
       port: 465,
