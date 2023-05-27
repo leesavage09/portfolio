@@ -11,6 +11,8 @@ export const button: ComponentStory<typeof Button> = (args) => (
 );
 
 button.args = {
-  label: 'Button',
+  children: 'Button',
   primary: true,
+  type: 'submit',
+  disabledText: 'disabled...',
 };

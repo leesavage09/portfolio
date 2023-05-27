@@ -12,7 +12,9 @@ export const HomeSection = () => (
       A JavaScript focused web developer that builds frontend and backend
       applications
     </Subtitle>
-    <Button primary label={'Projects'} scrollTo={'projects'} />
+    <Button primary type="scrollTo" scrollTo={'projects'}>
+      Projects
+    </Button>
     <ScrollIndicator />
   </>
 );

@@ -37,11 +37,13 @@ export default function Notinstagram() {
           </>
         </Paragraph>
         <Button
+          type="href"
           primary
           className="float-right"
-          label={'Continue'}
           href={'https://not--instagram.herokuapp.com/'}
-        />
+        >
+          Continue
+        </Button>
       </Modal>
       <Head>
         <title>notinstagram Case Study</title>
@@ -65,11 +67,13 @@ export default function Notinstagram() {
           ]}
         />
         <Button
+          type="onClick"
           primary
           className="self-end mt-8"
-          label={'Live Link'}
           onClick={() => setShowLiveLink(true)}
-        />
+        >
+          Live Link
+        </Button>
       </Section>
       <Section>
         <Heading type="h2">About notinstagram</Heading>
@@ -195,10 +199,12 @@ export default function Notinstagram() {
               simulator in the browser DevTools.
             </Paragraph>
             <Button
+              type="onClick"
               primary
-              label={'Live Link'}
               onClick={() => setShowLiveLink(true)}
-            />
+            >
+              Live Link
+            </Button>
           </LayoutItem>
           <LayoutItem>
             <Heading type="h2">Full documentation</Heading>
@@ -208,10 +214,12 @@ export default function Notinstagram() {
               multiple code examples and more screenshots.
             </Paragraph>
             <Button
+              type="href"
               primary
-              label={'GitHub'}
               href={'https://github.com/leesavage09/notinstagram#notinstagram'}
-            />
+            >
+              Live Link
+            </Button>
           </LayoutItem>
         </Layout>
         <Image

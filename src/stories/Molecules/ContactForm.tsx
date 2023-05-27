@@ -8,7 +8,7 @@ interface FormProps {
   submitLabel: string;
 }
 
-export const ContactForm: React.FC<FormProps> = ({ children, submitLabel }) => {
+export const ContactForm: React.FC<FormProps> = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [result, setResult] = useState<{ status: any; error: any }>();
@@ -84,12 +84,13 @@ export const ContactForm: React.FC<FormProps> = ({ children, submitLabel }) => {
       >
         {children}
         <Button
-          submit
-          label={submitLabel}
+          type="submit"
           className="float-right"
           disabled={loading}
           disabledText="Sending Email..."
-        />
+        >
+          Live Link
+        </Button>
       </form>
     </>
   );

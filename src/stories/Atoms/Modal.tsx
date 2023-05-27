@@ -29,10 +29,12 @@ export const Modal = ({ children, visible, close }: ModalProps) => {
           >
             {children}
             <Button
+              type="onClick"
               className="mt-6 float-right clear-both  sm:clear-none sm:float-left sm:mr-8 sm:mt-0"
-              label={'Close'}
               onClick={close}
-            />
+            >
+              Live Link
+            </Button>
           </div>
         </div>
       </div>

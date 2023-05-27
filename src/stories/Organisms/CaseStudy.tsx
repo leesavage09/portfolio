@@ -36,12 +36,9 @@ export const CaseStudy: React.FC<CaseStudyProps> = ({
           <div>
             {children}
             <div className="text-center">
-              <Button
-                primary
-                label={'Case Study'}
-                className="mt-6 m-auto"
-                href={href}
-              />
+              <Button type="href" primary className="mt-6 m-auto" href={href}>
+                Live Link
+              </Button>
             </div>
           </div>
         </LayoutItem>

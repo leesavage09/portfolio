@@ -44,11 +44,13 @@ export default function TT2() {
           ]}
         />
         <Button
+          type="href"
           primary
           className="self-end mt-8"
-          label={'Live Link'}
           href={'https://account.tt2.co.uk/'}
-        />
+        >
+          Live Link
+        </Button>
       </Section>
       <Section>
         <Layout columns={2}>
