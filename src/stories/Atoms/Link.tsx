@@ -25,7 +25,6 @@ export const Link = ({
   }, [router, scrollTarget]);
 
   if (scrollTarget && foundTarget) {
-    console.log(router.pathname, { href }, { scrollTarget });
     return (
       <a
         className={twMerge('text-primary', className)}
