@@ -88,6 +88,7 @@ export const ContactForm: React.FC<FormProps> = ({ children, submitLabel }) => {
           label={submitLabel}
           className="float-right"
           disabled={loading}
+          disabledText="Sending Email..."
         />
       </form>
     </>

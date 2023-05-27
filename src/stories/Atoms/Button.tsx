@@ -10,6 +10,7 @@ interface ButtonProps {
   onClick?: () => void;
   submit?: boolean;
   disabled?: boolean;
+  disabledText?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -21,6 +22,7 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   submit,
   disabled,
+  disabledText,
 }) => {
   const defaultStyle = `${
     primary
@@ -59,7 +61,7 @@ export const Button: React.FC<ButtonProps> = ({
   if (submit)
     return (
       <button type="submit" className={style} disabled={disabled}>
-        {label}
+        {disabled && disabledText ? disabledText : label}
       </button>
     );
 
