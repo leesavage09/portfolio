@@ -1,14 +1,16 @@
+import { Input } from '@stories/Atoms/Input';
 import { Modal } from '@stories/Atoms/Modal';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { SyntheticEvent, useState } from 'react';
 import { Button } from '../Atoms/Button';
 
-interface FormProps {
-  children: string | JSX.Element | Array<JSX.Element>;
-  submitLabel: string;
-}
+type FormEventTarget = typeof EventTarget & {
+  name: { value: string };
+  email: { value: string };
+  message: { value: string };
+};
 
-export const ContactForm: React.FC<FormProps> = ({ children }) => {
+export const ContactForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [result, setResult] = useState<{ status: any; error: any }>();
@@ -35,21 +37,27 @@ export const ContactForm: React.FC<FormProps> = ({ children }) => {
     }
   };
 
-  const submit = async (e: SyntheticEvent) => {
-    e.preventDefault();
-    setLoading(true);
-
-    const target = e.target as typeof e.target & {
-      name: { value: string };
-      email: { value: string };
-      message: { value: string };
-    };
-
-    const data = {
+  const getFormData = (e: SyntheticEvent) => {
+    const target = e.target as unknown as FormEventTarget;
+    return {
       name: target.name.value,
       email: target.email.value,
       message: target.message.value,
     };
+  };
+
+  const resetFromData = (e: SyntheticEvent) => {
+    const target = e.target as unknown as FormEventTarget;
+    target.name.value = '';
+    target.email.value = '';
+    target.message.value = '';
+  };
+
+  const submit = async (e: SyntheticEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const data = getFormData(e);
 
     if (
       data.name ||
@@ -61,6 +69,7 @@ export const ContactForm: React.FC<FormProps> = ({ children }) => {
     ) {
       const result = await postMessage(data);
       setResult(result);
+      if (result?.status === 'OK') resetFromData(e);
       setShowModal(true);
     }
 
@@ -82,14 +91,21 @@ export const ContactForm: React.FC<FormProps> = ({ children }) => {
         onSubmit={submit}
         className="dark:bg-dark-blue-700 dark:text-blue-100 bg-blue-200 text-dark-blue-800 rounded-md drop-shadow-md p-6 sm:p-8 md:p-12 lg:p-16 w-full"
       >
-        {children}
+        <Input id="name" label="Name" placeholder="Enter your Name" />
+        <Input id="email" label="Email" placeholder="Enter your Email" />
+        <Input
+          id="message"
+          textArea
+          label="Message"
+          placeholder="Enter your Message"
+        />
         <Button
           type="submit"
           className="float-right"
           disabled={loading}
           disabledText="Sending Email..."
         >
-          Live Link
+          Send Email
         </Button>
       </form>
     </>
