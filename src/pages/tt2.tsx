@@ -3,6 +3,7 @@ import { Button } from '@stories/Atoms/Button';
 import { Chip } from '@stories/Atoms/Chip';
 import { Heading } from '@stories/Atoms/Heading';
 import { Layout, LayoutItem } from '@stories/Atoms/Layout';
+import { Link } from '@stories/Atoms/Link';
 import { OrderedList } from '@stories/Atoms/OrderedList';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { Section } from '@stories/Atoms/Section';
@@ -53,9 +54,9 @@ export default function TT2() {
         </Button>
       </Section>
       <Section>
+        <Heading type="h2">About Tyne Tunnel</Heading>
         <Layout columns={2}>
           <LayoutItem>
-            <Heading type="h2">About Tyne Tunnel</Heading>
             <Paragraph>
               Tyne Tunnel is the most popular route for those driving to the
               North of England. The tunnel goes underneath the river Tyne and
@@ -83,35 +84,55 @@ export default function TT2() {
         </Layout>
       </Section>
       <Section>
-        <Heading type="h2">Technologies used</Heading>
-        <div className="flex flex-wrap gap-4 ">
-          <Chip lable={'Agile Scrum'} />
-          <Chip lable={'Gitflow'} />
+        <Layout columns={2}>
+          <LayoutItem>
+            <Heading type="h3">Technologies used</Heading>
+            <div className="flex flex-wrap gap-4 ">
+              <Chip lable={'Agile Scrum'} />
+              <Chip lable={'Gitflow'} />
 
-          <Chip lable={'ClickUp'} />
-          <Chip lable={'Jira'} />
+              <Chip lable={'ClickUp'} />
+              <Chip lable={'Jira'} />
 
-          <Chip lable={'Babel'} />
-          <Chip lable={'Vite'} />
-          <Chip lable={'TypeScript'} />
-          <Chip lable={'React'} />
+              <Chip lable={'Babel'} />
+              <Chip lable={'Vite'} />
+              <Chip lable={'TypeScript'} />
+              <Chip lable={'React'} />
 
-          <Chip lable={'Eslint'} />
-          <Chip lable={'SASS'} />
-          <Chip lable={'Tailwind'} />
+              <Chip lable={'Eslint'} />
+              <Chip lable={'SASS'} />
+              <Chip lable={'Tailwind'} />
 
-          <Chip lable={'URQL'} />
-          <Chip lable={'GraphQL'} />
+              <Chip lable={'URQL'} />
+              <Chip lable={'GraphQL'} />
 
-          <Chip lable={'Formik'} />
-          <Chip lable={'Yup'} />
-          <Chip lable={'Storybook'} />
-          <Chip lable={'Ant design'} />
+              <Chip lable={'Formik'} />
+              <Chip lable={'Yup'} />
+              <Chip lable={'Storybook'} />
+              <Chip lable={'Ant design'} />
 
-          <Chip lable={'Jest'} />
-          <Chip lable={'Cypress'} />
-          <Chip lable={'React Testing Library'} />
-        </div>
+              <Chip lable={'Jest'} />
+              <Chip lable={'Cypress'} />
+              <Chip lable={'React Testing Library'} />
+            </div>
+          </LayoutItem>
+          <LayoutItem>
+            <Heading type="h3">Testimonial</Heading>
+            <Paragraph>
+              <>
+                Lee is a strong communicator, with a pragmatic and thoughtful
+                approach to all of the work he undertakes. Mindful of how his
+                work effects both users and the project’s commercials, he became
+                an invaluable asset to our team. He quickly cemented himself as
+                reliable and trustworthy, and is someone we look forward to
+                working with again.
+                <Link href="https://www.landdigital.agency">
+                  Daniel Gadd - Technical Director - Land digital agency
+                </Link>
+              </>
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
       </Section>
       <Section>
         <Heading type="h2">Multiple front ends</Heading>
