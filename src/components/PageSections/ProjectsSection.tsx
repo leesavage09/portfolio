@@ -57,7 +57,7 @@ export const ProjectsSection = () => (
 
             <Paragraph>
               When I joined the project, teach.io was in MVP stage with a small
-              number of beta testers. I worked on this project as a full-stack
+              number of users. I worked on this project as a full-stack
               developer, adding new features such as Zoom and Zapier
               Integrations.
             </Paragraph>
@@ -105,12 +105,11 @@ export const ProjectsSection = () => (
         <CaseStudy image={knots3dmenu} imageWidth={250} title={'Knots 3D'}>
           <Paragraph>
             <>
-              Sailing knots 3D is an interactive app that teaches how to tie the
-              most common sailing knots. Besides coding, I run the odd sailing
-              course. While teaching students, I became aware of the fact that
-              there’s no proper 3D app available for teaching sailing knots. I
-              created this app in my spare time to better teach my students and
-              to play around with Three.js.
+              Sailing Knots 3D is an interactive app that teaches how to tie the
+              most common sailing knots. Sailing Knots 3D is the only true 3D
+              app available for teaching sailing knots on the Android app store
+              (June 2023). This app uses the Ionic Framework and Three.js to
+              create a high performance 3D PWA
               <span className="flex justify-center">
                 <a href="https://play.google.com/store/apps/details?id=uk.co.leesavage.CCknots&gl=GB&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
                   <Image
