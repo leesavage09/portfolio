@@ -89,9 +89,9 @@ export const ProjectsSection = () => {
                     return;
                   }}
                   disabled
-                  disabledText="Case Study comming soon"
+                  disabledText="Case study coming soon"
                 >
-                  Comming Soon
+                  Coming Soon
                 </Button>
               </span>
             </>
@@ -133,7 +133,7 @@ export const ProjectsSection = () => {
                 the most common sailing knots. Sailing Knots 3D is the only true
                 3D app available for teaching sailing knots on the Android app
                 store (June 2023). This app uses the Ionic Framework and
-                Three.js to create a high performance 3D PWA
+                Three.js to create a high performance 3D PWA.
                 <span className="flex justify-center">
                   <a
                     className="hover:-translate-y-1 duration-300"
@@ -164,9 +164,9 @@ export const ProjectsSection = () => {
                       return;
                     }}
                     disabled
-                    disabledText="Case Study comming soon"
+                    disabledText="Case study coming soon"
                   >
-                    Comming Soon
+                    Coming Soon
                   </Button>
                 </span>
               </>
