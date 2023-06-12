@@ -33,11 +33,11 @@ interface ButtonPropsSubmit extends ButtonPropsBasic {
 }
 
 const primaryStyles =
-  'bg-primary text-dark-blue-800 disabled:bg-primary-100 disabled:text-dark-blue-100';
+  'uppercase bg-primary text-dark-blue-800 disabled:bg-primary-100 disabled:text-dark-blue-100';
 const secondaryStyles =
-  'bg-primary text-dark-blue-800 disabled:bg-primary-100 disabled:text-dark-blue-100';
+  'titlecase bg-blue text-dark-blue-800 disabled:bg-blue-100 disabled:text-dark-blue-100';
 const defaultStyle =
-  'uppercase py-3 px-9 rounded-md drop-shadow-lg border-none duration-300 hover:-translate-y-1 disabled:hover:-translate-y-0';
+  'py-3 px-9 rounded-md drop-shadow-lg border-none duration-300 hover:-translate-y-1 disabled:hover:-translate-y-0';
 
 type ButtonProps =
   | ButtonPropsHref

@@ -1,50 +1,25 @@
+import { useAppState } from '@components/AppContext';
 import { Anchor } from '@stories/Atoms/Anchor';
 import { Button } from '@stories/Atoms/Button';
 import { Chip } from '@stories/Atoms/Chip';
 import { Heading } from '@stories/Atoms/Heading';
 import { Layout, LayoutItem } from '@stories/Atoms/Layout';
 import { Link } from '@stories/Atoms/Link';
-import { Modal } from '@stories/Atoms/Modal';
 import { OrderedList } from '@stories/Atoms/OrderedList';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { Section } from '@stories/Atoms/Section';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useState } from 'react';
 import { ContactSection } from '../components/PageSections/ContactSection';
 import notinstagramgroup1 from '/public/images/notinstagramgroup1.png';
 import notinstagramgroup2 from '/public/images/notinstagramgroup2.png';
 import notinstagramsingle2 from '/public/images/notinstagramsingle2.png';
 
 export default function Notinstagram() {
-  const [showLiveLink, setShowLiveLink] = useState(false);
+  const appState = useAppState();
 
   return (
     <>
-      <Modal visible={showLiveLink} close={() => setShowLiveLink(false)}>
-        <Paragraph>
-          <>
-            <b>Warning:</b> If you use Chrome or a browser with fishing
-            protection, the site is flagged as a scam. I take this as a
-            complement, as it looks identical to the old version of Instagram.
-          </>
-        </Paragraph>
-        <Paragraph>
-          <>
-            For example, with Chrome, you will need to click{' '}
-            <i>&apos;Details&apos;</i> and then{' '}
-            <i>&apos;visit this unsafe site&apos;</i>
-          </>
-        </Paragraph>
-        <Button
-          type="href"
-          primary
-          className="float-right"
-          href={'https://not--instagram.herokuapp.com/'}
-        >
-          Continue
-        </Button>
-      </Modal>
       <Head>
         <title>notinstagram Case Study</title>
       </Head>
@@ -70,7 +45,7 @@ export default function Notinstagram() {
           type="onClick"
           primary
           className="self-end mt-8"
-          onClick={() => setShowLiveLink(true)}
+          onClick={() => appState.setShowNotInstagram(true)}
         >
           Live Link
         </Button>
@@ -201,7 +176,7 @@ export default function Notinstagram() {
             <Button
               type="onClick"
               primary
-              onClick={() => setShowLiveLink(true)}
+              onClick={() => appState.setShowNotInstagram(true)}
             >
               Live Link
             </Button>

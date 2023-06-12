@@ -1,10 +1,9 @@
-import { ThemeContext } from '@components/ThemeContext';
-import { useContext } from 'react';
+import { useAppState } from '@components/AppContext';
 import Moon from '/public/vector/moon.svg';
 import Sun from '/public/vector/sun.svg';
 
 export const ThemeToggle = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, setTheme } = useAppState();
   const dark = theme === 'dark';
 
   const handleToggle = () => {

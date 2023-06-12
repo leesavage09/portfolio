@@ -1,8 +1,9 @@
 import { addons } from '@storybook/addons';
 import { UPDATE_GLOBALS } from '@storybook/core-events';
 import React, { useEffect, useState } from 'react';
-import { ThemeContext } from '../src/components/ThemeContext';
+import { AppProvider } from '../src/components/AppContext';
 import '../src/styles/globals.css';
+import { Layout } from './Layout';
 
 export const parameters = {
   backgrounds: {
@@ -53,11 +54,11 @@ export const decorators = [
     }, [theme]);
 
     return (
-      <ThemeContext.Provider value={{ theme, setTheme }}>
-        <div className={theme}>
+      <AppProvider>
+        <Layout>
           <Story />
-        </div>
-      </ThemeContext.Provider>
+        </Layout>
+      </AppProvider>
     );
   },
 ];
