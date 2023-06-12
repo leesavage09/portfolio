@@ -101,6 +101,7 @@ export const ContactForm: React.FC = () => {
         />
         <Button
           type="submit"
+          primary
           className="float-right"
           disabled={loading}
           disabledText="Sending Email..."
