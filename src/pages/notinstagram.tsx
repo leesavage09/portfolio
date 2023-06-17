@@ -47,7 +47,7 @@ export default function Notinstagram() {
           className="self-end mt-8"
           onClick={() => appState.setShowNotInstagram(true)}
         >
-          Live Link
+          Live Demo
         </Button>
       </Section>
       <Section>
@@ -178,7 +178,7 @@ export default function Notinstagram() {
               primary
               onClick={() => appState.setShowNotInstagram(true)}
             >
-              Live Link
+              Live Demo
             </Button>
           </LayoutItem>
           <LayoutItem>
@@ -193,7 +193,7 @@ export default function Notinstagram() {
               primary
               href={'https://github.com/leesavage09/notinstagram#notinstagram'}
             >
-              Live Link
+              GitHub README.md
             </Button>
           </LayoutItem>
         </Layout>
