@@ -10,6 +10,7 @@ import googlePlayBadge from '/public/images/google_play_badge.png';
 import knots3dmenu from '/public/images/knots3dmenu.png';
 import notinstagramsingle1 from '/public/images/notinstagramsingle1.png';
 import teachio from '/public/images/teachio.png';
+import teachio2 from '/public/images/teachio2.png';
 import tt2overview from '/public/images/tt2overview.png';
 
 export const ProjectsSection = () => {
@@ -22,7 +23,87 @@ export const ProjectsSection = () => {
         Here you will find some of the personal and clients projects that I
         created with each project containing its own case study
       </Subtitle>
+
       <Layout columns={1}>
+        <LayoutItem>
+          <Heading type="h3">Teach.io</Heading>
+          <Layout columns={2}>
+            <LayoutItem className="justify-start ">
+              <Image
+                src={teachio}
+                alt={`Teach.io image`}
+                className="drop-shadow-md mb-6"
+                width={472}
+              />
+              <Image
+                src={teachio2}
+                alt={`Teach.io image`}
+                className="drop-shadow-md"
+                width={472}
+              />
+            </LayoutItem>
+
+            <LayoutItem>
+              <>
+                <Paragraph>
+                  Teach.io is a SaaS startup that enables people to turn their
+                  passions into careers through a state-of-the-art,
+                  custom-built, learning platform.
+                </Paragraph>
+
+                <Paragraph>
+                  I joined the project in an early MVP stage. I worked on this
+                  project for two years as the only developer. I adding many new
+                  features such as Zoom, Zapier, Stripe and Chargebee
+                  Integrations.
+                </Paragraph>
+
+                <Paragraph>
+                  This was a great opportunity to learn and grow as a developer.
+                  I built many features form scratch including a iCal calender,
+                  a public api to help teachers create sales funnels and a fully
+                  featured community. I plan to add a full case study soon.
+                </Paragraph>
+
+                <Paragraph>
+                  <>
+                    It boasts a plethora of{' '}
+                    <a
+                      className="text-dark-blue-300 hover:text-blue-800 underline"
+                      href="https://teach.io/features"
+                    >
+                      features
+                    </a>{' '}
+                    and functionality, including a live messaging system
+                    (complete with browser notifications), an internal
+                    notification system, a course builder, profile pages, and
+                    lots more.
+                  </>
+                </Paragraph>
+
+                <span className="flex justify-center mt-6">
+                  <Button type="href" href="https://teach.io">
+                    teach.io
+                  </Button>
+                </span>
+
+                <span className="flex justify-center mt-6">
+                  <Button
+                    type="onClick"
+                    className=""
+                    onClick={() => {
+                      return;
+                    }}
+                    disabled
+                    disabledText="Case study coming soon"
+                  >
+                    Coming Soon
+                  </Button>
+                </span>
+              </>
+            </LayoutItem>
+          </Layout>
+        </LayoutItem>
         <LayoutItem>
           <CaseStudy
             image={tt2overview}
@@ -46,80 +127,7 @@ export const ProjectsSection = () => {
                 type="href"
                 href="https://account.tt2.co.uk"
               >
-                https://account.tt2.co.uk
-              </Button>
-            </span>
-          </CaseStudy>
-        </LayoutItem>
-
-        <LayoutItem>
-          <CaseStudy image={teachio} imageWidth={472} title={'Teach.io'}>
-            <>
-              <Paragraph>
-                Teach.io is a SaaS startup that enables people to turn their
-                passions into careers through a state-of-the-art, custom-built,
-                learning platform.
-              </Paragraph>
-
-              {/* <Paragraph>
-              It boasts a plethora of features and functionality, including a
-              live messaging system (complete with browser notifications), an
-              internal notification system, a course builder, profile pages, and
-              lots more.
-            </Paragraph> */}
-
-              <Paragraph>
-                When I joined the project, teach.io was in MVP stage with a
-                small number of users. I worked on this project as a full-stack
-                developer, adding new features such as Zoom and Zapier
-                Integrations.
-              </Paragraph>
-
-              <span className="flex justify-center mt-6">
-                <Button type="href" href="https://teach.io">
-                  https://teach.io
-                </Button>
-              </span>
-
-              <span className="flex justify-center mt-6">
-                <Button
-                  type="onClick"
-                  className=""
-                  onClick={() => {
-                    return;
-                  }}
-                  disabled
-                  disabledText="Case study coming soon"
-                >
-                  Coming Soon
-                </Button>
-              </span>
-            </>
-          </CaseStudy>
-        </LayoutItem>
-
-        <LayoutItem>
-          <CaseStudy
-            image={notinstagramsingle1}
-            imageWidth={250}
-            title={'notinstagram'}
-            href={'/notinstagram'}
-          >
-            <Paragraph>
-              Notinstagram is a pixel perfect MVP version of Instagram. I
-              created notinstagram in my spare time to learn React and Ruby on
-              Rails. It serves as a demonstration of my capabilities in
-              createing a complex full stack aplication from scratch.
-            </Paragraph>
-
-            <span className="flex justify-center my-6">
-              <Button
-                type="onClick"
-                primary={false}
-                className="self-end mt-8"
-                onClick={() => appState.setShowNotInstagram(true)}
-              >
-                Live Demo
+                account.tt2.co.uk
               </Button>
             </span>
           </CaseStudy>
@@ -150,10 +158,11 @@ export const ProjectsSection = () => {
                   <Button
                     type="onClick"
                     primary={false}
+                    disabled
                     className="self-end"
                     onClick={() => appState.setShowKnots3d(true)}
                   >
-                    Live Demo
+                    PWA demo on request
                   </Button>
                 </span>
                 <span className="flex justify-center mb-6">
@@ -171,6 +180,34 @@ export const ProjectsSection = () => {
                 </span>
               </>
             </Paragraph>
+          </CaseStudy>
+        </LayoutItem>
+
+        <LayoutItem>
+          <CaseStudy
+            image={notinstagramsingle1}
+            imageWidth={250}
+            title={'notinstagram'}
+            href={'/notinstagram'}
+          >
+            <Paragraph>
+              Notinstagram is a pixel perfect MVP version of Instagram. I
+              created notinstagram in my spare time to learn React and Ruby on
+              Rails. It serves as a demonstration of my capabilities in creating
+              a complex full stack application from scratch.
+            </Paragraph>
+
+            <span className="flex justify-center my-6">
+              <Button
+                type="onClick"
+                primary={false}
+                disabled
+                className="self-end mt-8"
+                onClick={() => appState.setShowNotInstagram(true)}
+              >
+                Demo on request
+              </Button>
+            </span>
           </CaseStudy>
         </LayoutItem>
       </Layout>

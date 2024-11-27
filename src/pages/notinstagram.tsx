@@ -44,10 +44,11 @@ export default function Notinstagram() {
         <Button
           type="onClick"
           primary
+          disabled
           className="self-end mt-8"
           onClick={() => appState.setShowNotInstagram(true)}
         >
-          Live Demo
+          Demo on request
         </Button>
       </Section>
       <Section>

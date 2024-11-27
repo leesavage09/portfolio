@@ -23,7 +23,7 @@ export const CaseStudy: React.FC<CaseStudyProps> = ({
     <>
       <Heading type="h3">{title}</Heading>
       <Layout columns={2}>
-        <LayoutItem className="justify-center">
+        <LayoutItem className="justify-start">
           <Image
             src={image}
             alt={`${title} image`}
