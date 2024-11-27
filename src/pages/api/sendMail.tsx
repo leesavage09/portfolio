@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
+const genericError = 'Sorry there was an error! Please try again later';
+
 const handle = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { name, email, message } = req.body;
@@ -30,7 +32,7 @@ const handle = async (req: NextApiRequest, res: NextApiResponse) => {
     await new Promise((resolve, reject) => {
       transporter.verify(function (error, success) {
         if (error) {
-          reject(error);
+          reject(genericError);
         } else {
           resolve(success);
         }
@@ -51,9 +53,9 @@ const handle = async (req: NextApiRequest, res: NextApiResponse) => {
 
     await new Promise((resolve, reject) => {
       // send mail
-      transporter.sendMail(mailData, (err, info) => {
-        if (err) {
-          reject(err);
+      transporter.sendMail(mailData, (error, info) => {
+        if (error) {
+          reject(genericError);
         } else {
           resolve(info);
         }
