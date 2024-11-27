@@ -9,8 +9,7 @@ export const HomeSection = () => (
       HEY, I&apos;M <span className="text-primary">Lee Savage</span>
     </Heading>
     <Subtitle type="L">
-      A JavaScript focused web developer that builds frontend and backend
-      applications
+      A full-stack developer that builds frontend and backend web applications.
     </Subtitle>
     <Button primary type="scrollTo" scrollTo={'projects'}>
       Projects

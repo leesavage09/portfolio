@@ -20,8 +20,8 @@ export const ProjectsSection = () => {
     <>
       <Heading type="h2">Projects</Heading>
       <Subtitle type="M">
-        Here you will find some of the personal and clients projects that I
-        created with each project containing its own case study
+        Here you will find some of the projects that I have created or
+        contributed to significantly. Each project contains its own case study.
       </Subtitle>
 
       <Layout columns={1}>
@@ -53,16 +53,16 @@ export const ProjectsSection = () => {
 
                 <Paragraph>
                   I joined the project in an early MVP stage. I worked on this
-                  project for two years as the only developer. I adding many new
+                  project for two years as the lead developer. I added many new
                   features such as Zoom, Zapier, Stripe and Chargebee
                   Integrations.
                 </Paragraph>
 
                 <Paragraph>
-                  This was a great opportunity to learn and grow as a developer.
-                  I built many features form scratch including a iCal calender,
-                  a public api to help teachers create sales funnels and a fully
-                  featured community. I plan to add a full case study soon.
+                  This was a great opportunity to learn and grow. I built many
+                  features form scratch including an iCal calender, a public API
+                  to help teachers create sales funnels and a fully featured
+                  community. I plan to add a full case study soon.
                 </Paragraph>
 
                 <Paragraph>
