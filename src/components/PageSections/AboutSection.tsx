@@ -29,10 +29,10 @@ export const AboutSection = () => (
       <LayoutItem>
         <Heading type="h3">Favorite Technologies</Heading>
         <div className="flex flex-wrap gap-4 ">
-          <Chip lable={'SAAS'} />
           <Chip lable={'JavaScript'} />
           <Chip lable={'Typescript'} />
           <Chip lable={'React'} />
+          <Chip lable={'React Query'} />
           <Chip lable={'Next.js'} />
           <Chip lable={'Express'} />
           <Chip lable={'Tailwind'} />
