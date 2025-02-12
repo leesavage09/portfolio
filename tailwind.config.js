@@ -90,6 +90,9 @@ module.exports = {
       animation: {
         scroll: 'scroll 1.5s ease-in infinite',
       },
+      transitionProperty: {
+        'max-height': 'max-height',
+      },
     },
     screens: {
       sm: '640px',
