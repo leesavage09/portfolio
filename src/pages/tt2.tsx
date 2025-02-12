@@ -83,57 +83,6 @@ export default function TT2() {
           </LayoutItem>
         </Layout>
       </Section>
-      {/* <Section>
-        <Layout columns={2}>
-          <LayoutItem>
-            <Heading type="h3">Technologies used</Heading>
-            <div className="flex flex-wrap gap-4 ">
-              <Chip lable={'Agile Scrum'} />
-              <Chip lable={'Gitflow'} />
-
-              <Chip lable={'ClickUp'} />
-              <Chip lable={'Jira'} />
-
-              <Chip lable={'Babel'} />
-              <Chip lable={'Vite'} />
-              <Chip lable={'TypeScript'} />
-              <Chip lable={'React'} />
-
-              <Chip lable={'Eslint'} />
-              <Chip lable={'SASS'} />
-              <Chip lable={'Tailwind'} />
-
-              <Chip lable={'URQL'} />
-              <Chip lable={'GraphQL'} />
-
-              <Chip lable={'Formik'} />
-              <Chip lable={'Yup'} />
-              <Chip lable={'Storybook'} />
-              <Chip lable={'Ant design'} />
-
-              <Chip lable={'Jest'} />
-              <Chip lable={'Cypress'} />
-              <Chip lable={'React Testing Library'} />
-            </div>
-          </LayoutItem>
-          <LayoutItem>
-            <Heading type="h3">Testimonial</Heading>
-            <Paragraph>
-              <>
-                Lee is a strong communicator, with a pragmatic and thoughtful
-                approach to all of the work he undertakes. Mindful of how his
-                work effects both users and the project’s commercials, he became
-                an invaluable asset to our team. He quickly cemented himself as
-                reliable and trustworthy, and is someone we look forward to
-                working with again.
-                <Link href="https://www.landdigital.agency">
-                  Daniel Gadd - Technical Director - Land digital agency
-                </Link>
-              </>
-            </Paragraph>
-          </LayoutItem>
-        </Layout>
-      </Section> */}
       <Section>
         <Heading type="h3">Technologies used</Heading>
         <div className="flex flex-wrap gap-4 ">
