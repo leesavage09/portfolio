@@ -54,6 +54,7 @@ export default function TT2() {
           Live Link
         </Button>
       </Section>
+
       <Section>
         <Heading type="h2">About Teach</Heading>
         <Layout columns={2}>
@@ -113,7 +114,8 @@ export default function TT2() {
           </LayoutItem>
         </Layout>
       </Section>
-      <Section>
+
+      <Section alternativeBackground>
         <Heading type="h3">Technologies used</Heading>
         <div className="flex flex-wrap gap-4 justify-center">
           <Chip lable={'Express'} />
@@ -297,65 +299,86 @@ export default function TT2() {
           </Layout>
         </div>
       </Section>
-      {/* 
-      <Section>
-        <Heading type="h2">Work Completed</Heading>
+
+      <Section alternativeBackground>
+        <Heading type="h2">Integrations</Heading>
         <Subtitle type="M">
-          Due to the large scope of the project, continuous updates and ongoing
-          improvements were necessary. Improvements like reduction of technical
-          debt, implementation of features, redesigns, and improvements of user
-          experience.
+          During my time at Teach.io I integrated multiple external services to
+          implement the following main features:
         </Subtitle>
-        <Image
-          src={tt2devices2}
-          alt={`TT2 mobile app images`}
-          className="drop-shadow-md mb-8"
-          width={1024}
-        />
         <Layout columns={1}>
           <Layout columns={2}>
             <LayoutItem>
-              <Heading type="h3">Stripe implementation</Heading>
+              <Heading type="h3">Zoom</Heading>
               <Paragraph>
-                When I joined Land Digital agency on the Tyne Tunnel 2 Project,
-                WorldPay was the payment provider. I replaced WorldPay with a
-                customized Stripe check-out.
+                <>
+                  Teach.io has an app on the Zoom Market Place that allows
+                  students and teachers to create and attend meetings from
+                  within the Teach.io calendar app.
+                  <a href="https://marketplace.zoom.us/apps/WPObZ8yYQI2hvFaVp-Jetg">
+                    Zoom Marketplace App
+                  </a>
+                </>
               </Paragraph>
             </LayoutItem>
             <LayoutItem>
-              <Heading type="h3">Authentication</Heading>
+              <Heading type="h3">Chargebee</Heading>
               <Paragraph>
-                I refactored front end authentication logic, simplifying a
-                customized authentication/authorization component. The component
-                handled masquerade tokens allowing telephone support agents
-                access to user accounts.
+                Chargebee handles teachers&apos; subscriptions on Teach.io .
+                Teachers are able to manage, update, and cancel their own
+                subscriptions in-app as well as see the status of any free
+                trials or coupons.
+              </Paragraph>
+              <Paragraph>
+                For customer service purposes, Teach.io admins can manage
+                subscriptions by adding free services or updating costs.
               </Paragraph>
             </LayoutItem>
           </Layout>
           <Layout columns={2}>
             <LayoutItem>
-              <Heading type="h3">Migration to React router 6</Heading>
+              <Image
+                src={tt2}
+                alt={`TT2 mobile app images`}
+                className="drop-shadow-md mb-8"
+                width={1024}
+              />
+            </LayoutItem>
+            <LayoutItem>
+              <Heading type="h3">Zapier</Heading>
               <Paragraph>
-                To clarify design decisions and help future developers maintain
-                the code base, I refactored and simplified application routing
-                with a migration from React router 5 to React router 6. This
-                included modifications of the use and structure of React 18
-                suspense API and fallback components.
+                To provide better marketing options for teachers, the
+                http://teach.io Zapier app was introduced. Now, student creation
+                can be automated via Zapier actions, allowing teachers to sell
+                courses on external platforms or sales funnels.
+              </Paragraph>
+            </LayoutItem>
+          </Layout>
+          <Layout columns={2}>
+            <LayoutItem>
+              <Heading type="h3">Mux</Heading>
+              <Paragraph>
+                Mux allows teachers to upload encrypted videos, only allowing
+                students to view them via the app. This keeps their IP
+                protected. Teachers are updated when the video is ready to
+                review and publish the course.
               </Paragraph>
             </LayoutItem>
             <LayoutItem>
-              <Heading type="h3">Testing</Heading>
+              <Heading type="h3">Stripe</Heading>
               <Paragraph>
-                Because of the large number of users, many implemented key
-                features were backed-up with multi-layered (Snapshot, Unit,
-                Integration and E2E) testing for bug-free development.
+                Teachers can add their Stripe API keys to the app. They can
+                create sales pages to market courses and receive money directly.
+                Various management tools are available to track sales, and
+                refund customers.
               </Paragraph>
             </LayoutItem>
           </Layout>
         </Layout>
-      </Section>*/}
+      </Section>
+
       <Anchor id={'contact'} />
-      <Section pattern>
+      <Section pattern alternativeBackground>
         <ContactSection />
       </Section>
     </>

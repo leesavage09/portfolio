@@ -21,11 +21,9 @@ export default function Home() {
         <AboutSection />
       </Section>
       <Anchor id={'projects'} />
-      <Section>
-        <ProjectsSection />
-      </Section>
+      <ProjectsSection />
       <Anchor id={'contact'} />
-      <Section pattern>
+      <Section pattern alternativeBackground>
         <ContactSection />
       </Section>
     </>

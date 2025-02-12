@@ -3,6 +3,7 @@ import { Button } from '@stories/Atoms/Button';
 import { Heading } from '@stories/Atoms/Heading';
 import { Layout, LayoutItem } from '@stories/Atoms/Layout';
 import { Paragraph } from '@stories/Atoms/Paragraph';
+import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
 import { CaseStudy } from '@stories/Organisms/CaseStudy';
 import Image from 'next/image';
@@ -18,15 +19,15 @@ export const ProjectsSection = () => {
 
   return (
     <>
-      <Heading type="h2">Projects</Heading>
-      <Subtitle type="M">
-        Here you will find some of the projects that I have created or
-        contributed to significantly. Each project contains its own case study.
-      </Subtitle>
+      <Section>
+        <Heading type="h2">Projects</Heading>
+        <Subtitle type="M">
+          Here you will find some of the projects that I have created or
+          contributed to significantly
+        </Subtitle>
+      </Section>
 
-      <Layout columns={1} className="gap-y-16">
-        <div className="mx-auto h-1 w-full bg-dark-blue-200 rounded-xl" />
-
+      <Section>
         <LayoutItem>
           <Heading type="h3">Teach.io</Heading>
           <Layout columns={2}>
@@ -67,9 +68,9 @@ export const ProjectsSection = () => {
             </LayoutItem>
           </Layout>
         </LayoutItem>
+      </Section>
 
-        <div className="mx-auto h-1 w-full bg-dark-blue-200 rounded-xl" />
-
+      <Section alternativeBackground>
         <LayoutItem>
           <CaseStudy
             image={tt2overview}
@@ -98,9 +99,9 @@ export const ProjectsSection = () => {
             </span>
           </CaseStudy>
         </LayoutItem>
+      </Section>
 
-        <div className="mx-auto h-1 w-full bg-dark-blue-200 rounded-xl" />
-
+      <Section>
         <LayoutItem>
           <CaseStudy image={knots3dmenu} imageWidth={250} title={'Knots 3D'}>
             <Paragraph>
@@ -148,9 +149,9 @@ export const ProjectsSection = () => {
             </Paragraph>
           </CaseStudy>
         </LayoutItem>
+      </Section>
 
-        <div className="mx-auto h-1 w-full bg-dark-blue-200 rounded-xl" />
-
+      <Section alternativeBackground>
         <LayoutItem>
           <CaseStudy
             image={notinstagramsingle1}
@@ -187,7 +188,7 @@ export const ProjectsSection = () => {
             </span>
           </CaseStudy>
         </LayoutItem>
-      </Layout>
+      </Section>
     </>
   );
 };
