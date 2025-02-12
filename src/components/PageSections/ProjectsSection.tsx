@@ -10,8 +10,8 @@ import googlePlayBadge from '/public/images/google_play_badge.png';
 import knots3dmenu from '/public/images/knots3dmenu.png';
 import notinstagramsingle1 from '/public/images/notinstagramsingle1.png';
 import teachio from '/public/images/teachio.png';
-import teachio2 from '/public/images/teachio2.png';
 import tt2overview from '/public/images/tt2overview.png';
+import GithubSvg from '/public/vector/github-mark-white.svg';
 
 export const ProjectsSection = () => {
   const appState = useAppState();
@@ -37,12 +37,6 @@ export const ProjectsSection = () => {
                 className="drop-shadow-md mb-6"
                 width={472}
               />
-              <Image
-                src={teachio2}
-                alt={`Teach.io image`}
-                className="drop-shadow-md"
-                width={472}
-              />
             </LayoutItem>
 
             <LayoutItem>
@@ -55,15 +49,7 @@ export const ProjectsSection = () => {
 
                 <Paragraph>
                   I joined the project in an early MVP stage. I worked on this
-                  project for two years as the lead developer. I added many new
-                  features such as Zoom, Zapier, Stripe and Chargebee
-                  Integrations.
-                </Paragraph>
-
-                <Paragraph>
-                  I built many features including an iCal calender, a public API
-                  to help teachers create sales funnels and a fully featured
-                  community.
+                  project for over two years as the lead developer.
                 </Paragraph>
 
                 <span className="flex justify-center mt-6">
@@ -124,7 +110,7 @@ export const ProjectsSection = () => {
                 3D app available for teaching sailing knots on the Android app
                 store (June 2023). This app uses the Ionic Framework and
                 Three.js to create a high performance 3D PWA.
-                <span className="flex justify-center">
+                <span className="flex justify-center mb-6">
                   <a
                     className="hover:-translate-y-1 duration-300"
                     href="https://play.google.com/store/apps/details?id=uk.co.leesavage.CCknots&gl=GB&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
@@ -144,20 +130,18 @@ export const ProjectsSection = () => {
                     className="self-end"
                     onClick={() => appState.setShowKnots3d(true)}
                   >
-                    PWA demo on request
+                    PWA can be run locally
                   </Button>
                 </span>
                 <span className="flex justify-center mb-6">
                   <Button
-                    type="onClick"
-                    className=""
-                    onClick={() => {
-                      return;
-                    }}
-                    disabled
-                    disabledText="Case study coming soon"
+                    primary
+                    className="flex gap-4 items-center bg-black text-white"
+                    type="href"
+                    href="https://github.com/leesavage09/CCKnots"
                   >
-                    Coming Soon
+                    <GithubSvg width="25px" height="25px" />
+                    Source code
                   </Button>
                 </span>
               </>
@@ -176,21 +160,30 @@ export const ProjectsSection = () => {
           >
             <Paragraph>
               Notinstagram is a pixel perfect MVP version of Instagram. I
-              created notinstagram in my spare time to learn React and Ruby on
-              Rails. It serves as a demonstration of my capabilities in creating
-              a complex full stack application from scratch.
+              created notinstagram in my spare time to learn and transition from
+              Java into a PWA/Web development career
             </Paragraph>
 
-            <span className="flex justify-center my-6">
+            <Paragraph>
+              Built with React and Ruby on Rails, it serves as a demonstration
+              of my capabilities in creating a complex full stack application
+              from scratch.
+            </Paragraph>
+
+            <span className="flex justify-center my-6 flex-col ">
               <Button
                 type="onClick"
                 primary={false}
                 disabled
-                className="self-end mt-8"
+                className="self-end mt-8 mx-auto"
                 onClick={() => appState.setShowNotInstagram(true)}
               >
-                Demo on request
+                Live Demo
               </Button>
+              <span className="text-center text-sm">
+                Removed due to a copyright request, <br />
+                (see case study for code and images)
+              </span>
             </span>
           </CaseStudy>
         </LayoutItem>
