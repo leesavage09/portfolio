@@ -17,7 +17,7 @@ export default function Home() {
         <HomeSection />
       </Section>
       <Anchor id={'about'} />
-      <Section>
+      <Section pattern>
         <AboutSection />
       </Section>
       <Anchor id={'projects'} />
