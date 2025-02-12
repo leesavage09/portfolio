@@ -17,15 +17,19 @@ export const LayoutItem = ({ children, className }: LayoutItemProps) => (
 interface LayoutProps {
   columns: 1 | 2 | 3;
   children: ReactNode;
+  className?: string;
 }
 
-export const Layout = ({ children, columns }: LayoutProps) => {
+export const Layout = ({ children, columns, className = '' }: LayoutProps) => {
   const tailwindCol = (() => {
     switch (columns) {
       case 1:
-        return 'w-full grid grid-cols-1 gap-y-16';
+        return twMerge('w-full grid grid-cols-1 gap-y-16', className);
       case 2:
-        return 'w-full grid grid-cols-1 gap-y-8 sm:grid-cols-2 md:gap-y-12 lg:gap-y-24  gap-x-8 md:gap-x-14 lg:gap-x-20';
+        return twMerge(
+          'w-full grid grid-cols-1 gap-y-8 sm:grid-cols-2 md:gap-y-12 lg:gap-y-24  gap-x-8 md:gap-x-14 lg:gap-x-20',
+          className
+        );
     }
   })();
 

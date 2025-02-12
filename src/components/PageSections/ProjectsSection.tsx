@@ -24,7 +24,9 @@ export const ProjectsSection = () => {
         contributed to significantly. Each project contains its own case study.
       </Subtitle>
 
-      <Layout columns={1}>
+      <Layout columns={1} className="gap-y-16">
+        <div className="mx-auto h-1 w-full bg-dark-blue-200 rounded-xl" />
+
         <LayoutItem>
           <Heading type="h3">Teach.io</Heading>
           <Layout columns={2}>
@@ -59,26 +61,9 @@ export const ProjectsSection = () => {
                 </Paragraph>
 
                 <Paragraph>
-                  This was a great opportunity to learn and grow. I built many
-                  features form scratch including an iCal calender, a public API
+                  I built many features including an iCal calender, a public API
                   to help teachers create sales funnels and a fully featured
-                  community. I plan to add a full case study soon.
-                </Paragraph>
-
-                <Paragraph>
-                  <>
-                    It boasts a plethora of{' '}
-                    <a
-                      className="text-dark-blue-300 hover:text-blue-800 underline"
-                      href="https://teach.io/features"
-                    >
-                      features
-                    </a>{' '}
-                    and functionality, including a live messaging system
-                    (complete with browser notifications), an internal
-                    notification system, a course builder, profile pages, and
-                    lots more.
-                  </>
+                  community.
                 </Paragraph>
 
                 <span className="flex justify-center mt-6">
@@ -88,22 +73,17 @@ export const ProjectsSection = () => {
                 </span>
 
                 <span className="flex justify-center mt-6">
-                  <Button
-                    type="onClick"
-                    className=""
-                    onClick={() => {
-                      return;
-                    }}
-                    disabled
-                    disabledText="Case study coming soon"
-                  >
-                    Coming Soon
+                  <Button type="href" primary className="" href="/teach">
+                    Case Study
                   </Button>
                 </span>
               </>
             </LayoutItem>
           </Layout>
         </LayoutItem>
+
+        <div className="mx-auto h-1 w-full bg-dark-blue-200 rounded-xl" />
+
         <LayoutItem>
           <CaseStudy
             image={tt2overview}
@@ -132,6 +112,8 @@ export const ProjectsSection = () => {
             </span>
           </CaseStudy>
         </LayoutItem>
+
+        <div className="mx-auto h-1 w-full bg-dark-blue-200 rounded-xl" />
 
         <LayoutItem>
           <CaseStudy image={knots3dmenu} imageWidth={250} title={'Knots 3D'}>
@@ -182,6 +164,8 @@ export const ProjectsSection = () => {
             </Paragraph>
           </CaseStudy>
         </LayoutItem>
+
+        <div className="mx-auto h-1 w-full bg-dark-blue-200 rounded-xl" />
 
         <LayoutItem>
           <CaseStudy
