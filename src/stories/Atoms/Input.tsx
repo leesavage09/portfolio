@@ -51,7 +51,7 @@ export const Input: React.FC<InputProps> = ({
         className={twMerge(
           'mb-1  text-md',
           error
-            ? 'dark:text-primary-100 text-primary font-bold'
+            ? 'dark:text-primary-400 text-primary font-bold'
             : 'dark:text-blue-100 text-dark-blue'
         )}
         htmlFor={id}
