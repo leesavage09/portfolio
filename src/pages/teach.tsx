@@ -11,8 +11,10 @@ import { Subtitle } from '@stories/Atoms/Subtitle';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
-import tt2 from '/public/images/tt2.png';
-import tt2devices from '/public/images/tt2devices.png';
+import imageTeach1 from '/public/images/teachio1.png';
+import imageTeach2 from '/public/images/teachio2.png';
+import imageTeach3 from '/public/images/teachio3.png';
+import imageTeach4 from '/public/images/teachio4.png';
 
 export default function TT2() {
   const [showReactQuerySection, setShowReactQuerySection] = useState(false);
@@ -71,9 +73,9 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={tt2}
-              alt={`TT2 tunnel`}
-              className="drop-shadow-md "
+              src={imageTeach3}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
               width={500}
             />
           </LayoutItem>
@@ -185,8 +187,8 @@ export default function TT2() {
           <Layout columns={2}>
             <LayoutItem className="justify-center">
               <Image
-                src={tt2devices}
-                alt={`TT2 app images`}
+                src={imageTeach4}
+                alt={`Teach.io screen shot`}
                 className="drop-shadow-md"
                 width={500}
               />
@@ -277,8 +279,8 @@ export default function TT2() {
             </LayoutItem>
             <LayoutItem className="justify-center">
               <Image
-                src={tt2devices}
-                alt={`TT2 app images`}
+                src={imageTeach1}
+                alt={`Teach.io screen shot`}
                 className="drop-shadow-md"
                 width={500}
               />
@@ -322,6 +324,25 @@ export default function TT2() {
               </Paragraph>
             </LayoutItem>
             <LayoutItem>
+              <Heading type="h3">Zapier</Heading>
+              <Paragraph>
+                To provide better marketing options for teachers, the
+                http://teach.io Zapier app was introduced. Now, student creation
+                can be automated via Zapier actions, allowing teachers to sell
+                courses on external platforms or sales funnels.
+              </Paragraph>
+            </LayoutItem>
+          </Layout>
+          <Layout columns={2}>
+            <LayoutItem>
+              <Image
+                src={imageTeach2}
+                alt={`Teach.io screen shot`}
+                className="drop-shadow-md mb-8 px-4"
+                width={1024}
+              />
+            </LayoutItem>
+            <LayoutItem>
               <Heading type="h3">Chargebee</Heading>
               <Paragraph>
                 Chargebee handles teachers&apos; subscriptions on Teach.io .
@@ -332,25 +353,6 @@ export default function TT2() {
               <Paragraph>
                 For customer service purposes, Teach.io admins can manage
                 subscriptions by adding free services or updating costs.
-              </Paragraph>
-            </LayoutItem>
-          </Layout>
-          <Layout columns={2}>
-            <LayoutItem>
-              <Image
-                src={tt2}
-                alt={`TT2 mobile app images`}
-                className="drop-shadow-md mb-8"
-                width={1024}
-              />
-            </LayoutItem>
-            <LayoutItem>
-              <Heading type="h3">Zapier</Heading>
-              <Paragraph>
-                To provide better marketing options for teachers, the
-                http://teach.io Zapier app was introduced. Now, student creation
-                can be automated via Zapier actions, allowing teachers to sell
-                courses on external platforms or sales funnels.
               </Paragraph>
             </LayoutItem>
           </Layout>
