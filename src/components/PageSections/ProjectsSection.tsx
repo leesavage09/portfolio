@@ -55,7 +55,7 @@ export const ProjectsSection = () => {
 
                 <span className="flex justify-center mt-6">
                   <Button type="href" href="https://teach.io">
-                    teach.io
+                    https://teach.io
                   </Button>
                 </span>
 
@@ -94,7 +94,7 @@ export const ProjectsSection = () => {
                 type="href"
                 href="https://account.tt2.co.uk"
               >
-                account.tt2.co.uk
+                https://account.tt2.co.uk
               </Button>
             </span>
           </CaseStudy>
@@ -173,11 +173,10 @@ export const ProjectsSection = () => {
 
             <span className="flex justify-center my-6 flex-col ">
               <Button
-                type="onClick"
+                type="href"
                 primary={false}
-                disabled
                 className="self-end mt-8 mx-auto"
-                onClick={() => appState.setShowNotInstagram(true)}
+                href="https://not--instagram.herokuapp.com/"
               >
                 Live Demo
               </Button>

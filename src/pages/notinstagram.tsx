@@ -41,15 +41,20 @@ export default function Notinstagram() {
             },
           ]}
         />
-        <Button
-          type="onClick"
-          primary
-          disabled
-          className="self-end mt-8"
-          onClick={() => appState.setShowNotInstagram(true)}
-        >
-          Demo on request
-        </Button>
+        <div className="flex flex-col self-end mt-8">
+          <Button
+            type="href"
+            className="mx-auto"
+            primary
+            href="https://not--instagram.herokuapp.com/"
+          >
+            Live Demo
+          </Button>
+          <span className="text-center text-sm">
+            Removed due to a copyright request, <br />
+            (see case study for code and images)
+          </span>
+        </div>
       </Section>
       <Section>
         <Heading type="h2">About notinstagram</Heading>
@@ -175,12 +180,16 @@ export default function Notinstagram() {
               simulator in the browser DevTools.
             </Paragraph>
             <Button
-              type="onClick"
+              type="href"
               primary
-              onClick={() => appState.setShowNotInstagram(true)}
+              href="https://not--instagram.herokuapp.com/"
             >
               Live Demo
             </Button>
+            <span className="text-center text-sm">
+              Removed due to a copyright request, <br />
+              (see case study for code and images)
+            </span>
           </LayoutItem>
           <LayoutItem>
             <Heading type="h2">Full documentation</Heading>
