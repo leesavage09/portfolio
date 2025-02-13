@@ -1,8 +1,8 @@
 import { Input } from '@stories/Atoms/Input';
-import { Modal } from '@stories/Atoms/Modal';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { useFormik } from 'formik';
 import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 import * as Yup from 'yup';
 import { Button } from '../Atoms/Button';
 
@@ -34,7 +34,6 @@ const postMessage = async (data: {
 };
 
 export const ContactForm: React.FC = () => {
-  const [showModal, setShowModal] = useState(false);
   const [result, setResult] = useState<messageResponse>();
 
   const formik = useFormik({
@@ -54,9 +53,9 @@ export const ContactForm: React.FC = () => {
         .max(3000, 'The maximum length of your message is 3000 characters')
         .required('! Please write a message'),
     }),
+    validate: () => setResult(undefined),
     onSubmit: async (values) => {
       setResult(undefined);
-      setShowModal(true);
       const result = await postMessage(values);
       setResult(result);
       if (result?.status === 'OK') formik.resetForm();
@@ -65,18 +64,6 @@ export const ContactForm: React.FC = () => {
 
   return (
     <>
-      <Modal visible={showModal} close={() => setShowModal(false)}>
-        {!result ? (
-          <Paragraph>Your message is sending....</Paragraph>
-        ) : result?.status === 'OK' ? (
-          <Paragraph>Message Sent</Paragraph>
-        ) : (
-          <Paragraph>
-            Your message could not be sent. Please check you have provided valid
-            data and try again later...
-          </Paragraph>
-        )}
-      </Modal>
       <form
         onSubmit={formik.handleSubmit}
         className="dark:bg-dark-blue-700 dark:text-blue-100 bg-blue-200 text-dark-blue-800 rounded-md drop-shadow-md p-6 sm:p-8 md:p-12 lg:p-16 w-full"
@@ -112,19 +99,26 @@ export const ContactForm: React.FC = () => {
         <Button
           type="submit"
           primary
-          className="float-right ml-4"
+          className={twMerge(
+            'float-right ml-4',
+            formik.isSubmitting ? 'animate-pulse' : ''
+          )}
           disabled={formik.isSubmitting}
           disabledText="Sending Email..."
         >
           Send Email
         </Button>
+        {formik.isSubmitting && (
+          <Paragraph className="animate-pulse text-sm lg:text-sm">
+            Your message is sending....
+          </Paragraph>
+        )}
         {result &&
           (result?.status === 'OK' ? (
-            <Paragraph className="text-sm">Message Sent</Paragraph>
+            <Paragraph className="text-sm lg:text-sm">Message Sent</Paragraph>
           ) : (
-            <Paragraph className="text-sm">
-              Your message could not be sent. Please check you have provided
-              valid data and try again later...
+            <Paragraph className="text-sm lg:text-sm">
+              Sorry your message could not be sent. Please try again later
             </Paragraph>
           ))}
       </form>
