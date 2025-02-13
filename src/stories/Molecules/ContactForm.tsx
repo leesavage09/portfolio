@@ -1,7 +1,7 @@
 import { Input } from '@stories/Atoms/Input';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { useFormik } from 'formik';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import * as Yup from 'yup';
 import { Button } from '../Atoms/Button';
@@ -10,6 +10,12 @@ interface messageResponse {
   status?: string;
   error?: unknown;
 }
+
+const wakeUpServer = async () => {
+  const serverResponse = (await fetch(`/api/wakeUp/`))?.statusText;
+  if (process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev')
+    console.log(`Server says ${serverResponse}`);
+};
 
 const postMessage = async (data: {
   name: string;
@@ -61,6 +67,10 @@ export const ContactForm: React.FC = () => {
       if (result?.status === 'OK') formik.resetForm();
     },
   });
+
+  useEffect(() => {
+    wakeUpServer();
+  }, []);
 
   return (
     <>
