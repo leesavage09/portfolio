@@ -50,13 +50,13 @@ export const ContactForm: React.FC = () => {
     },
     validationSchema: Yup.object({
       name: Yup.string()
-        .max(150, 'The maximum length on name is 200 characters')
+        .max(150, '! The maximum length on name is 200 characters')
         .required('! Please provide your name'),
       email: Yup.string()
-        .email('Not a valid email')
+        .email('! Not a valid email')
         .required('! Please provide an email'),
       message: Yup.string()
-        .max(3000, 'The maximum length of your message is 3000 characters')
+        .max(3000, '! The maximum length of your message is 3000 characters')
         .required('! Please write a message'),
     }),
     validate: () => setResult(undefined),
@@ -113,8 +113,8 @@ export const ContactForm: React.FC = () => {
             'float-right ml-4',
             formik.isSubmitting ? 'animate-pulse' : ''
           )}
-          disabled={formik.isSubmitting}
-          disabledText="Sending Email..."
+          disabled={formik.isSubmitting || !formik.isValid}
+          disabledText={formik.isSubmitting ? 'Sending Email...' : 'Fix errors'}
         >
           Send Email
         </Button>
