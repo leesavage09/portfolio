@@ -780,6 +780,49 @@ export default function TT2() {
         </Layout>
       </Section>
 
+      <Section alternativeBackground>
+        <Heading type="h2">Real-time messaging & notifications</Heading>
+        <Subtitle type="M">
+          I implemented real-time messaging and notifications in teach.io using
+          Socket.io. The goal was to create an instant and seamless
+          communication experience for users, similar to what you’d expect in
+          modern chat applications.
+        </Subtitle>
+
+        <Layout columns={2}>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach4}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+          <LayoutItem>
+            <Heading type="h3">The challenge</Heading>
+            <Paragraph>
+              Traditional web applications rely on repeated requests to the
+              server to check for new messages or updates. This approach is
+              inefficient and results in stale data.
+            </Paragraph>
+            <Heading type="h3">The solution</Heading>
+            <Paragraph>
+              I integrated Socket.io, a powerful real-time communication
+              library, into the React frontend and an Express backend. This
+              allows messages and notifications to be delivered instantly - as
+              soon as they are sent.
+            </Paragraph>
+            <Heading type="h3">The impact</Heading>
+            <Paragraph>
+              This implementation significantly improved the user experience,
+              making communication smooth and real-time. Users are able to see
+              when others are online. This is all controllable via user
+              preferences.
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+      </Section>
+
       <Anchor id={'contact'} />
       <Section pattern alternativeBackground>
         <ContactSection />
