@@ -1,7 +1,7 @@
 import { Link } from '@stories/Atoms/Link';
 import { ThemeToggle } from '@stories/Atoms/ThemeToggle';
 import Image from 'next/image';
-import profilePic from '/public/images/leeSavage.png';
+import profilePic from '/public/images/lee_savage_3.png';
 
 export const Menu = () => (
   <nav
