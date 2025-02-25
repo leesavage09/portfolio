@@ -55,7 +55,7 @@ export const ProjectsSection = () => {
 
                 <span className="flex justify-center mt-6">
                   <Button type="href" href="https://teach.io">
-                    https://teach.io
+                    teach.io
                   </Button>
                 </span>
 
@@ -94,7 +94,7 @@ export const ProjectsSection = () => {
                 type="href"
                 href="https://account.tt2.co.uk"
               >
-                https://account.tt2.co.uk
+                account.tt2.co.uk
               </Button>
             </span>
           </CaseStudy>
