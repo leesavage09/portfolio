@@ -379,6 +379,122 @@ export default function TT2() {
         </Layout>
       </Section>
 
+      <Section>
+        <Anchor id={'ReactQuery'} />
+        <Heading type="h2">Event system</Heading>
+        <Subtitle type="M">
+          Teach.io needed a reliable and scalable solution for email and push
+          notifications about important events, discussions, activities within
+          the app, student milestones, new course content unlocked (the
+          drip-feed feature) or new content added by teachers. The event system
+          has to function according to a user&apos;s app preference.
+        </Subtitle>
+
+        <Layout columns={1}>
+          <LayoutItem>
+            <Paragraph>
+              The challenge was to ensure notifications were sent efficiently
+              and on time, without overloading the system.
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={2}>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach4}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+          <LayoutItem>
+            <Heading type="h3">Solution</Heading>
+            <Paragraph>
+              <>
+                To achieve this, the following technologies were implemented
+                <ul className="my-2 flex gap-2 flex-col">
+                  <li>
+                    <b>Google Cloud Tasks:</b> Chosen as the event management
+                    system to schedule and run tasks efficiently. This allows
+                    notifications to be processed asynchronously, improving
+                    performance and reliability.
+                  </li>
+                  <li>
+                    <b>MongoDB</b> Used to store event metadata, ensuring quick
+                    access and retrieval of relevant event data.
+                  </li>
+                  <li>
+                    <b>Express event processing middleware:</b> Middleware was
+                    developed to fetch event metadata before passing the event
+                    to the appropriate event handler.
+                  </li>
+                  <li>
+                    <b>Express debouncing middleware:</b> Debouncing middleware
+                    ensures notifications are only sent after the trigger stops
+                    changing. This keeps unnecessary notifications down while
+                    still keeping users informed about activity on the platform.
+                  </li>
+                  <li>
+                    <b>Queue-based processing:</b> Implemented to manage server
+                    load and prevent bottlenecks.
+                  </li>
+                </ul>
+              </>
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+        <Layout columns={2}>
+          <LayoutItem>
+            <Heading type="h3">Results</Heading>
+            <Paragraph>
+              <ul className="my-2 flex gap-2 flex-col">
+                <li>
+                  <b>Improved engagement:</b> Users received timely updates,
+                  leading to increased interactions within the community.
+                </li>
+                <li>
+                  <b>Scalability:</b> The solution can handle thousands of
+                  notifications daily with minimal performance overhead.
+                  Analysis of the community and interesting posts are calculated
+                  during night times when server load is low. A points based
+                  system was implement to score relevant or interesting content.
+                </li>
+                <li>
+                  <b>Reliability: </b> Google Cloud Tasks ensured that no
+                  notifications were missed, even during high-traffic periods.
+                  Automatic retries and New Relic logging was implemented to
+                  monitor success.
+                </li>
+                <li>
+                  <b>Optimized performance: </b> Offloading tasks to
+                  asynchronous processing reduced server load, ensuring app
+                  responsiveness.
+                </li>
+              </ul>
+            </Paragraph>
+          </LayoutItem>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach1}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={1}>
+          <LayoutItem>
+            <Paragraph>
+              By leveraging cloud-based event management and a well-structured
+              backend, I was able to successfully automate a notification
+              system, enhancing user experience and engagement.
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+      </Section>
+
       <Anchor id={'contact'} />
       <Section pattern alternativeBackground>
         <ContactSection />
