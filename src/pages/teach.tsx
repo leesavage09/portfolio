@@ -158,7 +158,6 @@ export default function TT2() {
       </Section>*/}
 
       <Section>
-        <Anchor id={'ReactQuery'} />
         <Heading type="h2">React query state management</Heading>
         <Subtitle type="M">
           Shortly after joining the project, I encountered significant
@@ -380,7 +379,6 @@ export default function TT2() {
       </Section>
 
       <Section>
-        <Anchor id={'ReactQuery'} />
         <Heading type="h2">Event system</Heading>
         <Subtitle type="M">
           Teach.io needed a reliable and scalable solution for email and push
@@ -490,6 +488,159 @@ export default function TT2() {
               By leveraging cloud-based event management and a well-structured
               backend, I was able to successfully automate a notification
               system, enhancing user experience and engagement.
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+      </Section>
+
+      <Section alternativeBackground>
+        <Heading type="h2">Block content editor</Heading>
+        <Subtitle type="M">
+          The HTML content editor for the course builder and course sales page
+          allows teachers to create stylish sales pages, as well as useful
+          course resources.
+        </Subtitle>
+
+        <Layout columns={1}>
+          <LayoutItem>
+            <Heading type="h3">The challenge</Heading>
+            <Paragraph>
+              Teach.io’s course creation and sales page management were
+              initially reliant on static HTML and the markdown format,
+              requiring teachers to have at least a basic understanding of
+              markdown. This was a major bottleneck in content creation, as
+              non-technical users struggled with formatting and structuring
+              content effectively. Our goal was to provide an intuitive WYSIWYG
+              editor that allowed real-time editing and customization without
+              sacrificing control over the final HTML output.
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={2}>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach4}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+          <LayoutItem>
+            <Heading type="h3">Why Slate.js?</Heading>
+            <Paragraph>
+              <>
+                Given the need for flexible, user-friendly, and extendable
+                features, I chose <b>Slate.js</b> A framework for building a
+                customizable block editor in React.
+              </>
+            </Paragraph>
+            <Paragraph>
+              <>
+                Slate.js stood out for several reasons:
+                <ul className="my-2 flex gap-2 flex-col">
+                  <li>
+                    <b>Highly customizable:</b> Unlike traditional WYSIWYG
+                    editors, Slate.js provides a lower-level API to define the
+                    exact behaviour needed. Later, when we needed the slate
+                    editor in the community, I was able to add mentions easily.
+                  </li>
+                  <li>
+                    <b>React-friendly:</b> Since Teach.io’s front end was built
+                    with React, integrating Slate.js felt natural.
+                  </li>
+                  <li>
+                    <b>Rich text capabilities: </b> It allowed me to implement
+                    features like inline formatting, media embedding, and custom
+                    blocks.
+                  </li>
+                  <li>
+                    <b>Schema enforcement: </b> Ensuring structured content
+                    without breaking HTML semantics was crucial.
+                  </li>
+                </ul>
+              </>
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={2}>
+          <LayoutItem>
+            <Heading type="h3">Implementation</Heading>
+            <Paragraph>
+              To build the editor, I configured Slate.js to provide a block
+              editing experience that felt seamless and intuitive. I structured
+              the system to handle different content types, such as headings,
+              paragraphs, images and mentions, ensuring users could easily
+              insert and format content.
+            </Paragraph>
+            <Paragraph>
+              One of the most powerful aspects of Slate.js was the ability to
+              customize the editor’s behaviour by defining specific rules for
+              content formatting. This allowed me to enforce consistency while
+              still giving users creative control over their course materials.
+            </Paragraph>
+            <Paragraph>
+              Additionally, I implemented a toolbar with essential formatting
+              options, including bold and italic text, and list creation. By
+              leveraging Slate.js’s flexibility, I ensured that users could
+              paste and edit their content in a way that mirrored a traditional
+              word processor while maintaining the underlying structure needed
+              for clean HTML output.
+            </Paragraph>
+          </LayoutItem>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach1}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={2}>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach1}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+          <LayoutItem>
+            <Heading type="h3">Storing and retrieving content</Heading>
+            <Paragraph>
+              Instead of storing raw HTML, I opted to save the structured JSON
+              output generated by Slate.js. This approach provided flexibility
+              in rendering content dynamically and prevented issues with
+              malformed HTML. When content needed to be displayed, it was
+              converted into HTML while maintaining its intended structure and
+              styling.
+            </Paragraph>
+            <Paragraph>
+              This method also allowed for seamless integration with our
+              database, ensuring that course content and sales pages remained
+              organized and easy to update. It also meant I could introduce new
+              content types and features over time without requiring significant
+              overhauls to the system.
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={1}>
+          <LayoutItem>
+            <Heading type="h3">The outcome</Heading>
+            <Paragraph>
+              With the new CMS, course creators at http://Teach.io were able to
+              build, update, and manage content effortlessly.
+            </Paragraph>
+            <Paragraph>
+              Slate.js proved to be a powerful tool in our stack, enabling a
+              custom editing experience tailored to http://Teach.io ’s needs. By
+              leveraging its flexibility, I transformed how courses and sales
+              pages were managed, ultimately improving both teacher efficiency
+              and learner engagement.
             </Paragraph>
           </LayoutItem>
         </Layout>
