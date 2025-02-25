@@ -823,8 +823,126 @@ export default function TT2() {
         </Layout>
       </Section>
 
+      <Section>
+        <Heading type="h2">E-mail templating</Heading>
+        <Subtitle type="M">
+          Email templating in web applications can be a particularly tricky
+          challenge due to several key factors. I encountered these difficulties
+          when working on email templates for Teach.io
+        </Subtitle>
+
+        <Layout columns={2}>
+          <LayoutItem>
+            <Paragraph>
+              <>
+                <Heading type="h3">Email templating challenges</Heading>
+                <ul className="my-2 flex gap-2 flex-col">
+                  <li>
+                    <b>Email client incompatibilities:</b> Different email
+                    clients (like Gmail, Outlook, and Apple Mail) render emails
+                    differently.
+                  </li>
+                  <li>
+                    <b>CSS support:</b> Many email clients have limited or
+                    outdated support for CSS. Some won’t recognize newer CSS
+                    properties or media queries, making responsive email design
+                    challenging.
+                  </li>
+                  <li>
+                    <b>Cross-device optimization: </b> Emails need to look good
+                    on various devices. This requires careful attention to
+                    detail in structuring the layout and the styles.
+                  </li>
+
+                  <li>
+                    <b>Testing & maintenance: </b> Since emails are sent to a
+                    wide range of users across different devices and email
+                    clients, extensive testing is needed to ensure that the
+                    design displays consistently.
+                  </li>
+                </ul>
+              </>
+            </Paragraph>
+          </LayoutItem>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach4}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={2}>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach4}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+          <LayoutItem>
+            <Heading type="h3">The solution</Heading>
+            <Paragraph>
+              I found that React Email is a powerful tool to improve the process
+              by offering a solution that addressed many of the traditional
+              pitfalls of email templating.
+            </Paragraph>
+
+            <Paragraph>
+              <>
+                Here’s why I used React Email to implement a robust email
+                templating solution for teach.io:
+                <ul className="my-2 flex gap-2 flex-col">
+                  <li>
+                    <b>Component-based design:</b> React Email allows for email
+                    templates to be built using reusable components. Each
+                    component can be individually styled and tested, making
+                    development faster and more organized.
+                  </li>
+                  <li>
+                    <b>Compatibility:</b> React email provides a set of
+                    pre-configured strategies and templates that address
+                    specific problems encountered in different email clients.
+                    This reduced the amount of manual tweaking and testing
+                    required to ensure emails look good in various environments.
+                  </li>
+                  <li>
+                    <b>Avoiding raw HTML editing: </b> One of the most
+                    significant challenges with traditional email templating is
+                    the need to manually edit raw HTML. React Email abstracted
+                    that away, allowing me to focus on building structure and
+                    logic.
+                  </li>
+                  <li>
+                    <b>Optimized for testing and debugging: </b> React Email
+                    provides tools for previewing email templates, making it
+                    easier to debug issues related to rendering, responsiveness,
+                    and compatibility.
+                  </li>
+                </ul>
+              </>
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={1}>
+          <LayoutItem>
+            <Heading type="h3">Results</Heading>
+            <Paragraph>
+              By using React Email, I was able to streamline the email template
+              development process. It’s a modern solution that simplifies the
+              traditionally complex task of email templating, making it more
+              efficient and less error-prone.
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+      </Section>
+
       <Anchor id={'contact'} />
-      <Section pattern alternativeBackground>
+      <Section pattern>
         <ContactSection />
       </Section>
     </>
