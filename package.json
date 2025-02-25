@@ -8,11 +8,10 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "husky install && next build && build-storybook -o public/storybook",
+    "build": "husky install && next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write .",
-    "storybook": "start-storybook -s ./public -p 6006"
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@next/font": "13.1.6",
@@ -34,15 +33,6 @@
     "@babel/core": "^7.21.3",
     "@commitlint/cli": "^17.4.3",
     "@commitlint/config-conventional": "^17.4.3",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/builder-webpack5": "^6.5.16",
-    "@storybook/manager-webpack5": "^6.5.16",
-    "@storybook/react": "^6.5.16",
-    "@storybook/testing-library": "^0.0.13",
     "@svgr/webpack": "^7.0.0",
     "@types/nodemailer": "^6.4.8",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
@@ -50,11 +40,9 @@
     "autoprefixer": "^10.4.14",
     "babel-loader": "^8.3.0",
     "eslint-config-next": "^14.2.24",
-    "eslint-plugin-storybook": "^0.6.11",
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
-    "storybook-addon-next": "^1.7.3",
     "tailwindcss": "^3.2.7"
   }
 }
