@@ -646,6 +646,140 @@ export default function TT2() {
         </Layout>
       </Section>
 
+      <Section>
+        <Heading type="h2">The calendar app</Heading>
+        <Subtitle type="M">
+          The calendar is one of the 4 cornerstones of the app. It supports time
+          zones and repeating events in an RFC iCal format
+        </Subtitle>
+
+        <Layout columns={1}>
+          <LayoutItem>
+            <Heading type="h3">Overview</Heading>
+            <Paragraph>
+              I designed and implemented a robust calendar application within
+              Teach.io. Some key requirements were: Support for multiple time
+              zones. Recurring events with complex scheduling options. Seamless
+              integration with third-party calendar services.
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={2}>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach4}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+          <LayoutItem>
+            <Heading type="h3">Challenges</Heading>
+            <Paragraph>
+              <ul className="my-2 flex gap-2 flex-col">
+                <li>
+                  <b>Handling time zones correctly:</b> Given that users were
+                  spread across different time zones, ensuring that events
+                  appeared at the correct local time was critical.
+                </li>
+                <li>
+                  <b>Implementing recurring events:</b> Recurring event rules
+                  needed to be flexible (daily, weekly, monthly, custom
+                  intervals) and adhere to iCalendar’s RRULE specification.
+                </li>
+                <li>
+                  <b>Exceptions: </b> Editing of one repeated event or edit all
+                  events after a date.
+                </li>
+                <li>
+                  <b>iCalendar (RFC 5545) compliance: </b> The calendar needed
+                  to generate valid .ics files that can be read by external
+                  services like Google Calendar and Outlook.
+                </li>
+              </ul>
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={2}>
+          <LayoutItem>
+            <Heading type="h3">Time zone management</Heading>
+            <Paragraph>
+              To handle time zones effectively, I used the date-fns library.
+              Events were stored in UTC in the database, and time zone
+              conversion was done dynamically based on the user’s location.
+            </Paragraph>
+            <Heading type="h3">Recurring events with RRULE</Heading>
+            <Paragraph>
+              I used the rrule.js library to generate recurring event rules. The
+              backend stored recurrence rules in the database as per the iCal
+              standard.
+            </Paragraph>
+            <Heading type="h3">Generating iCalendar (.ics) files</Heading>
+            <Paragraph>
+              To allow users to export events, I generated .ics files using
+              ical-generator in Node.js.
+            </Paragraph>
+          </LayoutItem>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach1}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={2}>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach1}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+          <LayoutItem>
+            <Heading type="h3">Results</Heading>
+            <Paragraph>
+              <ul className="my-2 flex gap-2 flex-col">
+                <li>
+                  The calendar successfully handles time zones, ensuring events
+                  are displayed correctly worldwide.
+                </li>
+                <li>
+                  Recurring events are flexible and fully customizable by users.
+                </li>
+                <li>
+                  iCalendar export and import functionality enables seamless
+                  integration with external services.
+                </li>
+                <li>
+                  The system is scalable, supporting thousands of concurrent
+                  users.
+                </li>
+                <li>
+                  By building a custom calendar the app is fully styled and
+                  tailored to the needs of Teach.io.
+                </li>
+              </ul>
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={1}>
+          <LayoutItem>
+            <Paragraph>
+              By leveraging standardized protocols and robust libraries, I built
+              a highly functional and user-friendly calendar for Teach.io,
+              enhancing scheduling efficiency for educators and learners alike.
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+      </Section>
+
       <Anchor id={'contact'} />
       <Section pattern alternativeBackground>
         <ContactSection />
