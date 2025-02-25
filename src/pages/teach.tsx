@@ -39,7 +39,7 @@ export default function TT2() {
             },
             {
               name: 'Scope',
-              discription: 'Development form early MVP to full application',
+              discription: 'Development from MVP to a compleat application',
             },
             {
               name: 'Timeframe',
@@ -166,139 +166,119 @@ export default function TT2() {
           and React&apos;s context API.
         </Subtitle>
 
-        <Button
-          type="onClick"
-          className={'mb-8 ' + (showReactQuerySection ? 'hidden' : '')}
-          onClick={() => {
-            setShowReactQuerySection(true);
-            document.getElementById('ReactQuery')?.scrollIntoView();
-          }}
-        >
-          How i solved this with React Query
-        </Button>
-
-        <div
-          className={
-            'transition-max-height duration-10000 ease-in-out overflow-hidden ' +
-            (showReactQuerySection ? 'max-h-[30000px]' : 'max-h-0 ')
-          }
-        >
-          <Layout columns={2}>
-            <LayoutItem className="justify-center">
-              <Image
-                src={imageTeach4}
-                alt={`Teach.io screen shot`}
-                className="drop-shadow-md"
-                width={500}
-              />
-            </LayoutItem>
-            <LayoutItem>
-              <Heading type="h3">Challenges</Heading>
-              <Paragraph>
-                <ul className="my-2 flex gap-2 flex-col">
-                  <li>
-                    <b>Stale data issues:</b> Users frequently saw outdated
-                    information due to lack of automatic refetching.
-                  </li>
-                  <li>
-                    <b>Excessive API calls:</b> Redundant network requests were
-                    being made, leading to performance degradation and
-                    unnecessary server load.
-                  </li>
-                  <li>
-                    <b>Complex state management: </b> Managing API state with
-                    useState, useEffect, and useReducer required excessive
-                    boilerplate code.
-                  </li>
-                  <li>
-                    <b>Side effects: </b> useEffect was a source of numerous
-                    difficult-to-trace bugs. Some effects were written directly
-                    in components rather than abstracted to custom hooks.
-                  </li>
-                  <li>
-                    <b>Difficult cache invalidation:</b> Implementing caching
-                    and refetching logic was error-prone and inconsistent or
-                    impossible.
-                  </li>
-                </ul>
-              </Paragraph>
-            </LayoutItem>
-          </Layout>
-          <Layout columns={1}>
-            <LayoutItem>
-              <Paragraph className="text-center">
-                To address these challenges, I introduced React Query into the
-                project, replacing manual API state management and caching
-                logic. React Query provided an elegant way to manage
-                server-state data efficiently.
-              </Paragraph>
-            </LayoutItem>
-          </Layout>
-          <Layout columns={2}>
-            <LayoutItem>
-              <Heading type="h3">Results & Benefits</Heading>
-              <Paragraph>
-                <ul className="my-2 flex gap-2 flex-col">
-                  <li>
-                    <b>Reduced API calls:</b> React Query caches responses,
-                    significantly decreasing redundant network requests. During
-                    render - if multiple components request the same data - API
-                    calls are automatically deduplicated.
-                  </li>
-                  <li>
-                    <b>No useContext:</b> The need for useContext was removed,
-                    greatly reducing unnecessary rerendering.
-                  </li>
-                  <li>
-                    <b>Improved data consistency: </b> Automatic refetching
-                    ensures users always see fresh data.
-                  </li>
-                  <li>
-                    <b>Skeletons: </b> The implementation of skeletons became
-                    trivial. It was easy to identfy if data was undefined,
-                    fresh, or stale. Suitable skeletons or animations now make
-                    it easy to indicate to the user what is happening in
-                    real-time.
-                  </li>
-                  <li>
-                    <b>Simplified state management:</b> Eliminated unnecessary
-                    reducer logic, led to cleaner, more maintainable code. A
-                    simple repeatable pattern was established, allowing new code
-                    to be authored quickly.
-                  </li>
-                  <li>
-                    <b> Enhanced user experience:</b> Optimistic updates
-                    provided instant UI feedback, improving perceived
-                    performance. For example, liking or commenting on a post is
-                    instantaneous and any failures would later result in a
-                    roll-back.
-                  </li>
-                </ul>
-              </Paragraph>
-            </LayoutItem>
-            <LayoutItem className="justify-center">
-              <Image
-                src={imageTeach1}
-                alt={`Teach.io screen shot`}
-                className="drop-shadow-md"
-                width={500}
-              />
-            </LayoutItem>
-          </Layout>
-          <Layout columns={1}>
-            <LayoutItem>
-              <Heading type="h3">Conclusion</Heading>
-              <Paragraph>
-                Migrating to React Query revolutionized the state management
-                strategy of the web application. I improved performance, reduced
-                complexity and enhanced the user experience by leveraging its
-                powerful caching, background refetching, mutation handling
-                capabilities and Optimistic updates. React Query is now a key
-                part of the teach.io development stack.
-              </Paragraph>
-            </LayoutItem>
-          </Layout>
-        </div>
+        <Layout columns={2}>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach4}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+          <LayoutItem>
+            <Heading type="h3">Challenges</Heading>
+            <Paragraph>
+              <ul className="my-2 flex gap-2 flex-col">
+                <li>
+                  <b>Stale data issues:</b> Users frequently saw outdated
+                  information due to lack of automatic refetching.
+                </li>
+                <li>
+                  <b>Excessive API calls:</b> Redundant network requests were
+                  being made, leading to performance degradation and unnecessary
+                  server load.
+                </li>
+                <li>
+                  <b>Complex state management: </b> Managing API state with
+                  useState, useEffect, and useReducer required excessive
+                  boilerplate code.
+                </li>
+                <li>
+                  <b>Side effects: </b> useEffect was a source of numerous
+                  difficult-to-trace bugs. Some effects were written directly in
+                  components rather than abstracted to custom hooks.
+                </li>
+                <li>
+                  <b>Difficult cache invalidation:</b> Implementing caching and
+                  refetching logic was error-prone and inconsistent or
+                  impossible.
+                </li>
+              </ul>
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+        <Layout columns={1}>
+          <LayoutItem>
+            <Paragraph className="text-center">
+              To address these challenges, I introduced React Query into the
+              project, replacing manual API state management and caching logic.
+              React Query provided an elegant way to manage server-state data
+              efficiently.
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
+        <Layout columns={2}>
+          <LayoutItem>
+            <Heading type="h3">Results & Benefits</Heading>
+            <Paragraph>
+              <ul className="my-2 flex gap-2 flex-col">
+                <li>
+                  <b>Reduced API calls:</b> React Query caches responses,
+                  significantly decreasing redundant network requests. During
+                  render - if multiple components request the same data - API
+                  calls are automatically deduplicated.
+                </li>
+                <li>
+                  <b>No useContext:</b> The need for useContext was removed,
+                  greatly reducing unnecessary rerendering.
+                </li>
+                <li>
+                  <b>Improved data consistency: </b> Automatic refetching
+                  ensures users always see fresh data.
+                </li>
+                <li>
+                  <b>Skeletons: </b> The implementation of skeletons became
+                  trivial. It was easy to identfy if data was undefined, fresh,
+                  or stale. Suitable skeletons or animations now make it easy to
+                  indicate to the user what is happening in real-time.
+                </li>
+                <li>
+                  <b>Simplified state management:</b> Eliminated unnecessary
+                  reducer logic, led to cleaner, more maintainable code. A
+                  simple repeatable pattern was established, allowing new code
+                  to be authored quickly.
+                </li>
+                <li>
+                  <b> Enhanced user experience:</b> Optimistic updates provided
+                  instant UI feedback, improving perceived performance. For
+                  example, liking or commenting on a post is instantaneous and
+                  any failures would later result in a roll-back.
+                </li>
+              </ul>
+            </Paragraph>
+          </LayoutItem>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach1}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
+        </Layout>
+        <Layout columns={1}>
+          <LayoutItem>
+            <Heading type="h3">Conclusion</Heading>
+            <Paragraph>
+              Migrating to React Query revolutionized the state management
+              strategy of the web application. I improved performance, reduced
+              complexity and enhanced the user experience by leveraging its
+              powerful caching, background refetching, mutation handling
+              capabilities and Optimistic updates. React Query is now a key part
+              of the teach.io development stack.
+            </Paragraph>
+          </LayoutItem>
+        </Layout>
       </Section>
 
       <Section alternativeBackground>
@@ -636,11 +616,11 @@ export default function TT2() {
               build, update, and manage content effortlessly.
             </Paragraph>
             <Paragraph>
-              Slate.js proved to be a powerful tool in our stack, enabling a
-              custom editing experience tailored to http://Teach.io ’s needs. By
-              leveraging its flexibility, I transformed how courses and sales
-              pages were managed, ultimately improving both teacher efficiency
-              and learner engagement.
+              Slate.js proved to be a powerful tool in the teach.io stack,
+              enabling a custom editing experience tailored to http://Teach.io
+              ’s needs. By leveraging its flexibility, I transformed how courses
+              and sales pages were managed, ultimately improving both teacher
+              efficiency and learner engagement.
             </Paragraph>
           </LayoutItem>
         </Layout>
