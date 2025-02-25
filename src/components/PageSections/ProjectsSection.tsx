@@ -10,7 +10,7 @@ import Image from 'next/image';
 import googlePlayBadge from '/public/images/google_play_badge.png';
 import knots3dmenu from '/public/images/knots3dmenu.png';
 import notinstagramsingle1 from '/public/images/notinstagramsingle1.png';
-import teachio from '/public/images/teachio.png';
+import teachio from '/public/images/teach/teachio.png';
 import tt2overview from '/public/images/tt2overview.png';
 import GithubSvg from '/public/vector/github-mark-white.svg';
 

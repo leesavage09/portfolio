@@ -11,10 +11,23 @@ import { Subtitle } from '@stories/Atoms/Subtitle';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
-import imageTeach1 from '/public/images/teachio1.png';
-import imageTeach2 from '/public/images/teachio2.png';
-import imageTeach3 from '/public/images/teachio3.png';
-import imageTeach4 from '/public/images/teachio4.png';
+import imageCalendar1 from '/public/images/teach/calendar1.png';
+import imageCalendar2 from '/public/images/teach/calendar2.png';
+import imageCalendar3 from '/public/images/teach/calendar3.png';
+import imageChat1 from '/public/images/teach/chat1.png';
+import imageChat2 from '/public/images/teach/chat2.png';
+import imageCommunity1 from '/public/images/teach/community1.png';
+import imageCommunity3 from '/public/images/teach/community3.jpg';
+import imageCourse1 from '/public/images/teach/course1.png';
+import imageDrip1 from '/public/images/teach/drip1.png';
+// import imageCommunity2 from '/public/images/teach/community2.png';
+import imageEmail1 from '/public/images/teach/email1.png';
+import imageIntegrations1 from '/public/images/teach/integrations1.png';
+import imageSettings1 from '/public/images/teach/settings1.png';
+import imageTeach1 from '/public/images/teach/teachio1.png';
+import imageTeach2 from '/public/images/teach/teachio2.png';
+import imageTeach3 from '/public/images/teach/teachio3.png';
+import imageTeach4 from '/public/images/teach/teachio4.png';
 
 export default function TT2() {
   const [showReactQuerySection, setShowReactQuerySection] = useState(false);
@@ -59,8 +72,8 @@ export default function TT2() {
 
       <Section>
         <Heading type="h2">About Teach</Heading>
-        <Layout columns={2}>
-          <LayoutItem>
+        <Layout columns={2} className="mb-8">
+          <LayoutItem className="my-auto">
             <Paragraph>
               Teach.io is an e-learning platform. When I joined the project, the
               app was a proof of concept. I implemented Teach.io as a
@@ -80,7 +93,15 @@ export default function TT2() {
             />
           </LayoutItem>
         </Layout>
-        <Layout columns={1}>
+        <Layout columns={2}>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageTeach2}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md"
+              width={500}
+            />
+          </LayoutItem>
           <LayoutItem>
             <Paragraph>
               <>
@@ -108,6 +129,11 @@ export default function TT2() {
                 </ul>
               </>
             </Paragraph>
+          </LayoutItem>
+        </Layout>
+
+        <Layout columns={1}>
+          <LayoutItem>
             <Paragraph>
               The app is fully functional and has all supporting features such
               as student management, group creation, avatars, personal
@@ -315,9 +341,9 @@ export default function TT2() {
           <Layout columns={2}>
             <LayoutItem>
               <Image
-                src={imageTeach2}
+                src={imageIntegrations1}
                 alt={`Teach.io screen shot`}
-                className="drop-shadow-md mb-8 px-4"
+                className="drop-shadow-md rounded-lg overflow-hidden"
                 width={1024}
               />
             </LayoutItem>
@@ -380,9 +406,9 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach4}
+              src={imageCommunity3}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
+              className="drop-shadow-md rounded-lg overflow-hidden"
               width={500}
             />
           </LayoutItem>
@@ -454,9 +480,9 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach1}
+              src={imageDrip1}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
+              className="drop-shadow-md rounded-lg overflow-hidden"
               width={500}
             />
           </LayoutItem>
@@ -500,9 +526,9 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach4}
+              src={imageCommunity1}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
+              className="drop-shadow-md rounded-lg overflow-hidden"
               width={500}
             />
           </LayoutItem>
@@ -582,9 +608,9 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach1}
+              src={imageCourse1}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
+              className="drop-shadow-md rounded-lg overflow-hidden"
               width={500}
             />
           </LayoutItem>
@@ -648,9 +674,9 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach4}
+              src={imageCalendar1}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
+              className="drop-shadow-md rounded-lg overflow-hidden"
               width={500}
             />
           </LayoutItem>
@@ -704,10 +730,10 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach1}
+              src={imageCalendar3}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
-              width={500}
+              className="drop-shadow-md rounded-lg overflow-hidden"
+              width={200}
             />
           </LayoutItem>
         </Layout>
@@ -715,9 +741,9 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach1}
+              src={imageCalendar2}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
+              className="drop-shadow-md rounded-lg overflow-hidden"
               width={500}
             />
           </LayoutItem>
@@ -772,9 +798,16 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach4}
+              src={imageChat2}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
+              className="drop-shadow-md rounded-lg overflow-hidden"
+              width={500}
+            />
+            <span className="my-4" />
+            <Image
+              src={imageChat1}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md rounded-lg overflow-hidden"
               width={500}
             />
           </LayoutItem>
@@ -846,9 +879,9 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach4}
+              src={imageSettings1}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
+              className="drop-shadow-md rounded-lg overflow-hidden"
               width={500}
             />
           </LayoutItem>
@@ -857,9 +890,9 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach4}
+              src={imageEmail1}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
+              className="drop-shadow-md rounded-lg overflow-hidden"
               width={500}
             />
           </LayoutItem>
