@@ -10,7 +10,6 @@ import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useState } from 'react';
 import imageCalendar1 from '/public/images/teach/calendar1.png';
 import imageCalendar2 from '/public/images/teach/calendar2.png';
 import imageCalendar3 from '/public/images/teach/calendar3.png';
@@ -30,8 +29,6 @@ import imageTeach3 from '/public/images/teach/teachio3.png';
 import imageTeach4 from '/public/images/teach/teachio4.png';
 
 export default function TT2() {
-  const [showReactQuerySection, setShowReactQuerySection] = useState(false);
-
   return (
     <>
       <Head>

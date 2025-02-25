@@ -64,7 +64,7 @@ const handle = async (req: NextApiRequest, res: NextApiResponse) => {
 
     res.status(200).json({ status: 'OK' });
   } catch (e: any) {
-    res.status(500).json({ error: e.message || e });
+    res.status(500).json({ error: e?.message || e });
   }
 };
 

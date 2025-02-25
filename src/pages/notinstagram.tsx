@@ -1,4 +1,3 @@
-import { useAppState } from '@components/AppContext';
 import { Anchor } from '@stories/Atoms/Anchor';
 import { Button } from '@stories/Atoms/Button';
 import { Chip } from '@stories/Atoms/Chip';
@@ -16,8 +15,6 @@ import notinstagramgroup2 from '/public/images/notinstagramgroup2.png';
 import notinstagramsingle2 from '/public/images/notinstagramsingle2.png';
 
 export default function Notinstagram() {
-  const appState = useAppState();
-
   return (
     <>
       <Head>
