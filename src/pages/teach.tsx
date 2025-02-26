@@ -143,6 +143,7 @@ export default function TT2() {
                 <Link href="https://teach.io/features">
                   https://teach.io/features
                 </Link>
+                .
               </>
             </Paragraph>
           </LayoutItem>
@@ -334,6 +335,7 @@ export default function TT2() {
                   <Link href="https://marketplace.zoom.us/apps/WPObZ8yYQI2hvFaVp-Jetg">
                     Zoom Marketplace App
                   </Link>
+                  .
                 </>
               </Paragraph>
             </LayoutItem>

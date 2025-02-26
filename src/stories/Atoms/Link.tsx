@@ -31,7 +31,7 @@ export const Link = ({
         href={'#' + scrollTarget}
       >
         {' '}
-        {children}{' '}
+        {children}
       </a>
     );
   }
@@ -41,7 +41,7 @@ export const Link = ({
   return (
     <NextLink className={twMerge('text-primary', className)} href={href + hash}>
       {' '}
-      {children}{' '}
+      {children}
     </NextLink>
   );
 };

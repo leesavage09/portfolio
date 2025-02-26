@@ -45,10 +45,10 @@ export default function Notinstagram() {
             primary
             href="https://not--instagram.herokuapp.com/"
           >
-            Live Demo
+            Live Demo*
           </Button>
           <span className="text-center text-sm">
-            Removed due to a copyright request, <br />
+            * Removed due to a copyright request. <br />
             (see case study for code and images)
           </span>
         </div>
@@ -69,20 +69,29 @@ export default function Notinstagram() {
                 I started the notinstagram project with a
                 <Link href="https://github.com/leesavage09/notinstagram/wiki">
                   design brief
-                </Link>
+                </Link>{' '}
                 that narrows down the features for the MVP product. The design
                 brief also contains{' '}
                 <Link href="https://www.figma.com/proto/mPN3OAnSB9bZCmVttgZLhc/notinstagram?node-id=7-12&scaling=scale-down">
-                  interactive wireframes in Figma,
-                </Link>
-                it considers database design, redux state shape and REST api
-                design.
+                  interactive wireframes
+                </Link>{' '}
+                in Figma. The designs consider database design, redux state
+                shape and REST api design.
               </>
             </Paragraph>
             <Paragraph>
               Google has blacklisted notinstagram as a phishing site so you may
               have trouble accessing it. I take this as an acknowledgment of the
               accuracy of the implementation.
+            </Paragraph>
+            <Paragraph className="text-sm lg:text-md">
+              <>
+                *I have taken down the site. Visit{' '}
+                <Link href="https://github.com/leesavage09/notinstagram/wiki">
+                  GitHub
+                </Link>{' '}
+                for the source code and documentation.
+              </>
             </Paragraph>
           </LayoutItem>
           <LayoutItem className="justify-center">
@@ -105,7 +114,7 @@ export default function Notinstagram() {
             <Paragraph>
               For the backend of notinstagram I used a JSON REST API, built with
               Ruby on Rails and backed by a PostgreSQL database. I chose Ruby on
-              Rails for its Convention over Configuration philosophy and strict
+              Rails for its convention over configuration philosophy and strict
               (MVC) architectural pattern.
             </Paragraph>
             <div className="flex flex-wrap gap-4 ">
@@ -155,7 +164,7 @@ export default function Notinstagram() {
               <>
                 SCSS is used to style notinstagram. To create reusable styled
                 components, I used SCSS in combination with
-                <Link href="https://getbem.com">BEM conventions.</Link>
+                <Link href="https://getbem.com">BEM conventions</Link>.
               </>
             </Paragraph>
           </LayoutItem>
@@ -164,29 +173,23 @@ export default function Notinstagram() {
             <Heading type="h2">Amazon S3</Heading>
             <Paragraph>
               To reduce the load on the backend and to reduce costs, images are
-              edited on the client side and sent directly to an Amazon S3 bucket
-              using presigned URLs.
+              edited on the client side and sent directly to an Amazon S3
+              bucket, using presigned URLs.
             </Paragraph>
           </LayoutItem>
           <LayoutItem>
             <Heading type="h2">Live demo</Heading>
             <Paragraph>
-              You can view a live demo of notinstagram. Please note that the web
-              app is designed for mobile devices only. To access the demo, you
-              can best use a mobile device. On desktop, you can use the mobile
-              simulator in the browser DevTools.
+              <>
+                Unfortunately, I had to take the live demo down due to a
+                copyright request. Documentation, code and screenshots are
+                available on
+                <Link href="https://github.com/leesavage09/notinstagram/wiki">
+                  GitHub
+                </Link>
+                .
+              </>
             </Paragraph>
-            <Button
-              type="href"
-              primary
-              href="https://not--instagram.herokuapp.com/"
-            >
-              Live Demo
-            </Button>
-            <span className="text-center text-sm">
-              Removed due to a copyright request, <br />
-              (see case study for code and images)
-            </span>
           </LayoutItem>
           <LayoutItem>
             <Heading type="h2">Full documentation</Heading>
