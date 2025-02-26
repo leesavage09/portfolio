@@ -20,6 +20,7 @@ import imageCommunity3 from '/public/images/teach/community3.jpg';
 import imageCourse1 from '/public/images/teach/course1.png';
 import imageDrip1 from '/public/images/teach/drip1.png';
 // import imageCommunity2 from '/public/images/teach/community2.png';
+import { Link } from '@stories/Atoms/Link';
 import imageEmail1 from '/public/images/teach/email1.png';
 import imageIntegrations1 from '/public/images/teach/integrations1.png';
 import imageSettings1 from '/public/images/teach/settings1.png';
@@ -49,7 +50,7 @@ export default function TT2() {
             },
             {
               name: 'Scope',
-              discription: 'Development from MVP to a compleat application',
+              discription: 'Development from MVP to a complete application',
             },
             {
               name: 'Timeframe',
@@ -69,16 +70,16 @@ export default function TT2() {
 
       <Section>
         <Heading type="h2">About Teach</Heading>
-        <Layout columns={2} className="mb-8">
+        <Layout columns={2}>
           <LayoutItem className="my-auto">
             <Paragraph>
               Teach.io is an e-learning platform. When I joined the project, the
               app was a proof of concept. I implemented Teach.io as a
               Progressive Web App (PWA), enabling key features such as push
               notifications, offline access, and app installation across
-              devices. This upgrade significantly enhanced user engagement and
-              accessibility, bridging the gap between web and native
-              applications.
+              different devices. This upgrade significantly enhanced user
+              engagement and accessibility, bridging the gap between web and
+              native applications.
             </Paragraph>
           </LayoutItem>
           <LayoutItem className="justify-center">
@@ -102,7 +103,7 @@ export default function TT2() {
           <LayoutItem>
             <Paragraph>
               <>
-                <b>The app consisted of 4 major pillars:</b>
+                <b>The app consists of 4 major pillars:</b>
                 <ul className="my-2 flex gap-2 flex-col">
                   <li>
                     <b>Community:</b> The Facebook-like community is the heart
@@ -110,12 +111,12 @@ export default function TT2() {
                     GIFs, emojis, likes, comments, and replies.
                   </li>
                   <li>
-                    <b>Course:</b> Teachers can create courses with the customer
-                    course builder using multi-media content, module drip feed
-                    and progress tracking.
+                    <b>Course builder:</b> Teachers can create courses with the
+                    customer course builder using multi-media content, module
+                    drip feed and progress tracking.
                   </li>
                   <li>
-                    <b>Messaging:</b> Instant message other members with push
+                    <b>Messaging:</b> Instantly message other members with push
                     notifications.
                   </li>
                   <li>
@@ -135,6 +136,14 @@ export default function TT2() {
               The app is fully functional and has all supporting features such
               as student management, group creation, avatars, personal
               preferences, security 2FA, notifications, email and more.
+            </Paragraph>
+            <Paragraph>
+              <>
+                For all features see:
+                <Link href="https://teach.io/features">
+                  https://teach.io/features
+                </Link>
+              </>
             </Paragraph>
           </LayoutItem>
         </Layout>
@@ -156,7 +165,7 @@ export default function TT2() {
           <Chip lable={'New Relic'} />
           <Chip lable={'Next.js'} />
           <Chip lable={'Socket.io'} />
-          <Chip lable={'React email'} />
+          <Chip lable={'React Email'} />
           <Chip lable={'React Query'} />
           <Chip lable={'Formik & Yup'} />
           <Chip lable={'Tailwind'} />
@@ -242,7 +251,7 @@ export default function TT2() {
         </Layout>
         <Layout columns={2}>
           <LayoutItem>
-            <Heading type="h3">Results & Benefits</Heading>
+            <Heading type="h3">Results of introducing React Query</Heading>
             <Paragraph>
               <ul className="my-2 flex gap-2 flex-col">
                 <li>
@@ -293,7 +302,7 @@ export default function TT2() {
           <LayoutItem>
             <Heading type="h3">Conclusion</Heading>
             <Paragraph>
-              Migrating to React Query revolutionized the state management
+              Migrating to React Query revolutionised the state management
               strategy of the web application. I improved performance, reduced
               complexity and enhanced the user experience by leveraging its
               powerful caching, background refetching, mutation handling
@@ -315,23 +324,26 @@ export default function TT2() {
             <LayoutItem>
               <Heading type="h3">Zoom</Heading>
               <Paragraph>
+                Teach.io has an app on the Zoom Market Place that allows
+                students and teachers to create and attend meetings from within
+                the Teach.io calendar app.
+              </Paragraph>
+              <Paragraph>
                 <>
-                  Teach.io has an app on the Zoom Market Place that allows
-                  students and teachers to create and attend meetings from
-                  within the Teach.io calendar app.
-                  <a href="https://marketplace.zoom.us/apps/WPObZ8yYQI2hvFaVp-Jetg">
+                  See the
+                  <Link href="https://marketplace.zoom.us/apps/WPObZ8yYQI2hvFaVp-Jetg">
                     Zoom Marketplace App
-                  </a>
+                  </Link>
                 </>
               </Paragraph>
             </LayoutItem>
             <LayoutItem>
               <Heading type="h3">Zapier</Heading>
               <Paragraph>
-                To provide better marketing options for teachers, the
-                http://teach.io Zapier app was introduced. Now, student creation
-                can be automated via Zapier actions, allowing teachers to sell
-                courses on external platforms or sales funnels.
+                To provide better marketing options for teachers, the teach.io
+                Zapier app was introduced. Now, student creation can be
+                automated via Zapier actions, allowing teachers to sell courses
+                on external platforms or sales funnels.
               </Paragraph>
             </LayoutItem>
           </Layout>
@@ -347,7 +359,7 @@ export default function TT2() {
             <LayoutItem>
               <Heading type="h3">Chargebee</Heading>
               <Paragraph>
-                Chargebee handles teachers&apos; subscriptions on Teach.io .
+                Chargebee handles teachers&apos; subscriptions on Teach.io.
                 Teachers are able to manage, update, and cancel their own
                 subscriptions in-app as well as see the status of any free
                 trials or coupons.
@@ -373,8 +385,8 @@ export default function TT2() {
               <Paragraph>
                 Teachers can add their Stripe API keys to the app. They can
                 create sales pages to market courses and receive money directly.
-                Various management tools are available to track sales, and
-                refund customers.
+                Various management tools are available to track sales and refund
+                customers.
               </Paragraph>
             </LayoutItem>
           </Layout>
@@ -386,21 +398,54 @@ export default function TT2() {
         <Subtitle type="M">
           Teach.io needed a reliable and scalable solution for email and push
           notifications about important events, discussions, activities within
-          the app, student milestones, new course content unlocked (the
-          drip-feed feature) or new content added by teachers. The event system
-          has to function according to a user&apos;s app preference.
+          the app, student milestones, new course content created or unlocked by
+          the drip-feed feature. The event system has to function according to a
+          user&apos;s app preference.
         </Subtitle>
 
         <Layout columns={1}>
           <LayoutItem>
             <Paragraph>
               The challenge was to ensure notifications were sent efficiently
-              and on time, without overloading the system.
+              and on time, without overloading the system. To achieve this, the
+              below technologies were implemented.
             </Paragraph>
           </LayoutItem>
         </Layout>
 
         <Layout columns={2}>
+          <LayoutItem>
+            <Heading type="h3">Implementation</Heading>
+            <Paragraph>
+              <ul className="my-2 flex gap-2 flex-col">
+                <li>
+                  <b>Google Cloud Tasks:</b> Chosen as the event management
+                  system to schedule and run tasks efficiently. This allows
+                  notifications to be processed asynchronously, improving
+                  performance and reliability.
+                </li>
+                <li>
+                  <b>MongoDB:</b> Used to store event metadata, ensuring quick
+                  access and retrieval of relevant event data.
+                </li>
+                <li>
+                  <b>Express event processing middleware:</b> Middleware was
+                  developed to fetch event metadata before passing the event to
+                  the appropriate event handler.
+                </li>
+                <li>
+                  <b>Express debouncing middleware:</b> Debouncing middleware
+                  ensures notifications are only sent after the trigger stops
+                  changing. This keeps unnecessary notifications down while
+                  still keeping users informed about activity on the platform.
+                </li>
+                <li>
+                  <b>Queue-based processing:</b> Implemented to manage server
+                  load and prevent bottlenecks.
+                </li>
+              </ul>
+            </Paragraph>
+          </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
               src={imageCommunity3}
@@ -409,43 +454,16 @@ export default function TT2() {
               width={500}
             />
           </LayoutItem>
-          <LayoutItem>
-            <Heading type="h3">Solution</Heading>
-            <Paragraph>
-              <>
-                To achieve this, the following technologies were implemented
-                <ul className="my-2 flex gap-2 flex-col">
-                  <li>
-                    <b>Google Cloud Tasks:</b> Chosen as the event management
-                    system to schedule and run tasks efficiently. This allows
-                    notifications to be processed asynchronously, improving
-                    performance and reliability.
-                  </li>
-                  <li>
-                    <b>MongoDB</b> Used to store event metadata, ensuring quick
-                    access and retrieval of relevant event data.
-                  </li>
-                  <li>
-                    <b>Express event processing middleware:</b> Middleware was
-                    developed to fetch event metadata before passing the event
-                    to the appropriate event handler.
-                  </li>
-                  <li>
-                    <b>Express debouncing middleware:</b> Debouncing middleware
-                    ensures notifications are only sent after the trigger stops
-                    changing. This keeps unnecessary notifications down while
-                    still keeping users informed about activity on the platform.
-                  </li>
-                  <li>
-                    <b>Queue-based processing:</b> Implemented to manage server
-                    load and prevent bottlenecks.
-                  </li>
-                </ul>
-              </>
-            </Paragraph>
-          </LayoutItem>
         </Layout>
         <Layout columns={2}>
+          <LayoutItem className="justify-center">
+            <Image
+              src={imageDrip1}
+              alt={`Teach.io screen shot`}
+              className="drop-shadow-md rounded-lg overflow-hidden"
+              width={500}
+            />
+          </LayoutItem>
           <LayoutItem>
             <Heading type="h3">Results</Heading>
             <Paragraph>
@@ -474,14 +492,6 @@ export default function TT2() {
                 </li>
               </ul>
             </Paragraph>
-          </LayoutItem>
-          <LayoutItem className="justify-center">
-            <Image
-              src={imageDrip1}
-              alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
-              width={500}
-            />
           </LayoutItem>
         </Layout>
 
@@ -532,15 +542,13 @@ export default function TT2() {
           <LayoutItem>
             <Heading type="h3">Why Slate.js?</Heading>
             <Paragraph>
-              <>
-                Given the need for flexible, user-friendly, and extendable
-                features, I chose <b>Slate.js</b> A framework for building a
-                customizable block editor in React.
-              </>
+              Given the need for flexible, user-friendly, and extendable
+              features, I chose Slate.js.
             </Paragraph>
             <Paragraph>
               <>
-                Slate.js stood out for several reasons:
+                Slate.js is a framework for building a customizable block editor
+                in React and stood out for several reasons:
                 <ul className="my-2 flex gap-2 flex-col">
                   <li>
                     <b>Highly customizable:</b> Unlike traditional WYSIWYG
@@ -635,15 +643,15 @@ export default function TT2() {
           <LayoutItem>
             <Heading type="h3">The outcome</Heading>
             <Paragraph>
-              With the new CMS, course creators at http://Teach.io were able to
-              build, update, and manage content effortlessly.
+              With the new CMS, course creators at Teach.io were able to build,
+              update, and manage content effortlessly.
             </Paragraph>
             <Paragraph>
-              Slate.js proved to be a powerful tool in the teach.io stack,
-              enabling a custom editing experience tailored to http://Teach.io
-              ’s needs. By leveraging its flexibility, I transformed how courses
-              and sales pages were managed, ultimately improving both teacher
-              efficiency and learner engagement.
+              Slate.js proved to be a powerful tool in the Teach.io stack,
+              enabling a custom editing experience tailored to Teach.io’s needs.
+              By leveraging its flexibility, I transformed how courses and sales
+              pages were managed, ultimately improving both teacher efficiency
+              and learner engagement.
             </Paragraph>
           </LayoutItem>
         </Layout>
@@ -653,7 +661,7 @@ export default function TT2() {
         <Heading type="h2">The calendar app</Heading>
         <Subtitle type="M">
           The calendar is one of the 4 cornerstones of the app. It supports time
-          zones and repeating events in an RFC iCal format
+          zones and repeating events in an RFC iCal format.
         </Subtitle>
 
         <Layout columns={1}>
@@ -661,9 +669,7 @@ export default function TT2() {
             <Heading type="h3">Overview</Heading>
             <Paragraph>
               I designed and implemented a robust calendar application within
-              Teach.io. Some key requirements were: Support for multiple time
-              zones. Recurring events with complex scheduling options. Seamless
-              integration with third-party calendar services.
+              Teach.io.
             </Paragraph>
           </LayoutItem>
         </Layout>
@@ -749,24 +755,23 @@ export default function TT2() {
             <Paragraph>
               <ul className="my-2 flex gap-2 flex-col">
                 <li>
-                  The calendar successfully handles time zones, ensuring events
-                  are displayed correctly worldwide.
+                  <b>Time Zones:</b> The calendar successfully handles time
+                  zones, ensuring events are displayed correctly worldwide.
                 </li>
                 <li>
-                  Recurring events are flexible and fully customizable by users.
+                  <b>Recurring events:</b> Recurring events are flexible and
+                  fully customizable by users.
                 </li>
                 <li>
-                  iCalendar export and import functionality enables seamless
-                  integration with external services.
+                  <b>Import and export:</b> iCalendar export and import
+                  functionality enables seamless integration with external
+                  services.
                 </li>
                 <li>
-                  The system is scalable, supporting thousands of concurrent
-                  users.
+                  <b>Scalability:</b> The system is scalable, supporting
+                  thousands of concurrent users.
                 </li>
-                <li>
-                  By building a custom calendar the app is fully styled and
-                  tailored to the needs of Teach.io.
-                </li>
+                <li></li>
               </ul>
             </Paragraph>
           </LayoutItem>
@@ -775,9 +780,11 @@ export default function TT2() {
         <Layout columns={1}>
           <LayoutItem>
             <Paragraph>
-              By leveraging standardized protocols and robust libraries, I built
-              a highly functional and user-friendly calendar for Teach.io,
-              enhancing scheduling efficiency for educators and learners alike.
+              By building a custom calendar the app is fully styled and tailored
+              to the needs of Teach.io. I leveraged standardized protocols and
+              robust libraries to build a highly functional and user-friendly
+              calendar for Teach.io. This enhanced scheduling efficiency for
+              educators and learners alike.
             </Paragraph>
           </LayoutItem>
         </Layout>
@@ -826,7 +833,7 @@ export default function TT2() {
             <Paragraph>
               This implementation significantly improved the user experience,
               making communication smooth and real-time. Users are able to see
-              when others are online. This is all controllable via user
+              when others are online. However, this is controllable via user
               preferences.
             </Paragraph>
           </LayoutItem>
@@ -834,18 +841,18 @@ export default function TT2() {
       </Section>
 
       <Section>
-        <Heading type="h2">E-mail templating</Heading>
+        <Heading type="h2">Email templating</Heading>
         <Subtitle type="M">
           Email templating in web applications can be a particularly tricky
           challenge due to several key factors. I encountered these difficulties
-          when working on email templates for Teach.io
+          when working on email templates for Teach.io.
         </Subtitle>
 
         <Layout columns={2}>
           <LayoutItem>
             <Paragraph>
               <>
-                <Heading type="h3">Email templating challenges</Heading>
+                <Heading type="h3">Challenges</Heading>
                 <ul className="my-2 flex gap-2 flex-col">
                   <li>
                     <b>Email client incompatibilities:</b> Different email
