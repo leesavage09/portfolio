@@ -33,7 +33,7 @@ export const CaseStudy: React.FC<CaseStudyProps> = ({
         </LayoutItem>
 
         <LayoutItem>
-          <div>
+          <>
             {children}
             {href && (
               <div className="text-center">
@@ -42,7 +42,7 @@ export const CaseStudy: React.FC<CaseStudyProps> = ({
                 </Button>
               </div>
             )}
-          </div>
+          </>
         </LayoutItem>
       </Layout>
     </>

@@ -23,13 +23,19 @@ export const ProjectsSection = () => {
         <Heading type="h2">Projects</Heading>
         <Subtitle type="M">
           Here you will find some of the projects that I have created or
-          contributed to significantly
+          contributed to significantly.
         </Subtitle>
       </Section>
 
       <Section>
         <LayoutItem>
-          <Heading type="h3">Teach.io</Heading>
+          <Heading
+            type="h3"
+            className="normal-case
+"
+          >
+            Teach.io
+          </Heading>
           <Layout columns={2}>
             <LayoutItem className="justify-start ">
               <Image
@@ -42,13 +48,13 @@ export const ProjectsSection = () => {
 
             <LayoutItem>
               <>
-                <Paragraph>
+                <Paragraph className="mb-2">
                   Teach.io is a SaaS startup that enables people to turn their
                   passions into careers through a state-of-the-art,
                   custom-built, learning platform.
                 </Paragraph>
 
-                <Paragraph>
+                <Paragraph className="mb-2">
                   I joined the project in an early MVP stage. I worked on this
                   project for over two years as the lead developer.
                 </Paragraph>
@@ -78,12 +84,12 @@ export const ProjectsSection = () => {
             title={'Tyne Tunnel 2 Project'}
             href={'/tt2'}
           >
-            <Paragraph>
+            <Paragraph className="mb-2">
               Tyne Tunnel is the most popular route for those driving to the
               North of England. The tunnel goes underneath the river Tyne and
               connects North and South Shields.
             </Paragraph>
-            <Paragraph>
+            <Paragraph className="mb-2">
               A cashless free flow system was implemented in November 2021. The
               removal of barriers and physical payment booths required
               implementation of a web app payment system.
@@ -159,16 +165,16 @@ export const ProjectsSection = () => {
             title={'notinstagram'}
             href={'/notinstagram'}
           >
-            <Paragraph>
-              Notinstagram is a pixel perfect MVP version of Instagram. I
-              created notinstagram in my spare time to learn and transition from
-              Java into a PWA/Web development career
+            <Paragraph className="mb-2">
+              Notinstagram is a MVP version of Instagram. I created notinstagram
+              in my spare time to learn and transition from Java into a JS
+              PWA/Web development career.
             </Paragraph>
 
-            <Paragraph>
+            <Paragraph className="mb-2">
               Built with React and Ruby on Rails, it serves as a demonstration
-              of my capabilities in creating a complex full stack application
-              from scratch.
+              of my capabilities in creating a complex, pixel perfect, full
+              stack application from scratch.
             </Paragraph>
 
             <span className="flex justify-center my-6 flex-col ">
@@ -178,10 +184,10 @@ export const ProjectsSection = () => {
                 className="self-end mt-8 mx-auto"
                 href="https://not--instagram.herokuapp.com/"
               >
-                Live Demo
+                Live Demo*
               </Button>
               <span className="text-center text-sm">
-                Removed due to a copyright request, <br />
+                * Removed due to a copyright request. <br />
                 (see case study for code and images)
               </span>
             </span>
