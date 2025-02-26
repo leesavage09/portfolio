@@ -13,7 +13,7 @@ export const Paragraph: React.FC<ParagraphProps> = ({
   return (
     <span
       className={twMerge(
-        'mb-10 dark:text-blue-100 text-dark-blue-800 text-base lg:text-lg',
+        'mb-6 dark:text-blue-100 text-dark-blue-800 text-base lg:text-lg',
         className
       )}
     >
