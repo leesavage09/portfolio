@@ -107,7 +107,7 @@ export default function TT2() {
           <Chip lable={'Formik'} />
           <Chip lable={'Yup'} />
           <Chip lable={'Storybook'} />
-          <Chip lable={'Ant design'} />
+          <Chip lable={'Ant Design'} />
 
           <Chip lable={'Jest'} />
           <Chip lable={'Cypress'} />
@@ -149,7 +149,7 @@ export default function TT2() {
             <Heading type="h3">Customer Web app</Heading>
             <Paragraph>
               The customer facing front end is a responsive web app. Customers
-              are able to sign in, view their journeys, pay for tolls manage
+              are able to sign in, view their journeys, pay for tolls, manage
               vehicles and top-up their account.
             </Paragraph>
             <Heading type="h3">Head office reporting</Heading>
@@ -161,8 +161,8 @@ export default function TT2() {
             <Heading type="h3">Customer service</Heading>
             <Paragraph>
               The back-office for the customer service facilitates speedy,
-              informative, one-touch responses to customers, to enabling team
-              members to exceed internal KPIs.
+              informative, one-touch responses to customers. This helps to
+              enable team members exceeding internal KPIs.
             </Paragraph>
           </LayoutItem>
         </Layout>
@@ -170,9 +170,9 @@ export default function TT2() {
       <Section>
         <Heading type="h2">Work Completed</Heading>
         <Subtitle type="M">
-          Due to the large scope of the project, continuous updates and ongoing
-          improvements were necessary. Improvements like reduction of technical
-          debt, implementation of features, redesigns, and improvements of user
+          I was brought onto the team to assist with updates and improvements to
+          the web app. My work included the reduction of technical debt,
+          implementation of new features, UI redesigns, and improvements to user
           experience.
         </Subtitle>
         <Image
@@ -196,8 +196,8 @@ export default function TT2() {
               <Paragraph>
                 I refactored front end authentication logic, simplifying a
                 customized authentication/authorization component. The component
-                handled masquerade tokens allowing telephone support agents
-                access to user accounts.
+                handled masquerade tokens allowing telephone support agents to
+                access user accounts and assist with support queries.
               </Paragraph>
             </LayoutItem>
           </Layout>
