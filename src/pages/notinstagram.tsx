@@ -13,6 +13,7 @@ import { ContactSection } from '../components/PageSections/ContactSection';
 import notinstagramgroup1 from '/public/images/notinstagramgroup1.png';
 import notinstagramgroup2 from '/public/images/notinstagramgroup2.png';
 import notinstagramsingle2 from '/public/images/notinstagramsingle2.png';
+import GithubSvg from '/public/vector/github-mark-white.svg';
 
 export default function Notinstagram() {
   return (
@@ -199,10 +200,12 @@ export default function Notinstagram() {
               multiple code examples and more screenshots.
             </Paragraph>
             <Button
-              type="href"
               primary
+              className="flex gap-4 items-center bg-black text-white mx-auto w-max"
+              type="href"
               href={'https://github.com/leesavage09/notinstagram#notinstagram'}
             >
+              <GithubSvg width="25px" height="25px" />
               GitHub README.md
             </Button>
           </LayoutItem>
