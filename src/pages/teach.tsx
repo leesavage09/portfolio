@@ -46,7 +46,7 @@ export default function TT2() {
             },
             {
               name: 'Role',
-              discription: 'Lead - Full stack developer',
+              discription: 'Technical Lead - Full stack developer',
             },
             {
               name: 'Scope',
