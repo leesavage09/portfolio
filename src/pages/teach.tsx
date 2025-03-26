@@ -68,7 +68,37 @@ export default function TT2() {
         </Button>
       </Section>
 
-      <Section>
+      <Section alternativeBackground pattern>
+        <Heading type="h3">Testimonial</Heading>
+        <Paragraph>
+          <i>
+            <b>&quot;</b>We took a chance on Lee as we’d not worked together
+            before, and he was going to be the sole developer for our project.
+            So it was an important hire to get right. This chance paid off
+            significantly.
+            <br />
+            <br />
+            Lee has been a wonderful, helpful, and extremely valuable asset to
+            our team over the course of the project. He has taken on a
+            significant amount of technical responsibility within the product,
+            and has been instrumental in completing a significant ground-up
+            restructuring, and also a front end redesign. He is full of ideas,
+            which are carefully planned and calculated, which clearly
+            demonstrates his detail-oriented personality traits. He is able to
+            follow instructions without hesitation, but if he disagrees or
+            thinks there’s a better way, he is able to tell you why, and offer
+            an alternative solution.
+            <br />
+            <br />I really enjoyed working with Lee, and I would have no
+            hesitations hiring him again should the need arise.<b>&quot;</b>
+          </i>
+        </Paragraph>
+        <Link href="https://www.linkedin.com/in/rebecca-longhurst/">
+          Bex Longhurst - Chief Technology Officer - Teach.io
+        </Link>
+      </Section>
+
+      <Section pattern>
         <Heading type="h2">About Teach</Heading>
         <Layout columns={2}>
           <LayoutItem className="my-auto">
@@ -150,7 +180,7 @@ export default function TT2() {
         </Layout>
       </Section>
 
-      <Section alternativeBackground>
+      <Section alternativeBackground pattern>
         <Heading type="h3">Technologies used</Heading>
         <div className="flex flex-wrap gap-4 justify-center">
           <Chip lable={'Express'} />
@@ -173,24 +203,7 @@ export default function TT2() {
         </div>
       </Section>
 
-      {/* <Section pattern>
-        <Heading type="h3">Testimonial</Heading>
-        <Paragraph>
-          <i>
-            <b>&quot;</b>Lee is a strong communicator, with a pragmatic and
-            thoughtful approach to all of the work he undertakes. Mindful of how
-            his work effects both users and the project’s commercials, he became
-            an invaluable asset to our team. He quickly cemented himself as
-            reliable and trustworthy, and is someone we look forward to working
-            with again.<b>&quot;</b>
-          </i>
-        </Paragraph>
-        <Link href="https://www.landdigital.agency">
-          Daniel Gadd - Technical Director - Land digital agency
-        </Link>
-      </Section>*/}
-
-      <Section>
+      <Section alternativeBackground>
         <Heading type="h2">React query state management</Heading>
         <Subtitle type="M">
           Shortly after joining the project, I encountered significant
@@ -314,7 +327,7 @@ export default function TT2() {
         </Layout>
       </Section>
 
-      <Section alternativeBackground>
+      <Section>
         <Heading type="h2">Integrations</Heading>
         <Subtitle type="M">
           During my time at Teach.io I integrated multiple external services to
@@ -395,7 +408,7 @@ export default function TT2() {
         </Layout>
       </Section>
 
-      <Section>
+      <Section alternativeBackground>
         <Heading type="h2">Event system</Heading>
         <Subtitle type="M">
           Teach.io needed a reliable and scalable solution for email and push
@@ -508,7 +521,7 @@ export default function TT2() {
         </Layout>
       </Section>
 
-      <Section alternativeBackground>
+      <Section>
         <Heading type="h2">Block content editor</Heading>
         <Subtitle type="M">
           The HTML content editor for the course builder and course sales page
@@ -659,7 +672,7 @@ export default function TT2() {
         </Layout>
       </Section>
 
-      <Section>
+      <Section alternativeBackground>
         <Heading type="h2">The calendar app</Heading>
         <Subtitle type="M">
           The calendar is one of the 4 cornerstones of the app. It supports time
@@ -792,7 +805,7 @@ export default function TT2() {
         </Layout>
       </Section>
 
-      <Section alternativeBackground>
+      <Section>
         <Heading type="h2">Real-time messaging & notifications</Heading>
         <Subtitle type="M">
           I implemented real-time messaging and notifications in teach.io using
@@ -842,7 +855,7 @@ export default function TT2() {
         </Layout>
       </Section>
 
-      <Section>
+      <Section alternativeBackground>
         <Heading type="h2">Email templating</Heading>
         <Subtitle type="M">
           Email templating in web applications can be a particularly tricky
@@ -961,7 +974,7 @@ export default function TT2() {
       </Section>
 
       <Anchor id={'contact'} />
-      <Section pattern>
+      <Section alternativeBackground pattern>
         <ContactSection />
       </Section>
     </>
