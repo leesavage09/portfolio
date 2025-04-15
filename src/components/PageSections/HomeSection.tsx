@@ -9,7 +9,8 @@ export const HomeSection = () => (
       HEY, I&apos;M <span className="text-primary">Lee Savage</span>
     </Heading>
     <Subtitle type="L">
-      A full-stack developer that builds frontend and backend web applications.
+      I&apos;m a full-stack developer and former founder who helps startups
+      build and scale great products.
     </Subtitle>
     <Button primary type="scrollTo" scrollTo={'projects'}>
       Projects

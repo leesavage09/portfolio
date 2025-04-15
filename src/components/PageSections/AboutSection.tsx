@@ -5,10 +5,10 @@ export const AboutSection = () => (
   <>
     <Heading type="h2">About Me</Heading>
     <Subtitle type="M">
-      I am a senior full-stack developer, experienced in numerous languages such
-      as PHP, Java, Python, Ruby, C, C#. I have grown to love JavaScript warts
-      and all. Therefore, I am dedicated to creating and maintaining JavaScript
-      SaaS and PWAs applications.
+      I specialize in turning ideas into clean, scalable, user-friendly
+      applications that solve real business problems. With a strong foundation
+      in both technology and product thinking, I bring a unique ability to
+      bridge the gap between vision and execution.
     </Subtitle>
   </>
 );
