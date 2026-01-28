@@ -1,6 +1,6 @@
 import { useAppState } from '@components/AppContext';
-import Moon from '/public/vector/moon.svg';
-import Sun from '/public/vector/sun.svg';
+import Moon from '@vector/moon.svg';
+import Sun from '@vector/sun.svg';
 
 export const ThemeToggle = () => {
   const { theme, setTheme } = useAppState();

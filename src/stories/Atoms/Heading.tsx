@@ -1,3 +1,4 @@
+import type { JSX } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface Heading1Props {

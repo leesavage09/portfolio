@@ -8,19 +8,17 @@ import { OrderedList } from '@stories/Atoms/OrderedList';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
-import Head from 'next/head';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { ContactSection } from '../components/PageSections/ContactSection';
-import tt2 from '/public/images/tt2.png';
-import tt2devices from '/public/images/tt2devices.png';
-import tt2devices2 from '/public/images/tt2devices2.png';
+
+export const metadata: Metadata = {
+  title: 'TT2 Case Study',
+};
 
 export default function TT2() {
   return (
     <>
-      <Head>
-        <title>TT2 Case Study</title>
-      </Head>
       <Section pattern className="pt-28 md:pt-36 lg:pt-40">
         <Heading type="h1">Tyne Tunnel 2 Case Study</Heading>
         <OrderedList
@@ -75,10 +73,10 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={tt2}
+              src={'/images/tt2.png'}
               alt={`TT2 tunnel`}
-              className="drop-shadow-md "
               width={500}
+              height={232}
             />
           </LayoutItem>
         </Layout>
@@ -139,10 +137,10 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={tt2devices}
+              src={'/images/tt2devices.png'}
               alt={`TT2 app images`}
-              className="drop-shadow-md"
               width={500}
+              height={334}
             />
           </LayoutItem>
           <LayoutItem>
@@ -176,10 +174,11 @@ export default function TT2() {
           experience.
         </Subtitle>
         <Image
-          src={tt2devices2}
+          src={'/images/tt2devices2.png'}
           alt={`TT2 mobile app images`}
-          className="drop-shadow-md mb-8"
+          className="mb-8"
           width={1024}
+          height={511}
         />
         <Layout columns={1}>
           <Layout columns={2}>

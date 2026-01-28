@@ -7,20 +7,18 @@ import { Link } from '@stories/Atoms/Link';
 import { OrderedList } from '@stories/Atoms/OrderedList';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { Section } from '@stories/Atoms/Section';
-import Head from 'next/head';
+import GithubSvg from '@vector/github-mark-white.svg';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { ContactSection } from '../components/PageSections/ContactSection';
-import notinstagramgroup1 from '/public/images/notinstagramgroup1.png';
-import notinstagramgroup2 from '/public/images/notinstagramgroup2.png';
-import notinstagramsingle2 from '/public/images/notinstagramsingle2.png';
-import GithubSvg from '/public/vector/github-mark-white.svg';
+
+export const metadata: Metadata = {
+  title: 'notinstagram Case Study',
+};
 
 export default function Notinstagram() {
   return (
     <>
-      <Head>
-        <title>notinstagram Case Study</title>
-      </Head>
       <Section pattern className="pt-28 md:pt-36 lg:pt-40">
         <Heading type="h1">notinstagram Case Study</Heading>
         <OrderedList
@@ -97,9 +95,10 @@ export default function Notinstagram() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={notinstagramsingle2}
+              src={'/images/notinstagramsingle2.png'}
               alt={`notinstagram screen shots`}
               width={400}
+              height={400}
             />
           </LayoutItem>
         </Layout>
@@ -152,10 +151,11 @@ export default function Notinstagram() {
         </Layout>
 
         <Image
-          src={notinstagramgroup1}
+          src={'/images/notinstagramgroup1.png'}
           alt={`notinstagram screen shots`}
           className="my-8"
           width={700}
+          height={700}
         />
 
         <Layout columns={2}>
@@ -211,10 +211,11 @@ export default function Notinstagram() {
           </LayoutItem>
         </Layout>
         <Image
-          src={notinstagramgroup2}
+          src={'/images/notinstagramgroup2.png'}
           alt={`notinstagram screen shots`}
           className="my-8"
           width={700}
+          height={700}
         />
       </Section>
       <Anchor id={'contact'} />

@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 interface Heading1Props {
   children: JSX.Element | Array<JSX.Element | string> | string;
   type: 'L' | 'M';

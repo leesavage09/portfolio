@@ -4,37 +4,21 @@ import { Button } from '@stories/Atoms/Button';
 import { Chip } from '@stories/Atoms/Chip';
 import { Heading } from '@stories/Atoms/Heading';
 import { Layout, LayoutItem } from '@stories/Atoms/Layout';
+import { Link } from '@stories/Atoms/Link';
 import { OrderedList } from '@stories/Atoms/OrderedList';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
-import Head from 'next/head';
+import { Metadata } from 'next';
 import Image from 'next/image';
-import imageCalendar1 from '/public/images/teach/calendar1.png';
-import imageCalendar2 from '/public/images/teach/calendar2.png';
-import imageCalendar3 from '/public/images/teach/calendar3.png';
-import imageChat1 from '/public/images/teach/chat1.png';
-import imageChat2 from '/public/images/teach/chat2.png';
-import imageCommunity1 from '/public/images/teach/community1.png';
-import imageCommunity3 from '/public/images/teach/community3.jpg';
-import imageCourse1 from '/public/images/teach/course1.png';
-import imageDrip1 from '/public/images/teach/drip1.png';
-// import imageCommunity2 from '/public/images/teach/community2.png';
-import { Link } from '@stories/Atoms/Link';
-import imageEmail1 from '/public/images/teach/email1.png';
-import imageIntegrations1 from '/public/images/teach/integrations1.png';
-import imageSettings1 from '/public/images/teach/settings1.png';
-import imageTeach1 from '/public/images/teach/teachio1.png';
-import imageTeach2 from '/public/images/teach/teachio2.png';
-import imageTeach3 from '/public/images/teach/teachio3.png';
-import imageTeach4 from '/public/images/teach/teachio4.png';
+
+export const metadata: Metadata = {
+  title: 'Teach.io Case Study',
+};
 
 export default function TT2() {
   return (
     <>
-      <Head>
-        <title>Teach.io Case Study</title>
-      </Head>
       <Section pattern className="pt-28 md:pt-36 lg:pt-40">
         <Heading type="h1">Teach.io Case Study</Heading>
         <OrderedList
@@ -114,20 +98,20 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach3}
+              src={'/images/teach/teachio3.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
               width={500}
+              height={500}
             />
           </LayoutItem>
         </Layout>
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach2}
+              src={'/images/teach/teachio2.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
               width={500}
+              height={500}
             />
           </LayoutItem>
           <LayoutItem>
@@ -215,10 +199,10 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach4}
+              src={'/images/teach/teachio4.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
               width={500}
+              height={500}
             />
           </LayoutItem>
           <LayoutItem>
@@ -305,10 +289,10 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach1}
+              src={'/images/teach/teachio1.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
               width={500}
+              height={500}
             />
           </LayoutItem>
         </Layout>
@@ -365,10 +349,11 @@ export default function TT2() {
           <Layout columns={2}>
             <LayoutItem>
               <Image
-                src={imageIntegrations1}
+                src={'/images/teach/integrations1.png'}
                 alt={`Teach.io screen shot`}
-                className="drop-shadow-md rounded-lg overflow-hidden"
+                className="rounded-lg overflow-hidden"
                 width={1024}
+                height={1024}
               />
             </LayoutItem>
             <LayoutItem>
@@ -463,20 +448,22 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={imageCommunity3}
+              src={'/images/teach/community3.jpg'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
+              className="rounded-lg overflow-hidden"
               width={500}
+              height={500}
             />
           </LayoutItem>
         </Layout>
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageDrip1}
+              src={'/images/teach/drip1.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
+              className=" rounded-lg overflow-hidden"
               width={500}
+              height={500}
             />
           </LayoutItem>
           <LayoutItem>
@@ -548,10 +535,11 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageCommunity1}
+              src={'/images/teach/community1.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
+              className=" rounded-lg overflow-hidden"
               width={500}
+              height={500}
             />
           </LayoutItem>
           <LayoutItem>
@@ -617,10 +605,10 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={imageTeach1}
+              src={'/images/teach/teachio1.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md"
               width={500}
+              height={500}
             />
           </LayoutItem>
         </Layout>
@@ -628,10 +616,11 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageCourse1}
+              src={'/images/teach/course1.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
+              className=" rounded-lg overflow-hidden"
               width={500}
+              height={500}
             />
           </LayoutItem>
           <LayoutItem>
@@ -692,10 +681,11 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageCalendar1}
+              src={'/images/teach/calendar1.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
+              className=" rounded-lg overflow-hidden"
               width={500}
+              height={500}
             />
           </LayoutItem>
           <LayoutItem>
@@ -748,10 +738,11 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={imageCalendar3}
+              src={'/images/teach/calendar3.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
+              className=" rounded-lg overflow-hidden"
               width={200}
+              height={200}
             />
           </LayoutItem>
         </Layout>
@@ -759,10 +750,11 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageCalendar2}
+              src={'/images/teach/calendar2.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
+              className=" rounded-lg overflow-hidden"
               width={500}
+              height={500}
             />
           </LayoutItem>
           <LayoutItem>
@@ -817,17 +809,19 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageChat2}
+              src={'/images/teach/chat2.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
+              className=" rounded-lg overflow-hidden"
               width={500}
+              height={500}
             />
             <span className="my-4" />
             <Image
-              src={imageChat1}
+              src={'/images/teach/chat1.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
+              className=" rounded-lg overflow-hidden"
               width={500}
+              height={500}
             />
           </LayoutItem>
           <LayoutItem>
@@ -898,10 +892,11 @@ export default function TT2() {
           </LayoutItem>
           <LayoutItem className="justify-center">
             <Image
-              src={imageSettings1}
+              src={'/images/teach/settings1.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
+              className=" rounded-lg overflow-hidden"
               width={500}
+              height={500}
             />
           </LayoutItem>
         </Layout>
@@ -909,10 +904,11 @@ export default function TT2() {
         <Layout columns={2}>
           <LayoutItem className="justify-center">
             <Image
-              src={imageEmail1}
+              src={'/images/teach/email1.png'}
               alt={`Teach.io screen shot`}
-              className="drop-shadow-md rounded-lg overflow-hidden"
+              className=" rounded-lg overflow-hidden"
               width={500}
+              height={500}
             />
           </LayoutItem>
           <LayoutItem>

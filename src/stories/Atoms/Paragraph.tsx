@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface ParagraphProps {
-  children: ReactElement | string;
+  children: ReactElement<any> | string;
   className?: string;
 }
 

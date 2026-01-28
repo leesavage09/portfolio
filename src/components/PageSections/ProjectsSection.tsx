@@ -1,22 +1,13 @@
-import { useAppState } from '@components/AppContext';
 import { Button } from '@stories/Atoms/Button';
 import { Heading } from '@stories/Atoms/Heading';
 import { Layout, LayoutItem } from '@stories/Atoms/Layout';
 import { Paragraph } from '@stories/Atoms/Paragraph';
 import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
+import GithubSvg from '@vector/github-mark-white.svg';
 import Image from 'next/image';
-import bofa_image from '/public/images/bofa.png';
-import googlePlayBadge from '/public/images/google_play_badge.png';
-import knots3dmenu from '/public/images/knots3dmenu.png';
-import notinstagramsingle1 from '/public/images/notinstagramsingle1.png';
-import teachio from '/public/images/teach/teachio.png';
-import tt2overview from '/public/images/tt2overview.png';
-import GithubSvg from '/public/vector/github-mark-white.svg';
 
 export const ProjectsSection = () => {
-  const appState = useAppState();
-
   return (
     <>
       <Section>
@@ -36,10 +27,11 @@ export const ProjectsSection = () => {
           <Layout columns={2}>
             <LayoutItem className="justify-start">
               <Image
-                src={bofa_image}
+                src={'/images/bofa.png'}
                 alt={`BOFA math image`}
                 className=" mb-6"
                 width={472}
+                height={298}
               />
             </LayoutItem>
 
@@ -76,10 +68,11 @@ export const ProjectsSection = () => {
           <Layout columns={2}>
             <LayoutItem className="justify-start ">
               <Image
-                src={teachio}
+                src={'/images/teach/teachio.png'}
                 alt={`Teach.io image`}
                 className="mb-6"
                 width={472}
+                height={262}
               />
             </LayoutItem>
 
@@ -119,10 +112,11 @@ export const ProjectsSection = () => {
           <Layout columns={2}>
             <LayoutItem className="justify-start ">
               <Image
-                src={tt2overview}
+                src={'/images/tt2overview.png'}
                 alt={`Tyne Tunnel 2 Project`}
                 className="mb-6"
                 width={500}
+                height={200}
               />
             </LayoutItem>
 
@@ -162,10 +156,11 @@ export const ProjectsSection = () => {
           <Layout columns={2}>
             <LayoutItem className="justify-start ">
               <Image
-                src={knots3dmenu}
+                src={'/images/knots3dmenu.png'}
                 alt={`Knots 3D`}
                 className="mb-6"
                 width={250}
+                height={200}
               />
             </LayoutItem>
             <LayoutItem>
@@ -183,8 +178,9 @@ export const ProjectsSection = () => {
                     >
                       <Image
                         height={64}
+                        width={64}
                         alt="Get it on Google Play"
-                        src={googlePlayBadge}
+                        src={'/images/google_play_badge.png'}
                       />
                     </a>
                   </span>
@@ -215,10 +211,11 @@ export const ProjectsSection = () => {
           <Layout columns={2}>
             <LayoutItem className="justify-start ">
               <Image
-                src={notinstagramsingle1}
+                src={'/images/notinstagramsingle1.png'}
                 alt={`notinstagram`}
                 className="mb-6"
                 width={250}
+                height={200}
               />
             </LayoutItem>
 

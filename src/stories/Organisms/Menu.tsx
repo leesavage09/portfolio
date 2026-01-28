@@ -1,7 +1,6 @@
 import { Link } from '@stories/Atoms/Link';
 import { ThemeToggle } from '@stories/Atoms/ThemeToggle';
 import Image from 'next/image';
-import profilePic from '/public/images/lee_savage_3.png';
 
 export const Menu = () => (
   <nav
@@ -20,7 +19,7 @@ export const Menu = () => (
     >
       <>
         <Image
-          src={profilePic}
+          src={'/images/lee_savage_3.png'}
           width={60}
           height={60}
           className="w-11 h-11 rounded-full dark:bg-dark-blue-500 bg-blue-200 mr-3 hidden xs:block"
