@@ -23,7 +23,6 @@ export const metadata: Metadata = {
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const appState = useAppState();
 
-  console.log(appState.theme + ' ' + inter.className);
   return (
     <main className={appState.theme + ' ' + inter.className}>
       <Menu />
