@@ -10,5 +10,6 @@
   "css.customData": ["./.vscode/css-data.json"],
   "[xml]": {
     "editor.defaultFormatter": "DotJoshJohnson.xml"
-  }
+  },
+  "cSpell.words": ["bofa"]
 }

@@ -9,8 +9,8 @@ export const HomeSection = () => (
       HEY, I&apos;M <span className="text-primary">Lee Savage</span>
     </Heading>
     <Subtitle type="L">
-      I&apos;m a full-stack developer and former founder who helps startups
-      build and scale great products.
+      I help startups and established businesses build, modernize, and scale web
+      products with code that lasts.
     </Subtitle>
     <Button primary type="scrollTo" scrollTo={'projects'}>
       Projects

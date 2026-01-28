@@ -6,6 +6,7 @@ import { Paragraph } from '@stories/Atoms/Paragraph';
 import { Section } from '@stories/Atoms/Section';
 import { Subtitle } from '@stories/Atoms/Subtitle';
 import Image from 'next/image';
+import bofa_image from '/public/images/bofa.png';
 import googlePlayBadge from '/public/images/google_play_badge.png';
 import knots3dmenu from '/public/images/knots3dmenu.png';
 import notinstagramsingle1 from '/public/images/notinstagramsingle1.png';
@@ -26,24 +27,65 @@ export const ProjectsSection = () => {
         </Subtitle>
       </Section>
 
-      <Section>
+      <Section alternativeBackground>
         <LayoutItem>
-          <Heading type="h3" className="normal-case">
-            Teach.io
+          <Heading type="h3" className="normal-case mb-0">
+            BOFA Maths
           </Heading>
+          <Subtitle type="M">2025-present</Subtitle>
           <Layout columns={2}>
-            <LayoutItem className="justify-start ">
+            <LayoutItem className="justify-start">
               <Image
-                src={teachio}
-                alt={`Teach.io image`}
-                className="drop-shadow-md mb-6"
+                src={bofa_image}
+                alt={`BOFA math image`}
+                className=" mb-6"
                 width={472}
               />
             </LayoutItem>
 
             <LayoutItem>
               <>
+                <Paragraph className="mb-6">
+                  BOFA Maths is an established UK ed-tech business, focused on
+                  personalised and AI-driven maths revision tools. BOFA’s suite
+                  of adaptive learning tools helps pupils, teachers, parents,
+                  and tutors engage with GCSE and IGCSE maths revision in a
+                  highly tailored way.
+                </Paragraph>
+
                 <Paragraph className="mb-2">
+                  My work involves updating the codebase to align with modern
+                  development best practices, improving maintainability and
+                  performance while reducing technical debt. This ensures the
+                  platform remains robust and scalable. It also makes it easier
+                  for the team to extend and improve as BOFA continues to grow
+                  and evolve.
+                </Paragraph>
+              </>
+            </LayoutItem>
+          </Layout>
+        </LayoutItem>
+      </Section>
+
+      <Section>
+        <LayoutItem>
+          <Heading type="h3" className="normal-case mb-0">
+            Teach.io
+          </Heading>
+          <Subtitle type="M">2023-2025</Subtitle>
+          <Layout columns={2}>
+            <LayoutItem className="justify-start ">
+              <Image
+                src={teachio}
+                alt={`Teach.io image`}
+                className="mb-6"
+                width={472}
+              />
+            </LayoutItem>
+
+            <LayoutItem>
+              <>
+                <Paragraph className="mb-6">
                   Teach.io is a SaaS startup that enables people to turn their
                   passions into careers through a state-of-the-art,
                   custom-built, learning platform.
@@ -70,22 +112,23 @@ export const ProjectsSection = () => {
 
       <Section alternativeBackground>
         <LayoutItem>
-          <Heading type="h3" className="normal-case">
+          <Heading type="h3" className="normal-case mb-0">
             Tyne Tunnel 2 Project
           </Heading>
+          <Subtitle type="M">2021-2023</Subtitle>
           <Layout columns={2}>
             <LayoutItem className="justify-start ">
               <Image
                 src={tt2overview}
                 alt={`Tyne Tunnel 2 Project`}
-                className="drop-shadow-md mb-6"
+                className="mb-6"
                 width={500}
               />
             </LayoutItem>
 
             <LayoutItem>
               <>
-                <Paragraph className="mb-2">
+                <Paragraph className="mb-6">
                   Tyne Tunnel is the most popular route for those driving to the
                   North of England. The tunnel goes underneath the river Tyne
                   and connects North and South Shields.
@@ -121,7 +164,7 @@ export const ProjectsSection = () => {
               <Image
                 src={knots3dmenu}
                 alt={`Knots 3D`}
-                className="drop-shadow-md mb-6"
+                className="mb-6"
                 width={250}
               />
             </LayoutItem>
@@ -174,14 +217,14 @@ export const ProjectsSection = () => {
               <Image
                 src={notinstagramsingle1}
                 alt={`notinstagram`}
-                className="drop-shadow-md mb-6"
+                className="mb-6"
                 width={250}
               />
             </LayoutItem>
 
             <LayoutItem>
               <>
-                <Paragraph className="mb-2">
+                <Paragraph className="mb-6">
                   Notinstagram is a MVP version of Instagram. I created
                   notinstagram in my spare time to learn and transition from
                   Java into a JS PWA/Web development career.
